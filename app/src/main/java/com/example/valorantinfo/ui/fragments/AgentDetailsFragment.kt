@@ -13,7 +13,9 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.example.valorantinfo.R
+import com.example.valorantinfo.data.models.agentDetails.AgentDetails
 import com.example.valorantinfo.databinding.FragmentAgentDetailsBinding
 import com.example.valorantinfo.ui.adapters.AbilitiesAdapter
 import com.example.valorantinfo.ui.viewmodels.AgentDetailsViewModel
@@ -66,60 +68,66 @@ class AgentDetailsFragment : Fragment() {
                     when (resource) {
                         is Resource.Loading -> {
                             binding.progressBar.visibility = View.VISIBLE
+                            binding.contentGroup.visibility = View.GONE
                             binding.tvError.visibility = View.GONE
                         }
                         
                         is Resource.Success -> {
                             binding.progressBar.visibility = View.GONE
+                            binding.contentGroup.visibility = View.VISIBLE
                             binding.tvError.visibility = View.GONE
                             
                             resource.data?.data?.let { agentDetails ->
-                                // Set agent name and description
-                                binding.tvAgentName.text = agentDetails.displayName
-                                binding.tvAgentDescription.text = agentDetails.description
-                                
-                                // Load agent portrait
-                                Glide.with(requireContext())
-                                    .load(agentDetails.fullPortrait ?: agentDetails.displayIcon)
-                                    .transition(DrawableTransitionOptions.withCrossFade())
-                                    .into(binding.ivAgentPortrait)
-                                
-                                // Load agent background
-                                agentDetails.background?.let { backgroundUrl ->
-                                    Glide.with(requireContext())
-                                        .load(backgroundUrl)
-                                        .transition(DrawableTransitionOptions.withCrossFade())
-                                        .into(binding.ivAgentBackground)
-                                }
-                                
-                                // Set agent role if available
-                                agentDetails.role?.let { role ->
-                                    binding.tvAgentRole.text = role.displayName
-                                    
-                                    // Load role icon
-                                    Glide.with(requireContext())
-                                        .load(role.displayIcon)
-                                        .transition(DrawableTransitionOptions.withCrossFade())
-                                        .into(binding.ivAgentRole)
-                                }
-                                
-                                // Set agent abilities
-                                agentDetails.abilities?.let { abilities ->
-                                    abilitiesAdapter.submitList(abilities)
-                                }
+                                setupAgent(agentDetails)
                             }
                         }
                         
                         is Resource.Error -> {
                             binding.progressBar.visibility = View.GONE
+                            binding.contentGroup.visibility = View.GONE
                             binding.tvError.visibility = View.VISIBLE
-                            binding.tvError.text = resource.message ?: "Unknown error occurred"
+                            binding.tvError.text = resource.message ?: getString(R.string.error_unknown)
                             
                             Toast.makeText(requireContext(), resource.message, Toast.LENGTH_LONG).show()
                         }
                     }
                 }
             }
+        }
+    }
+
+    private fun setupAgent(agentDetails: AgentDetails) {
+        binding.apply {
+            tvAgentName.text = agentDetails.displayName
+            tvAgentDescription.text = agentDetails.description
+
+            val role = agentDetails.role
+            if (role != null) {
+                tvAgentRole.text = role.displayName
+                Glide.with(requireContext())
+                    .load(role.displayIcon)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .into(ivAgentRole)
+            }
+
+            Glide.with(requireContext())
+                .load(agentDetails.fullPortrait)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(ivAgentPortrait)
+
+            Glide.with(requireContext())
+                .load(agentDetails.background)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(ivAgentBackground)
+
+            val abilitiesAdapter = AbilitiesAdapter()
+            rvAbilities.apply {
+                adapter = abilitiesAdapter
+                layoutManager = LinearLayoutManager(requireContext())
+                setHasFixedSize(true)
+                itemAnimator = null
+            }
+            abilitiesAdapter.submitList(agentDetails.abilities)
         }
     }
 

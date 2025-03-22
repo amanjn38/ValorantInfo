@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.valorantinfo.data.models.agent.Agent
 import com.example.valorantinfo.databinding.ItemAgentBinding
 
@@ -33,7 +33,7 @@ class AgentsAdapter(
 
         fun bind(agent: Agent) {
             binding.apply {
-                tvAgentName.text = agent.displayName
+                tvAgentName.text = agent.displayName.uppercase()
                 
                 // Set agent role if available
                 agent.role?.let {
@@ -42,23 +42,22 @@ class AgentsAdapter(
                     // Load role icon
                     Glide.with(itemView)
                         .load(it.displayIcon)
-                        .transition(DrawableTransitionOptions.withCrossFade())
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
                         .into(ivAgentRole)
                 }
                 
                 // Load agent portrait
                 Glide.with(itemView)
                     .load(agent.fullPortrait ?: agent.displayIcon)
-                    .transition(DrawableTransitionOptions.withCrossFade())
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .into(ivAgentPortrait)
                 
-                // Set agent background
-                agent.background?.let { backgroundUrl ->
-                    Glide.with(itemView)
-                        .load(backgroundUrl)
-                        .transition(DrawableTransitionOptions.withCrossFade())
-                        .into(ivAgentBackground)
-                }
+                // Set agent background - ensure it's not being skipped
+                Glide.with(itemView)
+                    .load(agent.background)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .error(android.R.color.transparent)  // Fallback for missing backgrounds
+                    .into(ivAgentBackground)
                 
                 // Set click listener
                 root.setOnClickListener {

@@ -13,6 +13,7 @@ import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
+import androidx.lifecycle.ViewModelProvider
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -49,5 +50,11 @@ object AppModule {
     @Singleton
     fun provideAgentDetailsRepository(apiService: AgentDetailsApiService): AgentDetailsRepository {
         return AgentDetailsRepositoryImpl(apiService)
+    }
+
+    @Provides
+    @Singleton
+    fun provideViewModelFactory(): ViewModelProvider.Factory {
+        return ViewModelProvider.NewInstanceFactory()
     }
 }

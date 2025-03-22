@@ -8,16 +8,24 @@ plugins {
 
 android {
     namespace = "com.example.valorantinfo"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.valorantinfo"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.example.valorantinfo.HiltTestRunner"
+        
+        // Required for MockK to work properly with Android instrumented tests
+        ndk {
+            abiFilters.add("armeabi-v7a")
+            abiFilters.add("arm64-v8a")
+            abiFilters.add("x86")
+            abiFilters.add("x86_64")
+        }
     }
 
     buildTypes {
@@ -29,6 +37,18 @@ android {
             )
         }
     }
+    
+    packaging {
+        resources {
+            excludes += "/META-INF/LICENSE.md"
+            excludes += "/META-INF/LICENSE-notice.md"
+            excludes += "/META-INF/AL2.0"
+            excludes += "/META-INF/LGPL2.1"
+            // Exclude JNI files
+            jniLibs.useLegacyPackaging = true
+        }
+    }
+    
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -40,6 +60,40 @@ android {
     buildFeatures {
         viewBinding = true
         buildConfig = true
+    }
+    
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+            isReturnDefaultValues = true
+            all {
+                it.useJUnitPlatform()
+            }
+        }
+        animationsDisabled = true
+    }
+}
+
+// Define consistent versions for test dependencies
+val testCoreVersion = "1.5.0"
+val espressoVersion = "3.5.1"
+val testExtVersion = "1.1.5"
+val testRunnerVersion = "1.5.2"
+val testRulesVersion = "1.5.0"
+val mockkVersion = "1.13.8" // Use a more stable version
+
+configurations.all {
+    resolutionStrategy {
+        // Force a specific version of androidx.test:core to resolve conflicts
+        force("androidx.test:core:$testCoreVersion")
+        force("androidx.test:core-ktx:$testCoreVersion")
+        force("androidx.test.ext:junit:$testExtVersion")
+        force("androidx.test.ext:junit-ktx:$testExtVersion")
+        force("androidx.test:runner:$testRunnerVersion")
+        force("androidx.test:rules:$testRulesVersion")
+        force("androidx.test.espresso:espresso-core:$espressoVersion")
+        force("androidx.test.espresso:espresso-contrib:$espressoVersion")
+        force("androidx.test.espresso:espresso-intents:$espressoVersion")
     }
 }
 
@@ -65,4 +119,45 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.glide)
     kapt(libs.compiler)
+    implementation(libs.sdp.android)
+    implementation(libs.ssp.android)
+    implementation("androidx.core:core-splashscreen:1.0.1")
+    
+    // Testing dependencies
+    testImplementation("io.mockk:mockk:1.13.10")
+    androidTestImplementation("io.mockk:mockk-android:1.13.10")
+    androidTestImplementation("androidx.test:runner:1.5.2")
+    androidTestImplementation("androidx.test:rules:1.5.0")
+    androidTestImplementation("androidx.arch.core:core-testing:2.2.0")
+    androidTestImplementation("com.google.dexmaker:dexmaker-mockito:1.2")
+    androidTestImplementation("androidx.fragment:fragment-testing:1.6.2")
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.turbine)
+    testImplementation(libs.truth)
+
+    // UI Testing dependencies with consistent versions
+    androidTestImplementation("androidx.test:core:$testCoreVersion")
+    androidTestImplementation("androidx.test.ext:junit:$testExtVersion")
+    androidTestImplementation("androidx.test:runner:$testRunnerVersion")
+    androidTestImplementation("androidx.test:rules:$testRulesVersion")
+    androidTestImplementation("androidx.test.espresso:espresso-core:$espressoVersion")
+    androidTestImplementation("androidx.test.espresso:espresso-contrib:$espressoVersion")
+    androidTestImplementation("androidx.test.espresso:espresso-intents:$espressoVersion")
+    
+    // Hilt testing
+    androidTestImplementation("com.google.dagger:hilt-android-testing:${libs.versions.hiltAndroid.get()}")
+    kaptAndroidTest("com.google.dagger:hilt-android-compiler:${libs.versions.hiltAndroid.get()}")
+    
+    // Fragment testing (use consistent version with test:core)
+    val fragmentVersion = "1.6.2" // Use a version compatible with test:core:1.5.0
+    androidTestImplementation("androidx.fragment:fragment-testing:$fragmentVersion")
+    debugImplementation("androidx.fragment:fragment-testing:$fragmentVersion")
+    
+    // MockK for Android instrumented tests (with the correct configuration)
+    androidTestImplementation("io.mockk:mockk-android:$mockkVersion") {
+        exclude(group = "io.mockk", module = "mockk-agent-jvm")
+    }
+    // Use this version for Android instrumentation tests to avoid need for jvmti agent
+    androidTestImplementation("io.mockk:mockk-agent-api:$mockkVersion")
+    androidTestImplementation("io.mockk:mockk-agent:$mockkVersion")
 }
