@@ -5,7 +5,6 @@ import com.example.valorantinfo.data.models.agentDetails.Ability
 import com.example.valorantinfo.data.models.agentDetails.AgentDetails
 import com.example.valorantinfo.data.models.agentDetails.AgentDetailsResponse
 import com.example.valorantinfo.data.models.agentDetails.Role
-import com.example.valorantinfo.data.models.agentDetails.VoiceLine
 import com.example.valorantinfo.repository.AgentDetailsRepository
 import com.example.valorantinfo.utilities.Resource
 import com.google.common.truth.Truth.assertThat

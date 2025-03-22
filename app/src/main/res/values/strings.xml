@@ -7,7 +7,7 @@
     <string name="agents">AGENTS</string>
     <string name="explore_categories">EXPLORE CATEGORIES</string>
     <string name="app_subtitle">A clean, beautiful app for all your VALORANT agent needs</string>
-    <string name="search_agents">Search agents...</string>
+    <string name="search_agents">Search agents…</string>
     <string name="agent_portrait">Agent Portrait</string>
     <string name="agent_background">Agent Background</string>
     <string name="agent_role_icon">Agent Role Icon</string>
@@ -46,6 +46,6 @@
         To run tests:
         - Unit/Integration tests: ./gradlew test
         - UI tests: ./gradlew connectedAndroidTest
-        - Specific tests: ./gradlew test --tests "com.example.valorantinfo.ui.viewmodels.*"
+        - Specific tests: ./gradlew test —tests "com.example.valorantinfo.ui.viewmodels.*"
     </string>
 </resources>

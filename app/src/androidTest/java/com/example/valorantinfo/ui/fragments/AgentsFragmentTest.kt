@@ -1,6 +1,5 @@
 package com.example.valorantinfo.ui.fragments
 
-import android.os.Bundle
 import androidx.fragment.app.testing.FragmentScenario
 import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.test.ext.junit.runners.AndroidJUnit4

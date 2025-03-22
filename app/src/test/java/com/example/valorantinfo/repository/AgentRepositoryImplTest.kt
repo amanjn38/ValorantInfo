@@ -4,7 +4,6 @@ import app.cash.turbine.test
 import com.example.valorantinfo.api.AgentApiService
 import com.example.valorantinfo.data.models.agent.Agent
 import com.example.valorantinfo.data.models.agent.AgentResponse
-import com.example.valorantinfo.data.models.agent.VoiceLine
 import com.example.valorantinfo.utilities.Resource
 import com.google.common.truth.Truth.assertThat
 import io.mockk.coEvery

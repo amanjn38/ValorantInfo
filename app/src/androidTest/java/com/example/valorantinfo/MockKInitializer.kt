@@ -1,8 +1,6 @@
 package com.example.valorantinfo
 
 import io.mockk.MockKAnnotations
-import io.mockk.impl.annotations.MockK
-import io.mockk.mockk
 
 /**
  * Helper class to initialize MockK for Android instrumented tests
@@ -19,7 +17,4 @@ object MockKInitializer {
             e.printStackTrace()
         }
     }
-
-    // Helper function to create relaxed mocks
-    inline fun <reified T : Any> relaxedMock(): T = mockk(relaxed = true)
-} 
+}

@@ -3,12 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Required for instrumented tests -->
-    <application>
-        <activity
-            android:name="androidx.fragment.app.testing.EmptyFragmentActivity"
-            android:exported="true"
-            android:theme="@android:style/Theme.Material.Light.NoActionBar"
-            tools:replace="android:theme" />
+    <application android:icon="@mipmap/ic_launcher">
     </application>
 
 </manifest> 
