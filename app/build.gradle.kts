@@ -130,7 +130,7 @@ dependencies {
     androidTestImplementation(libs.androidx.rules.v150)
     androidTestImplementation(libs.arch.core.testing)
     androidTestImplementation(libs.dexmaker.mockito)
-    androidTestImplementation("androidx.fragment:fragment-testing:1.8.6")
+    debugImplementation("androidx.fragment:fragment-testing:1.8.6")
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.turbine)
     testImplementation(libs.truth)
@@ -150,7 +150,7 @@ dependencies {
     
     // Fragment testing (use consistent version with test:core)
     val fragmentVersion = "1.6.2" // Use a version compatible with test:core:1.5.0
-    androidTestImplementation("androidx.fragment:fragment-testing:$fragmentVersion")
+    debugImplementation("androidx.fragment:fragment-testing:$fragmentVersion")
     debugImplementation("androidx.fragment:fragment-testing:$fragmentVersion")
     
     // MockK for Android instrumented tests (with the correct configuration)
