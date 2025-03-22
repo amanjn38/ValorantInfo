@@ -12,7 +12,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.valorantinfo.R
 import com.example.valorantinfo.databinding.FragmentAgentsBinding
 import com.example.valorantinfo.ui.adapters.AgentsAdapter
 import com.example.valorantinfo.ui.viewmodels.AgentViewModel

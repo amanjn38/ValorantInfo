@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="AGENTS"
+        android:text="@string/agents"
         android:textColor="#FF4655"
         android:textSize="24sp"
         android:textStyle="bold"
