@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.valorantinfo.R
 import com.example.valorantinfo.data.models.Category
 import com.example.valorantinfo.databinding.FragmentHomeBinding
@@ -38,7 +37,7 @@ class HomeFragment : Fragment() {
     private fun setupRecyclerView() {
         categoryAdapter = CategoryAdapter { category ->
             when (category.title) {
-                "Agents" -> findNavController().navigate(R.id.action_homeFragment_to_agentsFragment)
+                "AGENTS" -> findNavController().navigate(R.id.action_homeFragment_to_agentsFragment)
                 // Add other navigation actions here when you create more fragments
                 else -> {
                     // For categories that don't have implementations yet
@@ -48,32 +47,32 @@ class HomeFragment : Fragment() {
         
         binding.rvCategories.apply {
             adapter = categoryAdapter
-            layoutManager = LinearLayoutManager(requireContext())
+            // Layout manager is defined in XML
         }
     }
     
     private fun loadCategories() {
         val categories = listOf(
-            Category("Agents", R.drawable.ic_agent_placeholder),
-            Category("Buddies", R.drawable.ic_agent_placeholder),
-            Category("Bundles", R.drawable.ic_agent_placeholder),
-            Category("Ceremonies", R.drawable.ic_agent_placeholder),
-            Category("Competitive Tiers", R.drawable.ic_agent_placeholder),
-            Category("Content Tiers", R.drawable.ic_agent_placeholder),
-            Category("Contracts", R.drawable.ic_agent_placeholder),
-            Category("Currencies", R.drawable.ic_agent_placeholder),
-            Category("Events", R.drawable.ic_agent_placeholder),
-            Category("Gamemodes", R.drawable.ic_agent_placeholder),
-            Category("Gear", R.drawable.ic_agent_placeholder),
-            Category("Level Borders", R.drawable.ic_agent_placeholder),
-            Category("Maps", R.drawable.ic_agent_placeholder),
-            Category("Player Cards", R.drawable.ic_agent_placeholder),
-            Category("Player Titles", R.drawable.ic_agent_placeholder),
-            Category("Seasons", R.drawable.ic_agent_placeholder),
-            Category("Sprays", R.drawable.ic_agent_placeholder),
-            Category("Themes", R.drawable.ic_agent_placeholder),
-            Category("Weapons", R.drawable.ic_agent_placeholder),
-            Category("Versions", R.drawable.ic_agent_placeholder)
+            Category("AGENTS", getString(R.string.explore_agents)),
+            Category("BUDDIES", "Collection of gun buddies to personalize weapons"),
+            Category("BUNDLES", "Featured content packs available in the store"),
+            Category("CEREMONIES", "Special celebration animations and effects"),
+            Category("COMPETITIVE TIERS", getString(R.string.understand_ranks)),
+            Category("CONTENT TIERS", "Rarity levels for in-game items and content"),
+            Category("CONTRACTS", "Agent contracts and battle pass progression"),
+            Category("CURRENCIES", "In-game currencies for purchasing items"),
+            Category("EVENTS", "Limited-time events and special occasions"),
+            Category("GAMEMODES", getString(R.string.learn_gamemodes)),
+            Category("GEAR", "Equipment and utilities available during matches"),
+            Category("LEVEL BORDERS", "Player level borders and progression visuals"),
+            Category("MAPS", getString(R.string.discover_maps)),
+            Category("PLAYER CARDS", "Banner cards for player profiles"),
+            Category("PLAYER TITLES", "Special titles displayed on player cards"),
+            Category("SEASONS", "Information about competitive seasons"),
+            Category("SPRAYS", "Decorative sprays to tag the environment"),
+            Category("THEMES", "Visual themes and aesthetics for content"),
+            Category("WEAPONS", getString(R.string.browse_weapons)),
+            Category("VERSIONS", "Game version history and updates")
         )
         
         categoryAdapter.submitList(categories)

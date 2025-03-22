@@ -1,53 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
-    app:cardBackgroundColor="#1A232F"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="2dp"
-    app:strokeColor="#FF4655"
-    app:strokeWidth="1dp">
+    android:layout_marginBottom="@dimen/_8sdp"
+    android:background="@drawable/ability_background"
+    android:padding="@dimen/_12sdp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/ivAbilityIcon"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="@dimen/_48sdp"
+        android:background="@drawable/ability_icon_background"
+        android:contentDescription="@string/ability_icon"
+        android:padding="@dimen/_6sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAbilityName"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:layout_marginStart="@dimen/_12sdp"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivAbilityIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Wingman" />
 
-        <ImageView
-            android:id="@+id/ivAbilityIcon"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvAbilityDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:textColor="#CCCCCC"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivAbilityIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tvAbilityName"
+        tools:text="Ability description goes here" />
 
-        <TextView
-            android:id="@+id/tvAbilityName"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ivAbilityIcon"
-            app:layout_constraintTop_toTopOf="@+id/ivAbilityIcon"
-            tools:text="Wingman" />
-
-        <TextView
-            android:id="@+id/tvAbilityDescription"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:textColor="#CCCCCC"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ivAbilityIcon"
-            app:layout_constraintTop_toBottomOf="@+id/tvAbilityName"
-            tools:text="Ability description goes here" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</com.google.android.material.card.MaterialCardView> 
+</androidx.constraintlayout.widget.ConstraintLayout> 

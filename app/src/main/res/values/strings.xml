@@ -5,4 +5,47 @@
     <string name="abilities">ABILITIES</string>
     <string name="valorant_info">VALORANT INFO</string>
     <string name="agents">AGENTS</string>
+    <string name="explore_categories">EXPLORE CATEGORIES</string>
+    <string name="app_subtitle">A clean, beautiful app for all your VALORANT agent needs</string>
+    <string name="search_agents">Search agents…</string>
+    <string name="agent_portrait">Agent Portrait</string>
+    <string name="agent_background">Agent Background</string>
+    <string name="agent_role_icon">Agent Role Icon</string>
+    <string name="ability_icon">Ability Icon</string>
+    <string name="search_icon">Search Icon</string>
+    <string name="valorant_logo">VALORANT Logo</string>
+    <string name="error_unknown">Unknown error occurred</string>
+    <string name="explore_agents">Explore all VALORANT agents and their unique abilities</string>
+    <string name="discover_maps">Discover the battlegrounds of VALORANT</string>
+    <string name="browse_weapons">Browse all weapons available in the VALORANT arsenal</string>
+    <string name="learn_gamemodes">Learn about the different ways to play VALORANT</string>
+    <string name="understand_ranks">Understand the ranking system in VALORANT</string>
+    
+    <!-- Not used in UI, just documentation for testing -->
+    <string name="testing_documentation">
+        The ValorantInfo app uses three types of tests:
+        
+        1. Unit Tests:
+        - Test individual components in isolation
+        - Located in src/test/java
+        - Examples: AgentViewModelTest, AgentDetailsViewModelTest
+        - Libraries: JUnit, Mockk, Turbine, Truth
+        
+        2. Integration Tests:
+        - Test interaction between components
+        - Located in src/test/java
+        - Examples: AgentRepositoryImplTest
+        - Libraries: JUnit, Mockk, Turbine, Truth
+        
+        3. UI Tests:
+        - Test user flows and UI interactions
+        - Located in src/androidTest/java
+        - Examples: HomeFragmentTest, AgentsFragmentTest
+        - Libraries: Espresso, Hilt Testing, JUnit, Mockk
+        
+        To run tests:
+        - Unit/Integration tests: ./gradlew test
+        - UI tests: ./gradlew connectedAndroidTest
+        - Specific tests: ./gradlew test —tests "com.example.valorantinfo.ui.viewmodels.*"
+    </string>
 </resources>

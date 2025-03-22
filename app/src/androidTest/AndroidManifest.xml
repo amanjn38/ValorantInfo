@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:name="com.example.valorantinfo.HiltTestApplication_Application"
+        android:debuggable="true"
+        tools:ignore="HardcodedDebugMode"
+        tools:replace="android:name">
+        
+        <!-- Custom Hilt test activity for fragment testing -->
+        <activity
+            android:name="com.example.valorantinfo.HiltTestActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        
+        <!-- Required for fragment testing -->
+        <activity
+            android:name="androidx.fragment.app.testing.EmptyFragmentActivity"
+            android:exported="true"
+            android:theme="@style/FragmentScenarioEmptyFragmentActivityTheme"
+            tools:replace="android:theme" />
+    </application>
+
+</manifest> 

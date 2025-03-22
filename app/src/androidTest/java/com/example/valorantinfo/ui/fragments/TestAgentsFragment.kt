@@ -7,32 +7,27 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.valorantinfo.R
 import com.example.valorantinfo.databinding.FragmentAgentsBinding
 import com.example.valorantinfo.ui.adapters.AgentsAdapter
 import com.example.valorantinfo.ui.viewmodels.AgentViewModel
 import com.example.valorantinfo.utilities.Resource
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
-@AndroidEntryPoint
-class AgentsFragment : Fragment() {
+/**
+ * Test version of AgentsFragment without Hilt dependencies
+ */
+class TestAgentsFragment : Fragment() {
 
     private var _binding: FragmentAgentsBinding? = null
     private val binding get() = _binding!!
     
-    // Property for testing - allows injecting a mock ViewModel
-    internal var viewModelOverride: AgentViewModel? = null
-    
-    private val viewModel: AgentViewModel by viewModels()
-    
+    lateinit var viewModel: AgentViewModel
     private lateinit var agentsAdapter: AgentsAdapter
 
     override fun onCreateView(
@@ -50,21 +45,16 @@ class AgentsFragment : Fragment() {
         setupRecyclerView()
         setupSearchBar()
         
-        // Use the override viewModel if provided (for testing), otherwise use the injected one
-        val activeViewModel = viewModelOverride ?: viewModel
-        
-        observeAgents(activeViewModel)
-        observeFilteredAgents(activeViewModel)
+        observeAgents()
+        observeFilteredAgents()
         
         // Fetch agents
-        activeViewModel.getAgents()
+        viewModel.getAgents()
     }
     
     private fun setupRecyclerView() {
         agentsAdapter = AgentsAdapter { agent ->
-            // Navigate to agent details fragment
-            val action = AgentsFragmentDirections.actionAgentsFragmentToAgentDetailsFragment(agent.uuid)
-            findNavController().navigate(action)
+            // No navigation in tests
         }
         binding.rvAgents.apply {
             adapter = agentsAdapter
@@ -76,15 +66,14 @@ class AgentsFragment : Fragment() {
     
     private fun setupSearchBar() {
         binding.etSearch.doAfterTextChanged { text ->
-            val activeViewModel = viewModelOverride ?: viewModel
-            activeViewModel.setSearchQuery(text.toString())
+            viewModel.setSearchQuery(text.toString())
         }
     }
     
-    private fun observeAgents(activeViewModel: AgentViewModel) {
+    private fun observeAgents() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                activeViewModel.agentsState.collectLatest { resource ->
+                viewModel.agentsState.collectLatest { resource ->
                     when (resource) {
                         is Resource.Loading -> {
                             binding.progressBar.visibility = View.VISIBLE
@@ -112,10 +101,10 @@ class AgentsFragment : Fragment() {
         }
     }
     
-    private fun observeFilteredAgents(activeViewModel: AgentViewModel) {
+    private fun observeFilteredAgents() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                activeViewModel.filteredAgents.collectLatest { agents ->
+                viewModel.filteredAgents.collectLatest { agents ->
                     agentsAdapter.submitList(agents)
                 }
             }

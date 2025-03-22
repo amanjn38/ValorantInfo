@@ -32,7 +32,7 @@ class CategoryAdapter(
         fun bind(category: Category) {
             binding.apply {
                 tvCategoryName.text = category.title
-                ivCategoryIcon.setImageResource(category.iconResId)
+                tvCategoryDescription.text = category.description
                 
                 // Set click listener
                 root.setOnClickListener {

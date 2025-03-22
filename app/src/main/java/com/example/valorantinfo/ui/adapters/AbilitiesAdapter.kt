@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.example.valorantinfo.R
 import com.example.valorantinfo.data.models.agentDetails.Ability
 import com.example.valorantinfo.databinding.ItemAbilityBinding
 
@@ -36,9 +37,10 @@ class AbilitiesAdapter : ListAdapter<Ability, AbilitiesAdapter.AbilityViewHolder
                 
                 // Load ability icon
                 ability.displayIcon?.let { iconUrl ->
-                    Glide.with(itemView)
+                    Glide.with(itemView.context)
                         .load(iconUrl)
-                        .transition(DrawableTransitionOptions.withCrossFade())
+                        .placeholder(R.drawable.ic_agent_placeholder)
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
                         .into(ivAbilityIcon)
                 }
             }
