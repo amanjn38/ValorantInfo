@@ -1,6 +1,6 @@
 package com.example.valorantinfo.api
 
-import com.example.valorantinfo.data.models.AgentResponse
+import com.example.valorantinfo.data.models.agent.AgentResponse
 import retrofit2.Response
 import retrofit2.http.GET
 

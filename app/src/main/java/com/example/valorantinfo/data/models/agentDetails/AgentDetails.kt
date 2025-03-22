@@ -1,6 +1,6 @@
-package com.example.valorantinfo.data.models
+package com.example.valorantinfo.data.models.agentDetails
 
-data class Agent(
+data class AgentDetails(
     val uuid: String,
     val displayName: String,
     val description: String,
@@ -8,9 +8,10 @@ data class Agent(
     val releaseDate: String?,
     val characterTags: List<String>?,
     val displayIcon: String,
-    val displayIconSmall: String,
+    val displayIconSmall: String?,
     val bustPortrait: String?,
     val fullPortrait: String?,
+    val fullPortraitV2: String?,
     val killfeedPortrait: String?,
     val background: String?,
     val backgroundGradientColors: List<String>?,
@@ -22,4 +23,4 @@ data class Agent(
     val role: Role?,
     val abilities: List<Ability>?,
     val voiceLine: VoiceLine?
-)
+) 

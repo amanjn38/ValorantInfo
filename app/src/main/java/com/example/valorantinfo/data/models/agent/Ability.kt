@@ -1,4 +1,4 @@
-package com.example.valorantinfo.data.models
+package com.example.valorantinfo.data.models.agent
 
 data class Ability(
     val slot: String,

@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.NavHostFragment
 import com.example.valorantinfo.R
 import com.example.valorantinfo.ui.viewmodels.AgentViewModel
 import com.example.valorantinfo.utilities.Resource
@@ -20,8 +21,6 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    private val viewModel: AgentViewModel by viewModels()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -31,29 +30,9 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        lifecycleScope.launch {
-            lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewModel.agentsState.collectLatest { resource ->
-                    when (resource) {
-                        is Resource.Loading -> {
-                            // Show loading state
-                        }
-
-                        is Resource.Success -> {
-                            val agents = resource.data?.data ?: emptyList()
-                        }
-
-                        is Resource.Error -> {
-                            Toast.makeText(this@MainActivity, resource.message, Toast.LENGTH_LONG)
-                                .show()
-                        }
-                    }
-                }
-            }
-        }
-
-        // Fetch agents on app launch
-        viewModel.getAgents()
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+        navController.navigate(R.id.homeFragment)
     }
 }

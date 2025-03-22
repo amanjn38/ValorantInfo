@@ -1,6 +1,9 @@
 package com.example.valorantinfo.di
 
 import com.example.valorantinfo.api.AgentApiService
+import com.example.valorantinfo.api.AgentDetailsApiService
+import com.example.valorantinfo.repository.AgentDetailsRepository
+import com.example.valorantinfo.repository.AgentDetailsRepositoryImpl
 import com.example.valorantinfo.repository.AgentRepository
 import com.example.valorantinfo.repository.AgentRepositoryImpl
 import dagger.Module
@@ -32,7 +35,19 @@ object AppModule {
 
     @Provides
     @Singleton
+    fun provideAgentDetailsApiService(retrofit: Retrofit): AgentDetailsApiService {
+        return retrofit.create(AgentDetailsApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
     fun provideAgentRepository(apiService: AgentApiService): AgentRepository {
         return AgentRepositoryImpl(apiService)
+    }
+
+    @Provides
+    @Singleton
+    fun provideAgentDetailsRepository(apiService: AgentDetailsApiService): AgentDetailsRepository {
+        return AgentDetailsRepositoryImpl(apiService)
     }
 }
