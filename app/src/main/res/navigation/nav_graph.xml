@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeFragment_to_buddiesFragment"
             app:destination="@id/buddiesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bundlesFragment"
+            app:destination="@id/bundlesFragment" />
     </fragment>
 
     <fragment
@@ -55,6 +58,29 @@
         tools:layout="@layout/fragment_buddy_details">
         <argument
             android:name="buddyUuid"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bundlesFragment"
+        android:name="com.example.valorantinfo.ui.fragments.BundlesFragment"
+        android:label="Bundles"
+        tools:layout="@layout/fragment_bundles">
+        <action
+            android:id="@+id/action_bundlesFragment_to_bundleDetailsFragment"
+            app:destination="@id/bundleDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bundleDetailsFragment"
+        android:name="com.example.valorantinfo.ui.fragments.BundleDetailsFragment"
+        android:label="Bundle Details"
+        tools:layout="@layout/fragment_bundle_details">
+        <argument
+            android:name="bundleUuid"
+            app:argType="string" />
+        <argument
+            android:name="bundleName"
             app:argType="string" />
     </fragment>
 

@@ -27,8 +27,8 @@ class BuddyLevelResponseTest {
         // Then
         assertEquals(status, response.status)
         assertEquals(buddyLevel, response.data)
-        assertEquals("test-uuid", response.data.uuid)
-        assertEquals(1, response.data.charmLevel)
-        assertEquals("Test Level", response.data.displayName)
+        assertEquals("test-uuid", response.data?.uuid)
+        assertEquals(1, response.data?.charmLevel)
+        assertEquals("Test Level", response.data?.displayName)
     }
 } 
