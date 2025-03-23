@@ -6,6 +6,9 @@ import com.example.valorantinfo.repository.AgentDetailsRepository
 import com.example.valorantinfo.repository.AgentDetailsRepositoryImpl
 import com.example.valorantinfo.repository.AgentRepository
 import com.example.valorantinfo.repository.AgentRepositoryImpl
+import com.example.valorantinfo.api.BuddyApiService
+import com.example.valorantinfo.repository.BuddyRepository
+import com.example.valorantinfo.repository.BuddyRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -50,6 +53,18 @@ object AppModule {
     @Singleton
     fun provideAgentDetailsRepository(apiService: AgentDetailsApiService): AgentDetailsRepository {
         return AgentDetailsRepositoryImpl(apiService)
+    }
+
+    @Provides
+    @Singleton
+    fun provideBuddyApiService(retrofit: Retrofit): BuddyApiService {
+        return retrofit.create(BuddyApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideBuddyRepository(apiService: BuddyApiService): BuddyRepository {
+        return BuddyRepositoryImpl(apiService)
     }
 
     @Provides

@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_agentsFragment"
             app:destination="@id/agentsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_buddiesFragment"
+            app:destination="@id/buddiesFragment" />
     </fragment>
 
     <fragment
@@ -32,6 +35,26 @@
         tools:layout="@layout/fragment_agent_details">
         <argument
             android:name="agentUuid"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/buddiesFragment"
+        android:name="com.example.valorantinfo.ui.fragments.BuddiesFragment"
+        android:label="Buddies"
+        tools:layout="@layout/fragment_buddies">
+        <action
+            android:id="@+id/action_buddiesFragment_to_buddyDetailsFragment"
+            app:destination="@id/buddyDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/buddyDetailsFragment"
+        android:name="com.example.valorantinfo.ui.fragments.BuddyDetailsFragment"
+        android:label="Buddy Details"
+        tools:layout="@layout/fragment_buddy_details">
+        <argument
+            android:name="buddyUuid"
             app:argType="string" />
     </fragment>
 

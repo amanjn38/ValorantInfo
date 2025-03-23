@@ -1,5 +1,6 @@
 package com.example.valorantinfo.ui.viewmodels
 
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import app.cash.turbine.test
 import com.example.valorantinfo.data.models.agent.Agent
 import com.example.valorantinfo.data.models.agent.AgentResponse
@@ -18,10 +19,17 @@ import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
 import org.junit.After
 import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
+import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
 
 @ExperimentalCoroutinesApi
+@RunWith(JUnit4::class)
 class AgentViewModelTest {
+
+    @get:Rule
+    val instantTaskExecutorRule = InstantTaskExecutorRule()
 
     private lateinit var viewModel: AgentViewModel
     private lateinit var repository: AgentRepository

@@ -38,6 +38,7 @@ class HomeFragment : Fragment() {
         categoryAdapter = CategoryAdapter { category ->
             when (category.title) {
                 "AGENTS" -> findNavController().navigate(R.id.action_homeFragment_to_agentsFragment)
+                "BUDDIES" -> findNavController().navigate(R.id.action_homeFragment_to_buddiesFragment)
                 // Add other navigation actions here when you create more fragments
                 else -> {
                     // For categories that don't have implementations yet

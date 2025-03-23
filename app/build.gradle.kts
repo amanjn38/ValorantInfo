@@ -66,9 +66,6 @@ android {
         unitTests {
             isIncludeAndroidResources = true
             isReturnDefaultValues = true
-            all {
-                it.useJUnitPlatform()
-            }
         }
         animationsDisabled = true
     }
@@ -160,4 +157,18 @@ dependencies {
     // Use this version for Android instrumentation tests to avoid need for jvmti agent
     androidTestImplementation("io.mockk:mockk-agent-api:$mockkVersion")
     androidTestImplementation("io.mockk:mockk-agent:$mockkVersion")
+
+    // Testing
+    testImplementation(libs.junit)
+    testImplementation(libs.mockk)
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation("org.robolectric:robolectric:4.10.3")
+    testImplementation("androidx.test.espresso:espresso-contrib:3.5.1")
+    testImplementation("androidx.test:core:1.5.0")
+    testImplementation("androidx.test:core-ktx:1.5.0")
+    
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.mockk.android)
 }

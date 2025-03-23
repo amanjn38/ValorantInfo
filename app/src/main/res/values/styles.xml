@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <!-- Text color for the search text -->
+        <item name="android:textColor">@color/white</item>
+        <!-- Hint text color -->
+        <item name="android:textColorHint">#999999</item>
+        <!-- Background color -->
+        <item name="android:background">@drawable/search_background</item>
+        <!-- Text size -->
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources> 
