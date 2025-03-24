@@ -10,9 +10,14 @@ import com.example.valorantinfo.data.models.buddy.BuddyResponse
 import com.example.valorantinfo.data.models.ceremony.Ceremony
 import com.example.valorantinfo.data.models.ceremony.CeremoniesListResponse
 import com.example.valorantinfo.data.models.ceremony.CeremonyDetailResponse
+import com.example.valorantinfo.data.models.competitivetier.CompetitiveTier
+import com.example.valorantinfo.data.models.competitivetier.CompetitiveTierDetailResponse
+import com.example.valorantinfo.data.models.competitivetier.CompetitiveTiersListResponse
+import com.example.valorantinfo.data.models.competitivetier.Tier
 import com.example.valorantinfo.repository.BuddyRepository
 import com.example.valorantinfo.repository.BundleRepository
 import com.example.valorantinfo.repository.CeremonyRepository
+import com.example.valorantinfo.repository.CompetitiveTierRepository
 import com.example.valorantinfo.utilities.Resource
 import dagger.Module
 import dagger.Provides
@@ -208,6 +213,70 @@ class TestRepositoryModule {
                             uuid = ceremonyUuid,
                             displayName = "Test Ceremony Detail",
                             assetPath = "ShooterGame/Content/Ceremonies/TestCeremony_PrimaryAsset"
+                        )
+                    )
+                ))
+            }
+        }
+    }
+
+    @Provides
+    @Singleton
+    fun provideCompetitiveTierRepository(): CompetitiveTierRepository {
+        return object : CompetitiveTierRepository {
+            override suspend fun fetchCompetitiveTiers(): Flow<Resource<CompetitiveTiersListResponse>> = flow {
+                emit(Resource.Loading())
+                emit(Resource.Success(
+                    CompetitiveTiersListResponse(
+                        status = 200,
+                        data = listOf(
+                            CompetitiveTier(
+                                uuid = "test-competitive-tier-uuid",
+                                assetObjectName = "Episode1_CompetitiveTierDataTable",
+                                tiers = listOf(
+                                    Tier(
+                                        tier = 0,
+                                        tierName = "UNRANKED",
+                                        division = "ECompetitiveDivision::UNRANKED",
+                                        divisionName = "UNRANKED",
+                                        color = "ffffffff",
+                                        backgroundColor = "00000000",
+                                        smallIcon = "https://example.com/small-icon.png",
+                                        largeIcon = "https://example.com/large-icon.png",
+                                        rankTriangleDownIcon = null,
+                                        rankTriangleUpIcon = null
+                                    )
+                                ),
+                                assetPath = "ShooterGame/Content/UI/Screens/Shared/Competitive/Episode1_CompetitiveTierDataTable"
+                            )
+                        )
+                    )
+                ))
+            }
+
+            override suspend fun fetchCompetitiveTierDetail(competitiveTierUuid: String): Flow<Resource<CompetitiveTierDetailResponse>> = flow {
+                emit(Resource.Loading())
+                emit(Resource.Success(
+                    CompetitiveTierDetailResponse(
+                        status = 200,
+                        data = CompetitiveTier(
+                            uuid = competitiveTierUuid,
+                            assetObjectName = "Episode1_CompetitiveTierDataTable",
+                            tiers = listOf(
+                                Tier(
+                                    tier = 0,
+                                    tierName = "UNRANKED",
+                                    division = "ECompetitiveDivision::UNRANKED",
+                                    divisionName = "UNRANKED",
+                                    color = "ffffffff",
+                                    backgroundColor = "00000000",
+                                    smallIcon = "https://example.com/small-icon.png",
+                                    largeIcon = "https://example.com/large-icon.png",
+                                    rankTriangleDownIcon = null,
+                                    rankTriangleUpIcon = null
+                                )
+                            ),
+                            assetPath = "ShooterGame/Content/UI/Screens/Shared/Competitive/Episode1_CompetitiveTierDataTable"
                         )
                     )
                 ))

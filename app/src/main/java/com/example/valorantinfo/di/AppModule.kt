@@ -15,6 +15,9 @@ import com.example.valorantinfo.repository.BundleRepositoryImpl
 import com.example.valorantinfo.api.CeremonyApiService
 import com.example.valorantinfo.repository.CeremonyRepository
 import com.example.valorantinfo.repository.CeremonyRepositoryImpl
+import com.example.valorantinfo.api.CompetitiveTierApiService
+import com.example.valorantinfo.repository.CompetitiveTierRepository
+import com.example.valorantinfo.repository.CompetitiveTierRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -139,6 +142,18 @@ object AppModule {
     @Singleton
     fun provideCeremonyRepository(apiService: CeremonyApiService): CeremonyRepository {
         return CeremonyRepositoryImpl(apiService)
+    }
+
+    @Provides
+    @Singleton
+    fun provideCompetitiveTierApiService(retrofit: Retrofit): CompetitiveTierApiService {
+        return retrofit.create(CompetitiveTierApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideCompetitiveTierRepository(apiService: CompetitiveTierApiService): CompetitiveTierRepository {
+        return CompetitiveTierRepositoryImpl(apiService)
     }
 
     @Provides

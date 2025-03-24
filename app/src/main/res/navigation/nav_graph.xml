@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_homeFragment_to_ceremoniesFragment"
             app:destination="@id/ceremoniesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_competitiveTiersFragment"
+            app:destination="@id/competitiveTiersFragment" />
     </fragment>
 
     <fragment
@@ -107,6 +110,29 @@
             app:argType="string" />
         <argument
             android:name="ceremonyName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/competitiveTiersFragment"
+        android:name="com.example.valorantinfo.ui.fragments.CompetitiveTiersFragment"
+        android:label="Competitive Tiers"
+        tools:layout="@layout/fragment_competitive_tiers">
+        <action
+            android:id="@+id/action_competitiveTiersFragment_to_competitiveTierDetailsFragment"
+            app:destination="@id/competitiveTierDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/competitiveTierDetailsFragment"
+        android:name="com.example.valorantinfo.ui.fragments.CompetitiveTierDetailsFragment"
+        android:label="Competitive Tier Details"
+        tools:layout="@layout/fragment_competitive_tier_details">
+        <argument
+            android:name="competitiveTierUuid"
+            app:argType="string" />
+        <argument
+            android:name="competitiveTierName"
             app:argType="string" />
     </fragment>
 
