@@ -12,6 +12,9 @@ import com.example.valorantinfo.repository.BuddyRepositoryImpl
 import com.example.valorantinfo.api.BundleApiService
 import com.example.valorantinfo.repository.BundleRepository
 import com.example.valorantinfo.repository.BundleRepositoryImpl
+import com.example.valorantinfo.api.CeremonyApiService
+import com.example.valorantinfo.repository.CeremonyRepository
+import com.example.valorantinfo.repository.CeremonyRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -20,6 +23,11 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 import androidx.lifecycle.ViewModelProvider
+import com.example.valorantinfo.BuildConfig
+import okhttp3.Interceptor
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
+import java.util.concurrent.TimeUnit
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -27,11 +35,50 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideRetrofit(): Retrofit {
+    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl("https://valorant-api.com/")
+            .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+    }
+
+    @Provides
+    fun provideOkHttpClient(
+        loggingInterceptor: HttpLoggingInterceptor,
+        networkIntercept: Interceptor
+    ): OkHttpClient {
+        return OkHttpClient.Builder()
+            .connectTimeout(30, TimeUnit.SECONDS)
+            .readTimeout(30, TimeUnit.SECONDS)   // Set read timeout
+            .writeTimeout(30, TimeUnit.SECONDS)  // Set write timeout
+            .addInterceptor(loggingInterceptor)
+            .addInterceptor(networkIntercept)
+            .build()
+    }
+
+    @Provides
+    fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor {
+        val interceptor = HttpLoggingInterceptor()
+        interceptor.setLevel(
+            if (BuildConfig.DEBUG)
+                HttpLoggingInterceptor.Level.BODY
+            else
+                HttpLoggingInterceptor.Level.NONE
+        )
+        return interceptor
+    }
+
+    @Provides
+    fun provideNetworkInterceptor(): Interceptor {
+        return Interceptor { chain ->
+            val request = chain.request()
+                .newBuilder()
+                .addHeader("Content-Type", "application/json")
+                .addHeader("Accept", "application/json")
+                .build()
+            chain.proceed(request)
+        }
     }
 
     @Provides
@@ -80,6 +127,18 @@ object AppModule {
     @Singleton
     fun provideBundleRepository(apiService: BundleApiService): BundleRepository {
         return BundleRepositoryImpl(apiService)
+    }
+
+    @Provides
+    @Singleton
+    fun provideCeremonyApiService(retrofit: Retrofit): CeremonyApiService {
+        return retrofit.create(CeremonyApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideCeremonyRepository(apiService: CeremonyApiService): CeremonyRepository {
+        return CeremonyRepositoryImpl(apiService)
     }
 
     @Provides

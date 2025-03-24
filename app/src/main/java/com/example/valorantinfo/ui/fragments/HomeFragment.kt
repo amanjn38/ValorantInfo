@@ -40,6 +40,7 @@ class HomeFragment : Fragment() {
                 "AGENTS" -> findNavController().navigate(R.id.action_homeFragment_to_agentsFragment)
                 "BUDDIES" -> findNavController().navigate(R.id.action_homeFragment_to_buddiesFragment)
                 "BUNDLES" -> findNavController().navigate(R.id.action_homeFragment_to_bundlesFragment)
+                "CEREMONIES" -> findNavController().navigate(R.id.action_homeFragment_to_ceremoniesFragment)
                 // Add other navigation actions here when you create more fragments
                 else -> {
                     // For categories that don't have implementations yet

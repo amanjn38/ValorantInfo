@@ -7,8 +7,12 @@ import com.example.valorantinfo.data.models.buddy.Buddy
 import com.example.valorantinfo.data.models.buddy.BuddyDetailResponse
 import com.example.valorantinfo.data.models.buddy.BuddyLevelResponse
 import com.example.valorantinfo.data.models.buddy.BuddyResponse
+import com.example.valorantinfo.data.models.ceremony.Ceremony
+import com.example.valorantinfo.data.models.ceremony.CeremoniesListResponse
+import com.example.valorantinfo.data.models.ceremony.CeremonyDetailResponse
 import com.example.valorantinfo.repository.BuddyRepository
 import com.example.valorantinfo.repository.BundleRepository
+import com.example.valorantinfo.repository.CeremonyRepository
 import com.example.valorantinfo.utilities.Resource
 import dagger.Module
 import dagger.Provides
@@ -16,6 +20,10 @@ import dagger.hilt.components.SingletonComponent
 import dagger.hilt.testing.TestInstallIn
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import okhttp3.Interceptor
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
+import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
@@ -24,6 +32,39 @@ import javax.inject.Singleton
     replaces = [AppModule::class]
 )
 class TestRepositoryModule {
+
+    @Provides
+    fun provideOkHttpClient(
+        loggingInterceptor: HttpLoggingInterceptor,
+        networkIntercept: Interceptor
+    ): OkHttpClient {
+        return OkHttpClient.Builder()
+            .connectTimeout(1, TimeUnit.SECONDS) // Short timeout for tests
+            .readTimeout(1, TimeUnit.SECONDS)
+            .writeTimeout(1, TimeUnit.SECONDS)
+            .addInterceptor(loggingInterceptor)
+            .addInterceptor(networkIntercept)
+            .build()
+    }
+
+    @Provides
+    fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor {
+        val interceptor = HttpLoggingInterceptor()
+        interceptor.setLevel(HttpLoggingInterceptor.Level.NONE) // No logging in tests
+        return interceptor
+    }
+
+    @Provides
+    fun provideNetworkInterceptor(): Interceptor {
+        return Interceptor { chain ->
+            val request = chain.request()
+                .newBuilder()
+                .addHeader("Content-Type", "application/json")
+                .addHeader("Accept", "application/json")
+                .build()
+            chain.proceed(request)
+        }
+    }
 
     @Provides
     @Singleton
@@ -126,6 +167,47 @@ class TestRepositoryModule {
                             logoIcon = null,
                             verticalPromoImage = "https://example.com/promo.png",
                             assetPath = "path/to/bundle"
+                        )
+                    )
+                ))
+            }
+        }
+    }
+    
+    @Provides
+    @Singleton
+    fun provideCeremonyRepository(): CeremonyRepository {
+        return object : CeremonyRepository {
+            override suspend fun fetchCeremonies(): Flow<Resource<CeremoniesListResponse>> = flow {
+                emit(Resource.Loading())
+                emit(Resource.Success(
+                    CeremoniesListResponse(
+                        status = 200,
+                        data = listOf(
+                            Ceremony(
+                                uuid = "test-ceremony-uuid",
+                                displayName = "ACE",
+                                assetPath = "ShooterGame/Content/Ceremonies/AceCeremony_PrimaryAsset"
+                            ),
+                            Ceremony(
+                                uuid = "test-ceremony-uuid-2",
+                                displayName = "FLAWLESS",
+                                assetPath = "ShooterGame/Content/Ceremonies/FlawlessCeremony_PrimaryAsset"
+                            )
+                        )
+                    )
+                ))
+            }
+
+            override suspend fun fetchCeremonyDetail(ceremonyUuid: String): Flow<Resource<CeremonyDetailResponse>> = flow {
+                emit(Resource.Loading())
+                emit(Resource.Success(
+                    CeremonyDetailResponse(
+                        status = 200,
+                        data = Ceremony(
+                            uuid = ceremonyUuid,
+                            displayName = "Test Ceremony Detail",
+                            assetPath = "ShooterGame/Content/Ceremonies/TestCeremony_PrimaryAsset"
                         )
                     )
                 ))

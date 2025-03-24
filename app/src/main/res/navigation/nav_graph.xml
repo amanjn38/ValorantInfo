@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_bundlesFragment"
             app:destination="@id/bundlesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_ceremoniesFragment"
+            app:destination="@id/ceremoniesFragment" />
     </fragment>
 
     <fragment
@@ -81,6 +84,29 @@
             app:argType="string" />
         <argument
             android:name="bundleName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ceremoniesFragment"
+        android:name="com.example.valorantinfo.ui.fragments.CeremoniesFragment"
+        android:label="Ceremonies"
+        tools:layout="@layout/fragment_ceremonies">
+        <action
+            android:id="@+id/action_ceremoniesFragment_to_ceremonyDetailsFragment"
+            app:destination="@id/ceremonyDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ceremonyDetailsFragment"
+        android:name="com.example.valorantinfo.ui.fragments.CeremonyDetailsFragment"
+        android:label="Ceremony Details"
+        tools:layout="@layout/fragment_ceremony_details">
+        <argument
+            android:name="ceremonyUuid"
+            app:argType="string" />
+        <argument
+            android:name="ceremonyName"
             app:argType="string" />
     </fragment>
 

@@ -13,4 +13,14 @@ object Constants {
     // Bundle error messages
     const val BUNDLE_ERROR_MESSAGE = "Failed to fetch bundles"
     const val BUNDLE_DETAILS_ERROR_MESSAGE = "Failed to fetch bundle details"
+    
+    // Ceremony error messages
+    const val CEREMONY_ERROR_MESSAGE = "Failed to fetch ceremonies"
+    const val CEREMONY_DETAILS_ERROR_MESSAGE = "Failed to fetch ceremony details"
+    
+    // Generic error messages
+    const val ERROR_EMPTY_RESPONSE = "Empty response from server"
+    const val ERROR_NETWORK_CONNECTION = "Network connection error"
+    const val ERROR_HTTP_EXCEPTION = "HTTP exception occurred"
+    const val ERROR_UNKNOWN = "Unknown error occurred"
 } 
