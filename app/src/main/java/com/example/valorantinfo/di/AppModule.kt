@@ -18,6 +18,9 @@ import com.example.valorantinfo.repository.CeremonyRepositoryImpl
 import com.example.valorantinfo.api.CompetitiveTierApiService
 import com.example.valorantinfo.repository.CompetitiveTierRepository
 import com.example.valorantinfo.repository.CompetitiveTierRepositoryImpl
+import com.example.valorantinfo.data.api.ContentTierApiService
+import com.example.valorantinfo.repository.ContentTierRepository
+import com.example.valorantinfo.repository.ContentTierRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,7 +29,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 import androidx.lifecycle.ViewModelProvider
-import com.example.valorantinfo.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -40,43 +42,40 @@ object AppModule {
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://valorant-api.com/")
+            .baseUrl("https://valorant-api.com/v1/")
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
 
     @Provides
+    @Singleton
     fun provideOkHttpClient(
         loggingInterceptor: HttpLoggingInterceptor,
-        networkIntercept: Interceptor
+        networkInterceptor: Interceptor
     ): OkHttpClient {
         return OkHttpClient.Builder()
-            .connectTimeout(30, TimeUnit.SECONDS)
-            .readTimeout(30, TimeUnit.SECONDS)   // Set read timeout
-            .writeTimeout(30, TimeUnit.SECONDS)  // Set write timeout
             .addInterceptor(loggingInterceptor)
-            .addInterceptor(networkIntercept)
+            .addInterceptor(networkInterceptor)
+            .connectTimeout(30, TimeUnit.SECONDS)
+            .readTimeout(30, TimeUnit.SECONDS)
+            .writeTimeout(30, TimeUnit.SECONDS)
             .build()
     }
 
     @Provides
+    @Singleton
     fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor {
-        val interceptor = HttpLoggingInterceptor()
-        interceptor.setLevel(
-            if (BuildConfig.DEBUG)
-                HttpLoggingInterceptor.Level.BODY
-            else
-                HttpLoggingInterceptor.Level.NONE
-        )
-        return interceptor
+        return HttpLoggingInterceptor().apply {
+            level = HttpLoggingInterceptor.Level.BODY
+        }
     }
 
     @Provides
+    @Singleton
     fun provideNetworkInterceptor(): Interceptor {
         return Interceptor { chain ->
-            val request = chain.request()
-                .newBuilder()
+            val request = chain.request().newBuilder()
                 .addHeader("Content-Type", "application/json")
                 .addHeader("Accept", "application/json")
                 .build()
@@ -154,6 +153,18 @@ object AppModule {
     @Singleton
     fun provideCompetitiveTierRepository(apiService: CompetitiveTierApiService): CompetitiveTierRepository {
         return CompetitiveTierRepositoryImpl(apiService)
+    }
+
+    @Provides
+    @Singleton
+    fun provideContentTierApiService(retrofit: Retrofit): ContentTierApiService {
+        return retrofit.create(ContentTierApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideContentTierRepository(api: ContentTierApiService): ContentTierRepository {
+        return ContentTierRepositoryImpl(api)
     }
 
     @Provides

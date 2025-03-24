@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_homeFragment_to_competitiveTiersFragment"
             app:destination="@id/competitiveTiersFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_contentTiersFragment"
+            app:destination="@id/contentTiersFragment" />
     </fragment>
 
     <fragment
@@ -135,5 +138,11 @@
             android:name="competitiveTierName"
             app:argType="string" />
     </fragment>
+
+    <fragment
+        android:id="@+id/contentTiersFragment"
+        android:name="com.example.valorantinfo.ui.fragments.ContentTiersFragment"
+        android:label="Content Tiers"
+        tools:layout="@layout/fragment_content_tiers" />
 
 </navigation>

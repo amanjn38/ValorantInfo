@@ -42,6 +42,7 @@ class HomeFragment : Fragment() {
                 "BUNDLES" -> findNavController().navigate(R.id.action_homeFragment_to_bundlesFragment)
                 "CEREMONIES" -> findNavController().navigate(R.id.action_homeFragment_to_ceremoniesFragment)
                 "COMPETITIVE TIERS" -> findNavController().navigate(R.id.action_homeFragment_to_competitiveTiersFragment)
+                "CONTENT TIERS" -> findNavController().navigate(R.id.action_homeFragment_to_contentTiersFragment)
                 // Add other navigation actions here when you create more fragments
                 else -> {
                     // For categories that don't have implementations yet
