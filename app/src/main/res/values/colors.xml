@@ -2,14 +2,17 @@
 <resources>
     <color name="primary">#FF4655</color>
     <color name="primary_dark">#CC3742</color>
-    <color name="accent_color">#FF4655</color>
+    <color name="accent">#FF4655</color>
+    <color name="background">#1F1F1F</color>
+    <color name="surface">#2D2D2D</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B3FFFFFF</color>
+    <color name="chip_background">#3D3D3D</color>
     
     <!-- Dark Theme Colors -->
     <color name="background_dark">#1A1A1A</color>
     <color name="card_background">#2D2D2D</color>
     <color name="card_stroke">#3D3D3D</color>
-    <color name="text_primary">#FFFFFF</color>
-    <color name="text_secondary">#B3FFFFFF</color>
     <color name="error_color">#FF5252</color>
     
     <!-- Existing colors -->

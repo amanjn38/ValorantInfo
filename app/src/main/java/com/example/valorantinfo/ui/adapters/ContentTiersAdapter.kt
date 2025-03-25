@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.valorantinfo.data.models.ContentTier
+import com.example.valorantinfo.data.models.contenttiers.ContentTier
 import com.example.valorantinfo.databinding.ItemContentTierBinding
 
 class ContentTiersAdapter(

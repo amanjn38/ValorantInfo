@@ -18,7 +18,7 @@ import com.example.valorantinfo.repository.CeremonyRepositoryImpl
 import com.example.valorantinfo.api.CompetitiveTierApiService
 import com.example.valorantinfo.repository.CompetitiveTierRepository
 import com.example.valorantinfo.repository.CompetitiveTierRepositoryImpl
-import com.example.valorantinfo.data.api.ContentTierApiService
+import com.example.valorantinfo.api.ContentTierApiService
 import com.example.valorantinfo.repository.ContentTierRepository
 import com.example.valorantinfo.repository.ContentTierRepositoryImpl
 import dagger.Module
@@ -42,7 +42,7 @@ object AppModule {
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://valorant-api.com/v1/")
+            .baseUrl("https://valorant-api.com/")
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

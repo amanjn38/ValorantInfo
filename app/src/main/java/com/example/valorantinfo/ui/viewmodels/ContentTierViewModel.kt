@@ -2,7 +2,7 @@ package com.example.valorantinfo.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.valorantinfo.data.models.ContentTier
+import com.example.valorantinfo.data.models.contenttiers.ContentTier
 import com.example.valorantinfo.repository.ContentTierRepository
 import com.example.valorantinfo.utilities.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel

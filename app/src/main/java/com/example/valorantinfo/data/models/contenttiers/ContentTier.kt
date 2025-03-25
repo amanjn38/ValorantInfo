@@ -1,4 +1,4 @@
-package com.example.valorantinfo.data.models
+package com.example.valorantinfo.data.models.contenttiers
 
 import com.google.gson.annotations.SerializedName
 
