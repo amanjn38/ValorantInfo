@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.valorantinfo.data.models.contracts.Chapter
-import com.example.valorantinfo.data.models.contracts.Data
 import com.example.valorantinfo.repository.ContractRepository
 import com.example.valorantinfo.utilities.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -23,7 +22,7 @@ sealed class ContractChapterUiState {
 
 @HiltViewModel
 class ContractChapterViewModel @Inject constructor(
-    private val repository: ContractRepository
+    private val repository: ContractRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableLiveData<ContractChapterUiState>()
@@ -86,4 +85,4 @@ class ContractChapterViewModel @Inject constructor(
         super.onCleared()
         currentChapter = null
     }
-} 
+}

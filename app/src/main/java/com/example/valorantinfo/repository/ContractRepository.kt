@@ -8,4 +8,4 @@ interface ContractRepository {
     suspend fun getContracts(): Resource<Contracts>
     suspend fun getContractDetails(uuid: String): Resource<Data>
     suspend fun getContract(uuid: String): Data?
-} 
+}

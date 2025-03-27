@@ -9,14 +9,14 @@ import com.example.valorantinfo.data.models.Category
 import com.example.valorantinfo.databinding.ItemCategoryBinding
 
 class CategoryAdapter(
-    private val onCategoryClick: (Category) -> Unit
+    private val onCategoryClick: (Category) -> Unit,
 ) : ListAdapter<Category, CategoryAdapter.CategoryViewHolder>(CategoryDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
         val binding = ItemCategoryBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
-            false
+            false,
         )
         return CategoryViewHolder(binding)
     }
@@ -33,7 +33,7 @@ class CategoryAdapter(
             binding.apply {
                 tvCategoryName.text = category.title
                 tvCategoryDescription.text = category.description
-                
+
                 // Set click listener
                 root.setOnClickListener {
                     onCategoryClick(category)
@@ -51,4 +51,4 @@ class CategoryAdapter(
             return oldItem == newItem
         }
     }
-} 
+}

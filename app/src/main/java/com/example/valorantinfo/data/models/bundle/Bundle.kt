@@ -12,5 +12,5 @@ data class Bundle(
     val displayIcon2: String,
     val logoIcon: String?,
     val verticalPromoImage: String,
-    val assetPath: String
-) 
+    val assetPath: String,
+)

@@ -5,6 +5,8 @@ dexmakerMockito = "1.2"
 espressoContrib = "3.5.1"
 espressoIntents = "3.5.1"
 espressoVersion = "3.5.1"
+fragmentTesting = "1.8.6"
+fragmentVersion = "1.6.2"
 hiltAndroid = "2.48"
 hiltCompiler = "2.48"
 glide = "4.16.0"
@@ -23,12 +25,14 @@ mockkVersion = "1.13.10"
 retrofit = "2.9.0"
 lifecycleRuntimeAndroid = "2.8.7"
 androidx-navigation = "2.8.9"
+robolectric = "4.10.3"
 rules = "1.5.0"
 runner = "1.5.2"
 sdpAndroid = "1.1.1"
 sspAndroid = "1.1.1"
 mockk = "1.13.9"
 coroutines-test = "1.8.0"
+swiperefreshlayout = "1.1.0"
 testCoreVersion = "1.5.0"
 testExtVersion = "1.1.5"
 turbine = "1.1.0"
@@ -45,6 +49,8 @@ androidx-core-v150 = { module = "androidx.test:core", version.ref = "testCoreVer
 androidx-espresso-contrib-v351 = { module = "androidx.test.espresso:espresso-contrib", version.ref = "espressoContrib" }
 androidx-espresso-core-v351 = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoVersion" }
 androidx-espresso-intents-v351 = { module = "androidx.test.espresso:espresso-intents", version.ref = "espressoIntents" }
+androidx-fragment-testing = { module = "androidx.fragment:fragment-testing", version.ref = "fragmentTesting" }
+androidx-fragment-testing-v162 = { module = "androidx.fragment:fragment-testing", version.ref = "fragmentVersion" }
 androidx-junit-v115 = { module = "androidx.test.ext:junit", version.ref = "testExtVersion" }
 androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleViewmodelKtx" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
@@ -52,7 +58,9 @@ androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fr
 androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "androidx-navigation" }
 androidx-rules-v150 = { module = "androidx.test:rules", version.ref = "rules" }
 androidx-runner-v152 = { module = "androidx.test:runner", version.ref = "runner" }
+androidx-swiperefreshlayout = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swiperefreshlayout" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+core-ktx = { module = "androidx.test:core-ktx", version.ref = "rules" }
 dexmaker-mockito = { module = "com.google.dexmaker:dexmaker-mockito", version.ref = "dexmakerMockito" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 hilt-android-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hiltAndroid" }
@@ -67,12 +75,15 @@ logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", ver
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+mockk-agent = { module = "io.mockk:mockk-agent", version.ref = "mockkVersion" }
+mockk-agent-api = { module = "io.mockk:mockk-agent-api", version.ref = "mockkVersion" }
 mockk-android = { module = "io.mockk:mockk-android", version.ref = "mockkVersion" }
 mockk-v11310 = { module = "io.mockk:mockk", version.ref = "mockkVersion" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 androidx-lifecycle-runtime-android = { group = "androidx.lifecycle", name = "lifecycle-runtime-android", version.ref = "lifecycleRuntimeAndroid" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
 sdp-android = { module = "com.intuit.sdp:sdp-android", version.ref = "sdpAndroid" }
 ssp-android = { module = "com.intuit.ssp:ssp-android", version.ref = "sspAndroid" }
 # Testing libraries

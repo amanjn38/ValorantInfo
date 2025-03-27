@@ -12,6 +12,6 @@ interface CompetitiveTierApiService {
 
     @GET("v1/competitivetiers/{competitiveTierUuid}")
     suspend fun getCompetitiveTierDetail(
-        @Path("competitiveTierUuid") competitiveTierUuid: String
+        @Path("competitiveTierUuid") competitiveTierUuid: String,
     ): Response<CompetitiveTierDetailResponse>
-} 
+}

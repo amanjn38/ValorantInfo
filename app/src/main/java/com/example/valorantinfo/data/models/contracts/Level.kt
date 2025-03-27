@@ -10,5 +10,5 @@ data class Level(
     val isPurchasableWithVP: Boolean,
     val reward: Reward,
     val vpCost: Int,
-    val xp: Int
-): Parcelable
+    val xp: Int,
+) : Parcelable

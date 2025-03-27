@@ -28,7 +28,7 @@ class CeremonyDetailsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentCeremonyDetailsBinding.inflate(inflater, container, false)
         return binding.root
@@ -36,18 +36,18 @@ class CeremonyDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         // Initially hide all content elements
         hideContentElements()
-        
+
         viewModel.fetchCeremonyDetail(args.ceremonyUuid)
         observeCeremonyDetails()
     }
-    
+
     private fun hideContentElements() {
         binding.progressBar.visibility = View.VISIBLE
         binding.tvError.visibility = View.GONE
-        
+
         // Hide all content sections until data is loaded
         binding.tvCeremonyName.visibility = View.GONE
         binding.divider.visibility = View.GONE
@@ -66,10 +66,10 @@ class CeremonyDetailsFragment : Fragment() {
                     is Resource.Success -> {
                         binding.progressBar.visibility = View.GONE
                         binding.tvError.visibility = View.GONE
-                        
+
                         result.data?.let { response ->
                             val ceremony = response.data
-                            
+
                             // Show all content sections
                             binding.tvCeremonyName.visibility = View.VISIBLE
                             binding.divider.visibility = View.VISIBLE
@@ -79,7 +79,7 @@ class CeremonyDetailsFragment : Fragment() {
                             binding.tvAssetPath.visibility = View.VISIBLE
                             binding.tvCeremonyDescription.visibility = View.VISIBLE
                             binding.tvCeremonyUuid.visibility = View.VISIBLE
-                            
+
                             // Set data
                             binding.tvCeremonyName.text = ceremony.displayName
                             binding.tvAssetPath.text = ceremony.assetPath
@@ -90,7 +90,7 @@ class CeremonyDetailsFragment : Fragment() {
                         binding.progressBar.visibility = View.GONE
                         binding.tvError.visibility = View.VISIBLE
                         binding.tvError.text = result.message ?: Constants.CEREMONY_DETAILS_ERROR_MESSAGE
-                        
+
                         // Hide all content sections
                         binding.tvCeremonyName.visibility = View.GONE
                         binding.divider.visibility = View.GONE
@@ -104,7 +104,7 @@ class CeremonyDetailsFragment : Fragment() {
                     is Resource.Loading -> {
                         binding.progressBar.visibility = View.VISIBLE
                         binding.tvError.visibility = View.GONE
-                        
+
                         // Keep content hidden during loading
                         binding.tvCeremonyName.visibility = View.GONE
                         binding.divider.visibility = View.GONE
@@ -124,4 +124,4 @@ class CeremonyDetailsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

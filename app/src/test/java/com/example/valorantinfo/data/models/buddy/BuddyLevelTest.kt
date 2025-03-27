@@ -14,7 +14,7 @@ class BuddyLevelTest {
         val displayName = "Test Level"
         val displayIcon = "https://example.com/icon.png"
         val assetPath = "path/to/asset"
-        
+
         // When
         val buddyLevel = BuddyLevel(
             uuid = uuid,
@@ -22,9 +22,9 @@ class BuddyLevelTest {
             hideIfNotOwned = hideIfNotOwned,
             displayName = displayName,
             displayIcon = displayIcon,
-            assetPath = assetPath
+            assetPath = assetPath,
         )
-        
+
         // Then
         assertEquals(uuid, buddyLevel.uuid)
         assertEquals(charmLevel, buddyLevel.charmLevel)
@@ -33,7 +33,7 @@ class BuddyLevelTest {
         assertEquals(displayIcon, buddyLevel.displayIcon)
         assertEquals(assetPath, buddyLevel.assetPath)
     }
-    
+
     @Test
     fun `test BuddyLevel copy function works correctly`() {
         // Given
@@ -43,15 +43,15 @@ class BuddyLevelTest {
             hideIfNotOwned = false,
             displayName = "Original",
             displayIcon = "original.png",
-            assetPath = "original/path"
+            assetPath = "original/path",
         )
-        
+
         // When
         val copy = original.copy(
             charmLevel = 2,
-            displayName = "Copy"
+            displayName = "Copy",
         )
-        
+
         // Then
         assertEquals("original", copy.uuid)
         assertEquals(2, copy.charmLevel)
@@ -60,4 +60,4 @@ class BuddyLevelTest {
         assertEquals("original.png", copy.displayIcon)
         assertEquals("original/path", copy.assetPath)
     }
-} 
+}

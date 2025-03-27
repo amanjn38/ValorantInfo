@@ -6,4 +6,4 @@ import kotlinx.coroutines.flow.Flow
 
 interface AgentDetailsRepository {
     fun fetchAgentDetails(agentUuid: String): Flow<Resource<AgentDetailsResponse>>
-} 
+}

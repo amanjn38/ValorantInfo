@@ -35,7 +35,7 @@ class TiersAdapter : ListAdapter<Tier, TiersAdapter.TierViewHolder>(DiffCallback
         val binding = ItemTierBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
-            false
+            false,
         )
         return TierViewHolder(binding)
     }
@@ -55,4 +55,4 @@ class TiersAdapter : ListAdapter<Tier, TiersAdapter.TierViewHolder>(DiffCallback
             }
         }
     }
-} 
+}

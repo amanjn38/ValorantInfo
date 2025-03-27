@@ -7,4 +7,4 @@ import kotlinx.coroutines.flow.Flow
 interface ContentTierRepository {
     fun getContentTiers(): Flow<Resource<List<ContentTier>>>
     fun getContentTier(contentTierUuid: String): Flow<Resource<ContentTier>>
-} 
+}

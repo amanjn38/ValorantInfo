@@ -20,5 +20,5 @@ data class ContentTier(
     @SerializedName("displayIcon")
     val displayIcon: String,
     @SerializedName("assetPath")
-    val assetPath: String
-) 
+    val assetPath: String,
+)

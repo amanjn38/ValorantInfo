@@ -9,8 +9,8 @@ import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
 
-class AgentRepositoryImpl  @Inject constructor(
-    private val apiService: AgentApiService
+class AgentRepositoryImpl @Inject constructor(
+    private val apiService: AgentApiService,
 ) : AgentRepository {
     override fun fetchAgents(): Flow<Resource<AgentResponse>> = flow {
         emit(Resource.Loading())

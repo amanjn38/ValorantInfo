@@ -6,7 +6,7 @@ data class CompetitiveTier(
     @SerializedName("uuid") val uuid: String,
     @SerializedName("assetObjectName") val assetObjectName: String,
     @SerializedName("tiers") val tiers: List<Tier>,
-    @SerializedName("assetPath") val assetPath: String
+    @SerializedName("assetPath") val assetPath: String,
 )
 
 data class Tier(
@@ -19,5 +19,5 @@ data class Tier(
     @SerializedName("smallIcon") val smallIcon: String?,
     @SerializedName("largeIcon") val largeIcon: String?,
     @SerializedName("rankTriangleDownIcon") val rankTriangleDownIcon: String?,
-    @SerializedName("rankTriangleUpIcon") val rankTriangleUpIcon: String?
-) 
+    @SerializedName("rankTriangleUpIcon") val rankTriangleUpIcon: String?,
+)

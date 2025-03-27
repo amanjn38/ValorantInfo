@@ -15,15 +15,15 @@ class BuddyLevelResponseTest {
             hideIfNotOwned = false,
             displayName = "Test Level",
             displayIcon = "https://example.com/icon.png",
-            assetPath = "path/to/asset"
+            assetPath = "path/to/asset",
         )
-        
+
         // When
         val response = BuddyLevelResponse(
             status = status,
-            data = buddyLevel
+            data = buddyLevel,
         )
-        
+
         // Then
         assertEquals(status, response.status)
         assertEquals(buddyLevel, response.data)
@@ -31,4 +31,4 @@ class BuddyLevelResponseTest {
         assertEquals(1, response.data?.charmLevel)
         assertEquals("Test Level", response.data?.displayName)
     }
-} 
+}

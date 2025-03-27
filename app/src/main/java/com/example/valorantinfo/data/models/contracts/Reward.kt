@@ -8,5 +8,5 @@ data class Reward(
     val amount: Int,
     val isHighlighted: Boolean,
     val type: String,
-    val uuid: String
-): Parcelable
+    val uuid: String,
+) : Parcelable

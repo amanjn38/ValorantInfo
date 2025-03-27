@@ -35,7 +35,7 @@ class ContractChaptersFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentContractChaptersBinding.inflate(inflater, container, false)
         return binding.root
@@ -118,7 +118,7 @@ class ContractChaptersFragment : Fragment() {
             .actionContractChaptersFragmentToContractChapterFragment(
                 contractId = args.contractId,
                 chapterId = chapter.id,
-                isEpilogue = chapter.isEpilogue
+                isEpilogue = chapter.isEpilogue,
             )
         findNavController().navigate(action)
     }
@@ -127,4 +127,4 @@ class ContractChaptersFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

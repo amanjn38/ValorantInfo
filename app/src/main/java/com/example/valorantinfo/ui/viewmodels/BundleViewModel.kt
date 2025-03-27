@@ -13,16 +13,16 @@ import javax.inject.Inject
 
 @HiltViewModel
 class BundleViewModel @Inject constructor(
-    private val repository: BundleRepository
+    private val repository: BundleRepository,
 ) : ViewModel() {
-    
+
     private val _bundles = MutableStateFlow<Resource<BundlesListResponse>>(Resource.Loading())
     val bundles: StateFlow<Resource<BundlesListResponse>> = _bundles
-    
+
     init {
         getBundles()
     }
-    
+
     fun getBundles() {
         viewModelScope.launch {
             repository.fetchBundles().collect { result ->
@@ -30,4 +30,4 @@ class BundleViewModel @Inject constructor(
             }
         }
     }
-} 
+}

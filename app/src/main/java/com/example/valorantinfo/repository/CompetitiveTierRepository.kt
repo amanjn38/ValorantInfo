@@ -8,4 +8,4 @@ import kotlinx.coroutines.flow.Flow
 interface CompetitiveTierRepository {
     suspend fun fetchCompetitiveTiers(): Flow<Resource<CompetitiveTiersListResponse>>
     suspend fun fetchCompetitiveTierDetail(competitiveTierUuid: String): Flow<Resource<CompetitiveTierDetailResponse>>
-} 
+}

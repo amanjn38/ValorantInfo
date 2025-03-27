@@ -40,7 +40,7 @@ class CompetitiveTiersAdapter(private val onItemClicked: (CompetitiveTier) -> Un
         val binding = ItemCompetitiveTierBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
-            false
+            false,
         )
         return CompetitiveTierViewHolder(binding)
     }
@@ -60,4 +60,4 @@ class CompetitiveTiersAdapter(private val onItemClicked: (CompetitiveTier) -> Un
             }
         }
     }
-} 
+}

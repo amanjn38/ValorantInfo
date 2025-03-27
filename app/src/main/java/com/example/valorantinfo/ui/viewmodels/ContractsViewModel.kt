@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ContractsViewModel @Inject constructor(
-    private val repository: ContractRepository
+    private val repository: ContractRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<Resource<List<Data>>>(Resource.Loading())
@@ -28,7 +28,7 @@ class ContractsViewModel @Inject constructor(
     private fun loadContracts() {
         viewModelScope.launch {
             _uiState.value = Resource.Loading()
-            
+
             when (val result = repository.getContracts()) {
                 is Resource.Success -> {
                     result.data?.let { contracts ->
@@ -55,4 +55,4 @@ class ContractsViewModel @Inject constructor(
     fun retry() {
         loadContracts()
     }
-} 
+}

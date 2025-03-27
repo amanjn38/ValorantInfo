@@ -21,7 +21,7 @@ class TestHomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
@@ -29,11 +29,11 @@ class TestHomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         setupCategoriesRecyclerView()
         loadCategories()
     }
-    
+
     private fun setupCategoriesRecyclerView() {
         val categoryAdapter = CategoryAdapter { /* No navigation in tests */ }
         binding.rvCategories.apply {
@@ -42,15 +42,15 @@ class TestHomeFragment : Fragment() {
             setHasFixedSize(true)
         }
     }
-    
+
     private fun loadCategories() {
         val categories = listOf(
             Category(
                 title = "AGENTS",
-                description = "View all agent details and abilities"
-            )
+                description = "View all agent details and abilities",
+            ),
         )
-        
+
         (binding.rvCategories.adapter as CategoryAdapter).submitList(categories)
     }
 
@@ -58,4 +58,4 @@ class TestHomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

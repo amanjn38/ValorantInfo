@@ -15,10 +15,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         // Install splash screen before calling super.onCreate
         val splashScreen = installSplashScreen()
-        
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        
+
         // Hide the action bar
         supportActionBar?.hide()
         setContentView(R.layout.activity_main)

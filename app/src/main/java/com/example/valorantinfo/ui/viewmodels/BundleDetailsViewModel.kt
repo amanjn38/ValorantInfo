@@ -3,7 +3,6 @@ package com.example.valorantinfo.ui.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.valorantinfo.data.models.bundle.Bundle
-import com.example.valorantinfo.data.models.bundle.BundleDetailResponse
 import com.example.valorantinfo.repository.BundleRepository
 import com.example.valorantinfo.utilities.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -14,12 +13,12 @@ import javax.inject.Inject
 
 @HiltViewModel
 class BundleDetailsViewModel @Inject constructor(
-    private val repository: BundleRepository
+    private val repository: BundleRepository,
 ) : ViewModel() {
-    
+
     private val _bundleDetails = MutableStateFlow<Resource<Bundle>>(Resource.Loading())
     val bundleDetails: StateFlow<Resource<Bundle>> = _bundleDetails
-    
+
     fun fetchBundleDetails(bundleUuid: String) {
         viewModelScope.launch {
             repository.fetchBundleDetails(bundleUuid).collect { result ->
@@ -41,4 +40,4 @@ class BundleDetailsViewModel @Inject constructor(
             }
         }
     }
-} 
+}

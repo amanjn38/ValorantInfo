@@ -11,14 +11,14 @@ import com.example.valorantinfo.data.models.contracts.Data
 import com.example.valorantinfo.databinding.ItemContractBinding
 
 class ContractsAdapter(
-    private val onContractClick: (Data) -> Unit
+    private val onContractClick: (Data) -> Unit,
 ) : ListAdapter<Data, ContractsAdapter.ViewHolder>(ContractDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemContractBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
-            false
+            false,
         )
         return ViewHolder(binding)
     }
@@ -32,7 +32,7 @@ class ContractsAdapter(
             binding.apply {
                 contractName.text = contract.displayName
                 contractDescription.text = contract.content.relationType
-                
+
                 // Load contract image
                 Glide.with(contractImage)
                     .load(contract.displayIcon)
@@ -40,7 +40,7 @@ class ContractsAdapter(
                     .error(R.drawable.error_image)
                     .into(contractImage)
             }
-            
+
             itemView.setOnClickListener { onContractClick(contract) }
         }
     }
@@ -54,4 +54,4 @@ class ContractsAdapter(
             return oldItem == newItem
         }
     }
-} 
+}

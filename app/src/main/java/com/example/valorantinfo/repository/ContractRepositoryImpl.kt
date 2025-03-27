@@ -7,7 +7,7 @@ import com.example.valorantinfo.utilities.Resource
 import javax.inject.Inject
 
 class ContractRepositoryImpl @Inject constructor(
-    private val api: ContractApiService
+    private val api: ContractApiService,
 ) : ContractRepository {
     override suspend fun getContracts(): Resource<Contracts> {
         return try {
@@ -37,4 +37,4 @@ class ContractRepositoryImpl @Inject constructor(
             null
         }
     }
-} 
+}

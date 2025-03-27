@@ -17,7 +17,7 @@ class AbilitiesAdapter : ListAdapter<Ability, AbilitiesAdapter.AbilityViewHolder
         val binding = ItemAbilityBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
-            false
+            false,
         )
         return AbilityViewHolder(binding)
     }
@@ -34,7 +34,7 @@ class AbilitiesAdapter : ListAdapter<Ability, AbilitiesAdapter.AbilityViewHolder
             binding.apply {
                 tvAbilityName.text = ability.displayName
                 tvAbilityDescription.text = ability.description
-                
+
                 // Load ability icon
                 ability.displayIcon?.let { iconUrl ->
                     Glide.with(itemView.context)
@@ -56,4 +56,4 @@ class AbilitiesAdapter : ListAdapter<Ability, AbilitiesAdapter.AbilityViewHolder
             return oldItem == newItem
         }
     }
-} 
+}

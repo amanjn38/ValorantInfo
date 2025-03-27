@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CeremonyViewModel @Inject constructor(
-    private val repository: CeremonyRepository
+    private val repository: CeremonyRepository,
 ) : ViewModel() {
 
     private val _ceremonies = MutableStateFlow<Resource<CeremoniesListResponse>>(Resource.Loading())
@@ -32,4 +32,4 @@ class CeremonyViewModel @Inject constructor(
             }.launchIn(viewModelScope)
         }
     }
-} 
+}

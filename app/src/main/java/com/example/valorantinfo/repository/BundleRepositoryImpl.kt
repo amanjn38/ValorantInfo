@@ -10,15 +10,15 @@ import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class BundleRepositoryImpl @Inject constructor(
-    private val bundleApiService: BundleApiService
+    private val bundleApiService: BundleApiService,
 ) : BundleRepository {
-    
+
     override suspend fun fetchBundles(): Flow<Resource<BundlesListResponse>> = flow {
         emit(Resource.Loading())
-        
+
         try {
             val response = bundleApiService.getBundles()
-            
+
             if (response.isSuccessful) {
                 response.body()?.let {
                     emit(Resource.Success(it))
@@ -30,13 +30,13 @@ class BundleRepositoryImpl @Inject constructor(
             emit(Resource.Error(e.message ?: Constants.BUNDLE_ERROR_MESSAGE))
         }
     }
-    
+
     override suspend fun fetchBundleDetails(bundleUuid: String): Flow<Resource<BundleDetailResponse>> = flow {
         emit(Resource.Loading())
-        
+
         try {
             val response = bundleApiService.getBundleDetails(bundleUuid)
-            
+
             if (response.isSuccessful) {
                 response.body()?.let {
                     emit(Resource.Success(it))
@@ -48,4 +48,4 @@ class BundleRepositoryImpl @Inject constructor(
             emit(Resource.Error(e.message ?: Constants.BUNDLE_DETAILS_ERROR_MESSAGE))
         }
     }
-} 
+}

@@ -9,5 +9,5 @@ data class Data(
     val levelVPCostOverride: Int,
     val shipIt: Boolean,
     val useLevelVPCostOverride: Boolean,
-    val uuid: String
+    val uuid: String,
 )

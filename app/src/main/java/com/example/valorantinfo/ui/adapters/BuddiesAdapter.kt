@@ -26,18 +26,20 @@ class BuddiesAdapter(private val onBuddyClick: (Buddy) -> Unit) :
 
     inner class BuddyViewHolder(
         private val binding: ItemBuddyBinding,
-        private val onBuddyClick: (Buddy) -> Unit
+        private val onBuddyClick: (Buddy) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(buddy: Buddy) {
             binding.apply {
                 tvBuddyName.text = buddy.displayName
-                
+
                 Glide.with(itemView.context)
                     .load(buddy.displayIcon)
-                    .apply(RequestOptions()
-                        .centerInside()
-                        .diskCacheStrategy(DiskCacheStrategy.ALL))
+                    .apply(
+                        RequestOptions()
+                            .centerInside()
+                            .diskCacheStrategy(DiskCacheStrategy.ALL),
+                    )
                     .into(ivBuddyIcon)
 
                 root.setOnClickListener {
@@ -59,4 +61,4 @@ class BuddiesAdapter(private val onBuddyClick: (Buddy) -> Unit) :
             return oldItem == newItem
         }
     }
-} 
+}

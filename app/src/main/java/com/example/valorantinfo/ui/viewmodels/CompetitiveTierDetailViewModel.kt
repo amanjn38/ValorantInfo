@@ -15,7 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class CompetitiveTierDetailViewModel @Inject constructor(
     private val repository: CompetitiveTierRepository,
-    private val savedStateHandle: SavedStateHandle
+    private val savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
 
     private val _competitiveTierDetailState = MutableStateFlow<Resource<CompetitiveTierDetailResponse>>(Resource.Loading())
@@ -29,7 +29,7 @@ class CompetitiveTierDetailViewModel @Inject constructor(
             competitiveTierUuid = uuid
             getCompetitiveTierDetail(uuid)
         }
-        
+
         savedStateHandle.get<String>("competitiveTierName")?.let { name ->
             competitiveTierName = name
         }
@@ -42,8 +42,8 @@ class CompetitiveTierDetailViewModel @Inject constructor(
             }
         }
     }
-    
+
     fun getCompetitiveTierName(): String {
         return competitiveTierName ?: "Competitive Tier"
     }
-} 
+}

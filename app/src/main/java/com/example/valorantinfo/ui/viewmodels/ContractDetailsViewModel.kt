@@ -17,7 +17,7 @@ import javax.inject.Inject
 @HiltViewModel
 class ContractDetailsViewModel @Inject constructor(
     private val repository: ContractRepository,
-    savedStateHandle: SavedStateHandle
+    savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
 
     private val contractId: String = checkNotNull(savedStateHandle["contractId"])
@@ -32,7 +32,7 @@ class ContractDetailsViewModel @Inject constructor(
     private fun loadContractDetails() {
         viewModelScope.launch {
             _uiState.value = Resource.Loading()
-            
+
             when (val result = repository.getContractDetails(contractId)) {
                 is Resource.Success -> {
                     result.data?.let { contract ->
@@ -65,4 +65,4 @@ class ContractDetailsViewModel @Inject constructor(
     fun retry() {
         loadContractDetails()
     }
-} 
+}

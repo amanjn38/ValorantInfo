@@ -18,7 +18,7 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class AgentsFragmentTest {
-    
+
     private lateinit var viewModel: AgentViewModel
     private lateinit var scenario: FragmentScenario<TestAgentsFragment>
     private val agentsStateFlow = MutableStateFlow<Resource<AgentResponse>>(Resource.Loading())
@@ -28,19 +28,19 @@ class AgentsFragmentTest {
     fun setup() {
         // Initialize MockK
         MockKInitializer.initialize()
-        
+
         // Create a relaxed mock of the ViewModel
         viewModel = mockk(relaxed = true)
-        
+
         // Set up the state flow behavior
         every { viewModel.agentsState } returns agentsStateFlow
         every { viewModel.filteredAgents } returns filteredAgentsFlow
     }
-    
+
     private fun launchFragment() {
         // Launch the fragment with the mocked ViewModel
         scenario = launchFragmentInContainer(
-            themeResId = R.style.Theme_ValorantInfo_NoActionBar
+            themeResId = R.style.Theme_ValorantInfo_NoActionBar,
         ) {
             TestAgentsFragment().apply {
                 this.viewModel = this@AgentsFragmentTest.viewModel
@@ -52,10 +52,10 @@ class AgentsFragmentTest {
     fun testAgentsFragmentLoadingState() {
         // Set the loading state
         agentsStateFlow.value = Resource.Loading()
-        
+
         // Launch fragment after setting state
         launchFragment()
-        
+
         // Add assertions as needed
         // For now, this is just verifying that the fragment loads without crashing
     }
@@ -85,22 +85,22 @@ class AgentsFragmentTest {
                 isBaseContent = true,
                 role = null,
                 abilities = emptyList(),
-                voiceLine = null
-            )
+                voiceLine = null,
+            ),
         )
-        
+
         // Set the filtered agents and success state
         filteredAgentsFlow.value = agents
         agentsStateFlow.value = Resource.Success(
             AgentResponse(
                 status = 200,
-                data = agents
-            )
+                data = agents,
+            ),
         )
-        
+
         // Launch fragment after setting state
         launchFragment()
-        
+
         // Add assertions as needed
         // For now, this is just verifying that the fragment handles success state without crashing
     }

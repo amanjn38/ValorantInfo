@@ -10,7 +10,7 @@ import com.example.valorantinfo.data.models.contracts.Chapter
 import com.example.valorantinfo.databinding.ItemContractChapterBinding
 
 class ContractChaptersAdapter(
-    private val onChapterClick: (Chapter) -> Unit
+    private val onChapterClick: (Chapter) -> Unit,
 ) : ListAdapter<Chapter, ContractChaptersAdapter.ChapterViewHolder>(ChapterDiffCallback()) {
 
     private val TAG = "ContractChaptersAdapter"
@@ -20,7 +20,7 @@ class ContractChaptersAdapter(
         val binding = ItemContractChapterBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
-            false
+            false,
         )
         return ChapterViewHolder(binding)
     }
@@ -32,7 +32,7 @@ class ContractChaptersAdapter(
     }
 
     inner class ChapterViewHolder(
-        private val binding: ItemContractChapterBinding
+        private val binding: ItemContractChapterBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(chapter: Chapter) {
@@ -53,4 +53,4 @@ class ContractChaptersAdapter(
             return oldItem == newItem
         }
     }
-} 
+}

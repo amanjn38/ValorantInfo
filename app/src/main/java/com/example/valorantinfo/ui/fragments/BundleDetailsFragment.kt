@@ -34,7 +34,7 @@ class BundleDetailsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentBundleDetailsBinding.inflate(inflater, container, false)
         return binding.root
@@ -98,7 +98,7 @@ class BundleDetailsFragment : Fragment() {
                                         e: GlideException?,
                                         model: Any?,
                                         target: Target<Drawable>,
-                                        isFirstResource: Boolean
+                                        isFirstResource: Boolean,
                                     ): Boolean {
                                         binding.progressBarIcon.visibility = View.GONE
                                         return false
@@ -109,7 +109,7 @@ class BundleDetailsFragment : Fragment() {
                                         model: Any,
                                         target: Target<Drawable>?,
                                         dataSource: DataSource,
-                                        isFirstResource: Boolean
+                                        isFirstResource: Boolean,
                                     ): Boolean {
                                         binding.progressBarIcon.visibility = View.GONE
                                         binding.ivBundleIcon.visibility = View.VISIBLE
@@ -129,7 +129,7 @@ class BundleDetailsFragment : Fragment() {
                                             e: GlideException?,
                                             model: Any?,
                                             target: Target<Drawable>,
-                                            isFirstResource: Boolean
+                                            isFirstResource: Boolean,
                                         ): Boolean {
                                             binding.progressBarPromo.visibility = View.GONE
                                             return false
@@ -140,7 +140,7 @@ class BundleDetailsFragment : Fragment() {
                                             model: Any,
                                             target: Target<Drawable>?,
                                             dataSource: DataSource,
-                                            isFirstResource: Boolean
+                                            isFirstResource: Boolean,
                                         ): Boolean {
                                             binding.progressBarPromo.visibility = View.GONE
                                             binding.ivPromoImage.visibility = View.VISIBLE
@@ -204,4 +204,4 @@ class BundleDetailsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

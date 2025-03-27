@@ -12,9 +12,9 @@ import java.io.IOException
 import javax.inject.Inject
 
 class BuddyRepositoryImpl @Inject constructor(
-    private val apiService: BuddyApiService
+    private val apiService: BuddyApiService,
 ) : BuddyRepository {
-    
+
     override fun fetchBuddies(): Flow<Resource<BuddyResponse>> = flow {
         emit(Resource.Loading())
         try {
@@ -32,7 +32,7 @@ class BuddyRepositoryImpl @Inject constructor(
             emit(Resource.Error("Network error: ${e.message}"))
         }
     }
-    
+
     override fun fetchBuddyDetails(buddyUuid: String): Flow<Resource<BuddyDetailResponse>> = flow {
         emit(Resource.Loading())
         try {
@@ -50,7 +50,7 @@ class BuddyRepositoryImpl @Inject constructor(
             emit(Resource.Error("Network error: ${e.message}"))
         }
     }
-    
+
     override fun fetchBuddyLevel(levelUuid: String): Flow<Resource<BuddyLevelResponse>> = flow {
         emit(Resource.Loading())
         try {
@@ -68,4 +68,4 @@ class BuddyRepositoryImpl @Inject constructor(
             emit(Resource.Error("Network error: ${e.message}"))
         }
     }
-} 
+}

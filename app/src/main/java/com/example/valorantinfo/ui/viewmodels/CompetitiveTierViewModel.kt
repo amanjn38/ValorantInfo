@@ -13,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CompetitiveTierViewModel @Inject constructor(
-    private val repository: CompetitiveTierRepository
+    private val repository: CompetitiveTierRepository,
 ) : ViewModel() {
 
     private val _competitiveTiersState = MutableStateFlow<Resource<CompetitiveTiersListResponse>>(Resource.Loading())
@@ -30,4 +30,4 @@ class CompetitiveTierViewModel @Inject constructor(
             }
         }
     }
-} 
+}

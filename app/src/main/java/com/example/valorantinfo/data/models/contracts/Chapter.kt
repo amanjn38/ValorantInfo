@@ -9,5 +9,5 @@ data class Chapter(
     val position: Int,
     val freeRewards: List<Reward>? = emptyList(),
     val isEpilogue: Boolean,
-    val levels: List<Level>
-): Parcelable
+    val levels: List<Level>,
+) : Parcelable

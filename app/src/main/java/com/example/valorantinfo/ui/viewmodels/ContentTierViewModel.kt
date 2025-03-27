@@ -14,7 +14,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ContentTierViewModel @Inject constructor(
-    private val repository: ContentTierRepository
+    private val repository: ContentTierRepository,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow<Resource<List<ContentTier>>>(Resource.Loading())
@@ -31,4 +31,4 @@ class ContentTierViewModel @Inject constructor(
             }
         }
     }
-} 
+}

@@ -11,14 +11,14 @@ import com.example.valorantinfo.data.models.agent.Agent
 import com.example.valorantinfo.databinding.ItemAgentBinding
 
 class AgentsAdapter(
-    private val onAgentClick: (Agent) -> Unit = {}
+    private val onAgentClick: (Agent) -> Unit = {},
 ) : ListAdapter<Agent, AgentsAdapter.AgentViewHolder>(AgentDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AgentViewHolder {
         val binding = ItemAgentBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
-            false
+            false,
         )
         return AgentViewHolder(binding)
     }
@@ -34,31 +34,31 @@ class AgentsAdapter(
         fun bind(agent: Agent) {
             binding.apply {
                 tvAgentName.text = agent.displayName.uppercase()
-                
+
                 // Set agent role if available
                 agent.role?.let {
                     tvAgentRole.text = it.displayName
-                    
+
                     // Load role icon
                     Glide.with(itemView)
                         .load(it.displayIcon)
                         .diskCacheStrategy(DiskCacheStrategy.ALL)
                         .into(ivAgentRole)
                 }
-                
+
                 // Load agent portrait
                 Glide.with(itemView)
                     .load(agent.fullPortrait ?: agent.displayIcon)
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .into(ivAgentPortrait)
-                
+
                 // Set agent background - ensure it's not being skipped
                 Glide.with(itemView)
                     .load(agent.background)
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
-                    .error(android.R.color.transparent)  // Fallback for missing backgrounds
+                    .error(android.R.color.transparent) // Fallback for missing backgrounds
                     .into(ivAgentBackground)
-                
+
                 // Set click listener
                 root.setOnClickListener {
                     onAgentClick(agent)
@@ -76,4 +76,4 @@ class AgentsAdapter(
             return oldItem == newItem
         }
     }
-} 
+}

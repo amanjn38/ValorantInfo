@@ -10,7 +10,7 @@ import java.io.IOException
 import javax.inject.Inject
 
 class AgentDetailsRepositoryImpl @Inject constructor(
-    private val apiService: AgentDetailsApiService
+    private val apiService: AgentDetailsApiService,
 ) : AgentDetailsRepository {
     override fun fetchAgentDetails(agentUuid: String): Flow<Resource<AgentDetailsResponse>> = flow {
         emit(Resource.Loading())
@@ -29,4 +29,4 @@ class AgentDetailsRepositoryImpl @Inject constructor(
             emit(Resource.Error("Network error: ${e.message}"))
         }
     }
-} 
+}

@@ -6,5 +6,5 @@ data class ContentTiersListResponse(
     @SerializedName("status")
     val status: Int,
     @SerializedName("data")
-    val data: List<ContentTier>
-) 
+    val data: List<ContentTier>,
+)

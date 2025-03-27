@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -32,7 +31,7 @@ class ContractsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentContractsBinding.inflate(inflater, container, false)
         return binding.root
@@ -62,8 +61,8 @@ class ContractsFragment : Fragment() {
         contractsAdapter = ContractsAdapter { contract ->
             findNavController().navigate(
                 ContractsFragmentDirections.actionContractsFragmentToContractChaptersFragment(
-                    contractId = contract.uuid
-                )
+                    contractId = contract.uuid,
+                ),
             )
         }
 
@@ -125,7 +124,7 @@ class ContractsFragment : Fragment() {
             visibility = View.VISIBLE
             setOnClickListener { viewModel.retry() }
         }
-        
+
         Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG)
             .setAction("Retry") { viewModel.retry() }
             .show()
@@ -141,4 +140,4 @@ class ContractsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

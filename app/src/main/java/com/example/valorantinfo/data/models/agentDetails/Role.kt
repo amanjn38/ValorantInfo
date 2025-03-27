@@ -5,5 +5,5 @@ data class Role(
     val displayName: String,
     val description: String,
     val displayIcon: String,
-    val assetPath: String
-) 
+    val assetPath: String,
+)

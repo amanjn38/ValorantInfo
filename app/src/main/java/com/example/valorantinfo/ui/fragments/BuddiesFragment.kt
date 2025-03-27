@@ -6,7 +6,6 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -33,7 +32,7 @@ class BuddiesFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentBuddiesBinding.inflate(inflater, container, false)
         return binding.root
@@ -52,12 +51,12 @@ class BuddiesFragment : Fragment() {
         buddiesAdapter = BuddiesAdapter { buddy ->
             // Show a short toast with the buddy name for better feedback
 //            Toast.makeText(context, "Loading ${buddy.displayName} details...", Toast.LENGTH_SHORT).show()
-            
+
             // Navigate to buddy details
             val action = BuddiesFragmentDirections.actionBuddiesFragmentToBuddyDetailsFragment(buddy.uuid)
             findNavController().navigate(action)
         }
-        
+
         // Set up RecyclerView with optimal column count based on screen width
         val spanCount = calculateSpanCount()
         binding.rvBuddies.apply {
@@ -67,7 +66,7 @@ class BuddiesFragment : Fragment() {
             itemAnimator?.changeDuration = 0
         }
     }
-    
+
     // Calculate the optimal number of columns based on screen width
     private fun calculateSpanCount(): Int {
         val displayMetrics = resources.displayMetrics
@@ -85,16 +84,22 @@ class BuddiesFragment : Fragment() {
 
             override fun afterTextChanged(s: Editable?) {}
         })
-        
+
         // Set clear button functionality
         binding.etSearch.setOnFocusChangeListener { _, hasFocus ->
             if (hasFocus && binding.etSearch.text.isNotEmpty()) {
                 binding.etSearch.setCompoundDrawablesWithIntrinsicBounds(
-                    R.drawable.ic_search, 0, R.drawable.ic_close, 0
+                    R.drawable.ic_search,
+                    0,
+                    R.drawable.ic_close,
+                    0,
                 )
             } else {
                 binding.etSearch.setCompoundDrawablesWithIntrinsicBounds(
-                    R.drawable.ic_search, 0, 0, 0
+                    R.drawable.ic_search,
+                    0,
+                    0,
+                    0,
                 )
             }
         }
@@ -129,7 +134,7 @@ class BuddiesFragment : Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.filteredBuddies.collectLatest { buddies ->
                 buddiesAdapter.submitList(buddies)
-                
+
                 // Show empty state message if no buddies match the search
                 if (buddies.isEmpty() && viewModel.searchQuery.value.isNotEmpty()) {
                     binding.tvError.visibility = View.VISIBLE
@@ -147,4 +152,4 @@ class BuddiesFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

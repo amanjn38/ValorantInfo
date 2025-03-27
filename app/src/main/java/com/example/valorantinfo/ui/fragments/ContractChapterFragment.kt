@@ -5,7 +5,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -15,8 +14,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.valorantinfo.data.models.contracts.Chapter
 import com.example.valorantinfo.databinding.FragmentContractChapterBinding
 import com.example.valorantinfo.ui.adapters.ContractLevelAdapter
-import com.example.valorantinfo.ui.viewmodels.ContractChapterViewModel
 import com.example.valorantinfo.ui.viewmodels.ContractChapterUiState
+import com.example.valorantinfo.ui.viewmodels.ContractChapterViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -35,7 +34,7 @@ class ContractChapterFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentContractChapterBinding.inflate(inflater, container, false)
         return binding.root
@@ -88,7 +87,7 @@ class ContractChapterFragment : Fragment() {
         viewModel.loadChapter(
             contractId = args.contractId,
             chapterId = args.chapterId,
-            isEpilogue = args.isEpilogue
+            isEpilogue = args.isEpilogue,
         )
     }
 
@@ -123,4 +122,4 @@ class ContractChapterFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

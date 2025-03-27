@@ -1,7 +1,17 @@
 package com.example.valorantinfo.di
 
-import com.example.valorantinfo.api.*
-import com.example.valorantinfo.repository.*
+import com.example.valorantinfo.api.AgentApiService
+import com.example.valorantinfo.api.AgentDetailsApiService
+import com.example.valorantinfo.api.BuddyApiService
+import com.example.valorantinfo.api.BundleApiService
+import com.example.valorantinfo.api.CeremonyApiService
+import com.example.valorantinfo.api.ContentTierApiService
+import com.example.valorantinfo.repository.AgentDetailsRepository
+import com.example.valorantinfo.repository.AgentDetailsRepositoryImpl
+import com.example.valorantinfo.repository.AgentRepository
+import com.example.valorantinfo.repository.AgentRepositoryImpl
+import com.example.valorantinfo.repository.ContentTierRepository
+import com.example.valorantinfo.repository.ContentTierRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.components.SingletonComponent
@@ -13,7 +23,7 @@ import javax.inject.Singleton
 @Module
 @TestInstallIn(
     components = [SingletonComponent::class],
-    replaces = [AppModule::class]
+    replaces = [AppModule::class],
 )
 object TestAppModule {
 
@@ -68,7 +78,6 @@ object TestAppModule {
         return retrofit.create(CeremonyApiService::class.java)
     }
 
-
     @Provides
     @Singleton
     fun provideContentTierApiService(retrofit: Retrofit): ContentTierApiService {
@@ -80,4 +89,4 @@ object TestAppModule {
     fun provideContentTierRepository(api: ContentTierApiService): ContentTierRepository {
         return ContentTierRepositoryImpl(api)
     }
-} 
+}

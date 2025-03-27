@@ -12,7 +12,7 @@ import java.io.IOException
 import javax.inject.Inject
 
 class CompetitiveTierRepositoryImpl @Inject constructor(
-    private val apiService: CompetitiveTierApiService
+    private val apiService: CompetitiveTierApiService,
 ) : CompetitiveTierRepository {
 
     override suspend fun fetchCompetitiveTiers(): Flow<Resource<CompetitiveTiersListResponse>> = flow {
@@ -50,4 +50,4 @@ class CompetitiveTierRepositoryImpl @Inject constructor(
             emit(Resource.Error(Constants.NETWORK_ERROR))
         }
     }
-} 
+}

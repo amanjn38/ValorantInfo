@@ -5,6 +5,7 @@ plugins {
     id("dagger.hilt.android.plugin")
     id("androidx.navigation.safeargs.kotlin")
     id("kotlin-parcelize")
+    id("org.jlleitschuh.gradle.ktlint") version "11.6.1"
 }
 
 android {
@@ -19,7 +20,6 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "com.example.valorantinfo.HiltTestRunner"
-        
         // Required for MockK to work properly with Android instrumented tests
         ndk {
             abiFilters.add("armeabi-v7a")
@@ -34,11 +34,11 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
-    
+
     packaging {
         resources {
             excludes += "/META-INF/LICENSE.md"
@@ -49,7 +49,7 @@ android {
             jniLibs.useLegacyPackaging = true
         }
     }
-    
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -62,13 +62,41 @@ android {
         viewBinding = true
         buildConfig = true
     }
-    
+
     testOptions {
         unitTests {
             isIncludeAndroidResources = true
             isReturnDefaultValues = true
         }
         animationsDisabled = true
+    }
+
+    // Lint configuration
+    lint {
+        abortOnError = true
+        checkReleaseBuilds = true
+        disable += setOf("InvalidPackage", "MissingPermission")
+        enable += setOf("NullSafeMutableStateFlow", "MissingContentDescription")
+        warningsAsErrors = true
+        xmlReport = true
+        htmlReport = true
+        textReport = true
+        baseline = file("lint-baseline.xml")
+    }
+}
+
+// KtLint configuration
+ktlint {
+    version.set("0.50.0")
+    verbose.set(true)
+    outputToConsole.set(true)
+    enableExperimentalRules.set(true)
+    filter {
+        exclude { element -> element.file.path.contains("generated/") }
+    }
+    reporters {
+        reporter(org.jlleitschuh.gradle.ktlint.reporter.ReporterType.PLAIN)
+        reporter(org.jlleitschuh.gradle.ktlint.reporter.ReporterType.CHECKSTYLE)
     }
 }
 
@@ -120,7 +148,7 @@ dependencies {
     implementation(libs.sdp.android)
     implementation(libs.ssp.android)
     implementation(libs.androidx.core.splashscreen)
-    
+
     // Testing dependencies
     testImplementation(libs.mockk.v11310)
     androidTestImplementation(libs.mockk.android)
@@ -128,7 +156,7 @@ dependencies {
     androidTestImplementation(libs.androidx.rules.v150)
     androidTestImplementation(libs.arch.core.testing)
     androidTestImplementation(libs.dexmaker.mockito)
-    debugImplementation("androidx.fragment:fragment-testing:1.8.6")
+    debugImplementation(libs.androidx.fragment.testing)
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.turbine)
     testImplementation(libs.truth)
@@ -141,37 +169,36 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core.v351)
     androidTestImplementation(libs.androidx.espresso.contrib.v351)
     androidTestImplementation(libs.androidx.espresso.intents.v351)
-    
+
     // Hilt testing
     androidTestImplementation(libs.hilt.android.testing)
     kaptAndroidTest("com.google.dagger:hilt-android-compiler:${libs.versions.hiltAndroid.get()}")
-    
+
     // Fragment testing (use consistent version with test:core)
-    val fragmentVersion = "1.6.2" // Use a version compatible with test:core:1.5.0
-    debugImplementation("androidx.fragment:fragment-testing:$fragmentVersion")
-    debugImplementation("androidx.fragment:fragment-testing:$fragmentVersion")
-    
+    debugImplementation(libs.androidx.fragment.testing.v162)
+    debugImplementation(libs.androidx.fragment.testing.v162)
+
     // MockK for Android instrumented tests (with the correct configuration)
     androidTestImplementation("io.mockk:mockk-android:$mockkVersion") {
         exclude(group = "io.mockk", module = "mockk-agent-jvm")
     }
     // Use this version for Android instrumentation tests to avoid need for jvmti agent
-    androidTestImplementation("io.mockk:mockk-agent-api:$mockkVersion")
-    androidTestImplementation("io.mockk:mockk-agent:$mockkVersion")
+    androidTestImplementation(libs.mockk.agent.api)
+    androidTestImplementation(libs.mockk.agent)
 
     // Testing
     testImplementation(libs.junit)
     testImplementation(libs.mockk)
-    testImplementation("androidx.arch.core:core-testing:2.2.0")
+    testImplementation(libs.arch.core.testing)
     testImplementation(libs.kotlinx.coroutines.test)
-    testImplementation("org.robolectric:robolectric:4.10.3")
-    testImplementation("androidx.test.espresso:espresso-contrib:3.5.1")
-    testImplementation("androidx.test:core:1.5.0")
-    testImplementation("androidx.test:core-ktx:1.5.0")
-    
+    testImplementation(libs.robolectric)
+    testImplementation(libs.androidx.espresso.contrib.v351)
+    testImplementation(libs.androidx.core.v150)
+    testImplementation(libs.core.ktx)
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.mockk.android)
-    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
-
+    implementation(libs.androidx.swiperefreshlayout)
+    testImplementation(kotlin("test"))
 }

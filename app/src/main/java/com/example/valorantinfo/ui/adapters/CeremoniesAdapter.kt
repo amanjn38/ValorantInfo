@@ -15,7 +15,7 @@ class CeremoniesAdapter(private val onCeremonyClick: (Ceremony) -> Unit) :
         val binding = ItemCeremonyBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
-            false
+            false,
         )
         return CeremonyViewHolder(binding)
     }
@@ -29,7 +29,7 @@ class CeremoniesAdapter(private val onCeremonyClick: (Ceremony) -> Unit) :
 
         fun bind(ceremony: Ceremony, onCeremonyClick: (Ceremony) -> Unit) {
             binding.tvCeremonyName.text = ceremony.displayName
-            
+
             // Set click listener
             binding.root.setOnClickListener {
                 onCeremonyClick(ceremony)
@@ -46,4 +46,4 @@ class CeremoniesAdapter(private val onCeremonyClick: (Ceremony) -> Unit) :
             return oldItem == newItem
         }
     }
-} 
+}

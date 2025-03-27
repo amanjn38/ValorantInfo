@@ -13,7 +13,7 @@ interface BuddyApiService {
 
     @GET("v1/buddies/{buddyUuid}")
     suspend fun getBuddyDetails(@Path("buddyUuid") buddyUuid: String): Response<BuddyDetailResponse>
-    
+
     @GET("v1/buddies/levels/{buddyLevelUuid}")
     suspend fun getBuddyLevel(@Path("buddyLevelUuid") buddyLevelUuid: String): Response<BuddyLevelResponse>
 }

@@ -26,14 +26,14 @@ class TestAgentsFragment : Fragment() {
 
     private var _binding: FragmentAgentsBinding? = null
     private val binding get() = _binding!!
-    
+
     lateinit var viewModel: AgentViewModel
     private lateinit var agentsAdapter: AgentsAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentAgentsBinding.inflate(inflater, container, false)
         return binding.root
@@ -41,17 +41,17 @@ class TestAgentsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         setupRecyclerView()
         setupSearchBar()
-        
+
         observeAgents()
         observeFilteredAgents()
-        
+
         // Fetch agents
         viewModel.getAgents()
     }
-    
+
     private fun setupRecyclerView() {
         agentsAdapter = AgentsAdapter { agent ->
             // No navigation in tests
@@ -63,13 +63,13 @@ class TestAgentsFragment : Fragment() {
             itemAnimator = null
         }
     }
-    
+
     private fun setupSearchBar() {
         binding.etSearch.doAfterTextChanged { text ->
             viewModel.setSearchQuery(text.toString())
         }
     }
-    
+
     private fun observeAgents() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -80,19 +80,19 @@ class TestAgentsFragment : Fragment() {
                             binding.rvAgents.visibility = View.GONE
                             binding.tvError.visibility = View.GONE
                         }
-                        
+
                         is Resource.Success -> {
                             binding.progressBar.visibility = View.GONE
                             binding.rvAgents.visibility = View.VISIBLE
                             binding.tvError.visibility = View.GONE
                         }
-                        
+
                         is Resource.Error -> {
                             binding.progressBar.visibility = View.GONE
                             binding.rvAgents.visibility = View.GONE
                             binding.tvError.visibility = View.VISIBLE
                             binding.tvError.text = resource.message ?: getString(R.string.error_unknown)
-                            
+
                             Toast.makeText(requireContext(), resource.message, Toast.LENGTH_LONG).show()
                         }
                     }
@@ -100,7 +100,7 @@ class TestAgentsFragment : Fragment() {
             }
         }
     }
-    
+
     private fun observeFilteredAgents() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -115,4 +115,4 @@ class TestAgentsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

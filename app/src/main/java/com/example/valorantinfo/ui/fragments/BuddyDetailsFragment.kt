@@ -25,19 +25,21 @@ import kotlinx.coroutines.launch
 class BuddyDetailsFragment : Fragment() {
 
     private var _binding: FragmentBuddyDetailsBinding? = null
+
     // Made binding accessible for testing
     internal val binding get() = _binding!!
 
     val viewModel: BuddyDetailsViewModel by viewModels()
     private val args: BuddyDetailsFragmentArgs by navArgs()
     private lateinit var buddyLevelsAdapter: BuddyLevelsAdapter
+
     // Made bottomSheetBehavior accessible for testing
     internal lateinit var bottomSheetBehavior: BottomSheetBehavior<View>
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentBuddyDetailsBinding.inflate(inflater, container, false)
         return binding.root
@@ -48,19 +50,19 @@ class BuddyDetailsFragment : Fragment() {
 
         // Initially hide all content elements
         hideContentElements()
-        
+
         setupBottomSheet()
         setupRecyclerView()
         viewModel.fetchBuddyDetails(args.buddyUuid)
         observeBuddyDetails()
         observeSelectedLevel()
     }
-    
+
     // Added helper method to hide content elements
     private fun hideContentElements() {
         binding.progressBar.visibility = View.VISIBLE
         binding.tvError.visibility = View.GONE
-        
+
         // Hide all content sections until data is loaded
         binding.tvBuddyName.visibility = View.GONE
         binding.ivBuddyIcon.visibility = View.GONE
@@ -76,19 +78,19 @@ class BuddyDetailsFragment : Fragment() {
     internal fun setupBottomSheet() {
         bottomSheetBehavior = BottomSheetBehavior.from(binding.bottomSheetContainer)
         bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
-        
+
         binding.btnCloseBottomSheet.setOnClickListener {
             bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
             viewModel.clearSelectedLevel()
         }
-        
+
         bottomSheetBehavior.addBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
             override fun onStateChanged(bottomSheet: View, newState: Int) {
                 if (newState == BottomSheetBehavior.STATE_HIDDEN) {
                     viewModel.clearSelectedLevel()
                 }
             }
-            
+
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
                 // Not needed
             }
@@ -105,23 +107,23 @@ class BuddyDetailsFragment : Fragment() {
             layoutManager = LinearLayoutManager(requireContext())
         }
     }
-    
+
     // Made the method accessible for testing
     private fun showLevelDetails(level: BuddyLevel) {
         // Pre-populate UI with data we already have
         binding.tvLevelDetailName.text = level.displayName.uppercase()
         binding.tvLevelDetailCharmLevel.text = "CHARM LEVEL: ${level.charmLevel}"
         binding.tvLevelUuid.text = "UUID: ${level.uuid}"
-        
+
         Glide.with(requireContext())
             .load(level.displayIcon)
             .diskCacheStrategy(DiskCacheStrategy.ALL)
             .into(binding.ivLevelDetailIcon)
-            
+
         // Show the bottom sheet
         binding.bottomSheetContainer.visibility = View.VISIBLE
         bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
-        
+
         // Fetch detailed level data from API
         viewModel.fetchBuddyLevel(level.uuid)
     }
@@ -133,24 +135,24 @@ class BuddyDetailsFragment : Fragment() {
                     is Resource.Success -> {
                         binding.progressBar.visibility = View.GONE
                         binding.tvError.visibility = View.GONE
-                        
+
                         result.data?.let { buddy ->
                             // Show main elements
                             binding.tvBuddyName.visibility = View.VISIBLE
                             binding.ivBuddyIcon.visibility = View.VISIBLE
-                            
+
                             binding.tvBuddyName.text = buddy.displayName
-                            
+
                             // Load buddy icon
                             Glide.with(requireContext())
                                 .load(buddy.displayIcon)
                                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                                 .into(binding.ivBuddyIcon)
-                            
+
                             // Make description labels visible and set description
                             binding.tvDescriptionLabel.visibility = View.VISIBLE
                             binding.tvBuddyDescription.visibility = View.VISIBLE
-                            
+
                             // Set description if available (using level description)
                             if (buddy.levels.isNotEmpty()) {
                                 val defaultLevel = buddy.levels.first()
@@ -176,7 +178,7 @@ class BuddyDetailsFragment : Fragment() {
                         binding.progressBar.visibility = View.GONE
                         binding.tvError.visibility = View.VISIBLE
                         binding.tvError.text = result.message
-                        
+
                         // Hide content sections
                         binding.tvBuddyName.visibility = View.GONE
                         binding.ivBuddyIcon.visibility = View.GONE
@@ -189,7 +191,7 @@ class BuddyDetailsFragment : Fragment() {
                     is Resource.Loading -> {
                         binding.progressBar.visibility = View.VISIBLE
                         binding.tvError.visibility = View.GONE
-                        
+
                         // Hide content sections during loading
                         binding.tvBuddyName.visibility = View.GONE
                         binding.ivBuddyIcon.visibility = View.GONE
@@ -203,7 +205,7 @@ class BuddyDetailsFragment : Fragment() {
             }
         }
     }
-    
+
     private fun observeSelectedLevel() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.selectedLevel.collectLatest { result ->
@@ -211,14 +213,14 @@ class BuddyDetailsFragment : Fragment() {
                     is Resource.Success -> {
                         binding.pbLevelDetails.visibility = View.GONE
                         binding.tvLevelDetailError.visibility = View.GONE
-                        
-                        // We've already pre-populated the UI, 
+
+                        // We've already pre-populated the UI,
                         // but here we could update with any additional data from the API response
                         result.data?.let { level ->
                             binding.tvLevelDetailName.text = level.displayName.uppercase()
                             binding.tvLevelDetailCharmLevel.text = "CHARM LEVEL: ${level.charmLevel}"
                             binding.tvLevelUuid.text = "UUID: ${level.uuid}"
-                            
+
                             Glide.with(requireContext())
                                 .load(level.displayIcon)
                                 .diskCacheStrategy(DiskCacheStrategy.ALL)
@@ -243,4 +245,4 @@ class BuddyDetailsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

@@ -30,7 +30,7 @@ class CeremoniesFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentCeremoniesBinding.inflate(inflater, container, false)
         return binding.root
@@ -38,14 +38,14 @@ class CeremoniesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         // Initially hide all content elements
         hideContentElements()
-        
+
         setupRecyclerView()
         observeCeremonies()
     }
-    
+
     private fun hideContentElements() {
         binding.progressBar.visibility = View.VISIBLE
         binding.tvError.visibility = View.GONE
@@ -57,7 +57,7 @@ class CeremoniesFragment : Fragment() {
             // Navigate to ceremony details
             val action = CeremoniesFragmentDirections.actionCeremoniesFragmentToCeremonyDetailsFragment(
                 ceremony.uuid,
-                ceremony.displayName
+                ceremony.displayName,
             )
             findNavController().navigate(action)
         }
@@ -76,7 +76,7 @@ class CeremoniesFragment : Fragment() {
                         binding.progressBar.visibility = View.GONE
                         binding.tvError.visibility = View.GONE
                         binding.rvCeremonies.visibility = View.VISIBLE
-                        
+
                         result.data?.let { response ->
                             ceremoniesAdapter.submitList(response.data)
                         }
@@ -101,4 +101,4 @@ class CeremoniesFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

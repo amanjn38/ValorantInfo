@@ -10,14 +10,14 @@ import com.example.valorantinfo.data.models.contenttiers.ContentTier
 import com.example.valorantinfo.databinding.ItemContentTierBinding
 
 class ContentTiersAdapter(
-    private val onItemClick: (ContentTier) -> Unit
+    private val onItemClick: (ContentTier) -> Unit,
 ) : ListAdapter<ContentTier, ContentTiersAdapter.ContentTierViewHolder>(ContentTierDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContentTierViewHolder {
         val binding = ItemContentTierBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
-            false
+            false,
         )
         return ContentTierViewHolder(binding)
     }
@@ -27,7 +27,7 @@ class ContentTiersAdapter(
     }
 
     inner class ContentTierViewHolder(
-        private val binding: ItemContentTierBinding
+        private val binding: ItemContentTierBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
 
         init {
@@ -62,4 +62,4 @@ class ContentTiersAdapter(
             return oldItem == newItem
         }
     }
-} 
+}

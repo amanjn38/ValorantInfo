@@ -29,7 +29,7 @@ class BundlesFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentBundlesBinding.inflate(inflater, container, false)
         return binding.root
@@ -37,14 +37,14 @@ class BundlesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         // Initially hide all content elements
         hideContentElements()
-        
+
         setupRecyclerView()
         observeBundles()
     }
-    
+
     private fun hideContentElements() {
         binding.progressBar.visibility = View.VISIBLE
         binding.tvError.visibility = View.GONE
@@ -56,7 +56,7 @@ class BundlesFragment : Fragment() {
             // Navigate to bundle details
             val action = BundlesFragmentDirections.actionBundlesFragmentToBundleDetailsFragment(
                 bundle.uuid,
-                bundle.displayName
+                bundle.displayName,
             )
             findNavController().navigate(action)
         }
@@ -75,7 +75,7 @@ class BundlesFragment : Fragment() {
                         binding.progressBar.visibility = View.GONE
                         binding.tvError.visibility = View.GONE
                         binding.rvBundles.visibility = View.VISIBLE
-                        
+
                         result.data?.let { response ->
                             bundlesAdapter.submitList(response.data)
                         }
@@ -100,4 +100,4 @@ class BundlesFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

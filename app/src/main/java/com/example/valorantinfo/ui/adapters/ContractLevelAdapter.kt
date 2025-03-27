@@ -92,4 +92,4 @@ class ContractLevelAdapter : ListAdapter<Level, ContractLevelAdapter.LevelViewHo
             return oldItem == newItem
         }
     }
-} 
+}

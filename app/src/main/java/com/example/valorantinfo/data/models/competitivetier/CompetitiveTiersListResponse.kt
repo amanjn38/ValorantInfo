@@ -4,5 +4,5 @@ import com.google.gson.annotations.SerializedName
 
 data class CompetitiveTiersListResponse(
     @SerializedName("status") val status: Int,
-    @SerializedName("data") val data: List<CompetitiveTier>
-) 
+    @SerializedName("data") val data: List<CompetitiveTier>,
+)

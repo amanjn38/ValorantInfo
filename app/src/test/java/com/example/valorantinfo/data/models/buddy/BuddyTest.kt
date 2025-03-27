@@ -4,7 +4,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class BuddyTest {
-    
+
     @Test
     fun `Buddy has correct properties`() {
         // Given
@@ -21,7 +21,7 @@ class BuddyTest {
                 hideIfNotOwned = false,
                 displayName = "Level 1",
                 displayIcon = "https://example.com/level1.png",
-                assetPath = "path/to/level1"
+                assetPath = "path/to/level1",
             ),
             BuddyLevel(
                 uuid = "level-uuid-2",
@@ -29,10 +29,10 @@ class BuddyTest {
                 hideIfNotOwned = true,
                 displayName = "Level 2",
                 displayIcon = "https://example.com/level2.png",
-                assetPath = "path/to/level2"
-            )
+                assetPath = "path/to/level2",
+            ),
         )
-        
+
         // When
         val buddy = Buddy(
             uuid = uuid,
@@ -41,9 +41,9 @@ class BuddyTest {
             themeUuid = themeUuid,
             displayIcon = displayIcon,
             assetPath = assetPath,
-            levels = levels
+            levels = levels,
         )
-        
+
         // Then
         assertEquals(uuid, buddy.uuid)
         assertEquals(displayName, buddy.displayName)
@@ -56,7 +56,7 @@ class BuddyTest {
         assertEquals("level-uuid-1", buddy.levels[0].uuid)
         assertEquals("level-uuid-2", buddy.levels[1].uuid)
     }
-    
+
     @Test
     fun `Buddy can have null themeUuid`() {
         // Given
@@ -67,7 +67,7 @@ class BuddyTest {
         val displayIcon = "https://example.com/buddy.png"
         val assetPath = "path/to/buddy"
         val levels = emptyList<BuddyLevel>()
-        
+
         // When
         val buddy = Buddy(
             uuid = uuid,
@@ -76,9 +76,9 @@ class BuddyTest {
             themeUuid = themeUuid,
             displayIcon = displayIcon,
             assetPath = assetPath,
-            levels = levels
+            levels = levels,
         )
-        
+
         // Then
         assertEquals(uuid, buddy.uuid)
         assertEquals(displayName, buddy.displayName)
@@ -88,4 +88,4 @@ class BuddyTest {
         assertEquals(assetPath, buddy.assetPath)
         assertEquals(0, buddy.levels.size)
     }
-} 
+}

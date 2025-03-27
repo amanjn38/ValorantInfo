@@ -5,20 +5,17 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.valorantinfo.R
 import com.example.valorantinfo.data.models.contracts.Data
 import com.example.valorantinfo.databinding.FragmentContractDetailsBinding
 import com.example.valorantinfo.ui.viewmodels.ContractDetailsViewModel
 import com.example.valorantinfo.utilities.Resource
-import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -37,7 +34,7 @@ class ContractDetailsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentContractDetailsBinding.inflate(inflater, container, false)
         return binding.root
@@ -103,7 +100,7 @@ class ContractDetailsFragment : Fragment() {
         binding.apply {
             contractName.text = contract.displayName
             contractDescription.text = contract.content.relationType
-            
+
             // Load contract image
             Glide.with(contractImage)
                 .load(contract.displayIcon)
@@ -114,7 +111,7 @@ class ContractDetailsFragment : Fragment() {
             // Navigate to chapters list
             val action = ContractDetailsFragmentDirections
                 .actionContractDetailsFragmentToContractChaptersFragment(
-                    contractId = args.contractId
+                    contractId = args.contractId,
                 )
             findNavController().navigate(action)
         }
@@ -124,4 +121,4 @@ class ContractDetailsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

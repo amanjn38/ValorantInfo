@@ -5,5 +5,5 @@ data class Content(
     val premiumRewardScheduleUuid: Any,
     val premiumVPCost: Int,
     val relationType: String,
-    val relationUuid: String
+    val relationUuid: String,
 )

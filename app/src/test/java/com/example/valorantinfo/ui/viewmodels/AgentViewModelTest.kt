@@ -53,25 +53,25 @@ class AgentViewModelTest {
         val mockResponse = mockAgentResponse()
         coEvery { repository.fetchAgents() } returns flowOf(
             Resource.Loading(),
-            Resource.Success(mockResponse)
+            Resource.Success(mockResponse),
         )
 
         // When
         viewModel.agentsState.test {
             // Assert initial state is Loading
             assertThat(awaitItem()).isInstanceOf(Resource.Loading::class.java)
-            
+
             // Trigger the agent fetch
             viewModel.getAgents()
-            
+
             // Skip the initial Loading state
             skipItems(1)
-            
+
             // Assert Success state with data
             val successState = awaitItem()
             assertThat(successState).isInstanceOf(Resource.Success::class.java)
             assertThat((successState as Resource.Success).data).isEqualTo(mockResponse)
-            
+
             // Cancel the collection
             cancelAndConsumeRemainingEvents()
         }
@@ -82,22 +82,22 @@ class AgentViewModelTest {
         // Given
         val mockResponse = mockAgentResponse()
         coEvery { repository.fetchAgents() } returns flowOf(
-            Resource.Success(mockResponse)
+            Resource.Success(mockResponse),
         )
 
         // When
         viewModel.filteredAgents.test {
             // Assert initial state is empty list
             assertThat(awaitItem()).isEmpty()
-            
+
             // Trigger the agent fetch
             viewModel.getAgents()
-                        
+
             // Assert filtered agents
             val agents = awaitItem()
             assertThat(agents).hasSize(2) // Only playable characters
             assertThat(agents.map { it.displayName }).containsExactly("Jett", "Phoenix")
-            
+
             // Cancel the collection
             cancelAndConsumeRemainingEvents()
         }
@@ -108,26 +108,26 @@ class AgentViewModelTest {
         // Given
         val mockResponse = mockAgentResponse()
         coEvery { repository.fetchAgents() } returns flowOf(
-            Resource.Success(mockResponse)
+            Resource.Success(mockResponse),
         )
-        
+
         // Load agents first
         viewModel.getAgents()
         testDispatcher.scheduler.advanceUntilIdle()
-        
+
         // When & Then
         viewModel.filteredAgents.test {
             // Skip the initial emission (all agents)
             skipItems(1)
-            
+
             // Set search query to "je"
             viewModel.setSearchQuery("je")
-            
+
             // Assert filtered agents contain only Jett
             val filtered = awaitItem()
             assertThat(filtered).hasSize(1)
             assertThat(filtered[0].displayName).isEqualTo("Jett")
-            
+
             // Cancel the collection
             cancelAndConsumeRemainingEvents()
         }
@@ -138,22 +138,22 @@ class AgentViewModelTest {
         // Given
         val errorMessage = "Network error"
         coEvery { repository.fetchAgents() } returns flowOf(
-            Resource.Error(errorMessage)
+            Resource.Error(errorMessage),
         )
 
         // When
         viewModel.agentsState.test {
             // Skip the initial loading state
             skipItems(1)
-            
+
             // Trigger the agent fetch
             viewModel.getAgents()
-            
+
             // Assert error state
             val errorState = awaitItem()
             assertThat(errorState).isInstanceOf(Resource.Error::class.java)
             assertThat((errorState as Resource.Error).message).isEqualTo(errorMessage)
-            
+
             // Cancel the collection
             cancelAndConsumeRemainingEvents()
         }
@@ -175,7 +175,7 @@ class AgentViewModelTest {
                         displayName = "Duelist",
                         description = "Duelist description",
                         displayIcon = "duelist_icon.png",
-                        assetPath = "ShooterGame/Content/Characters/AggroBot/AggroBot_PrimaryAsset"
+                        assetPath = "ShooterGame/Content/Characters/AggroBot/AggroBot_PrimaryAsset",
                     ),
                     abilities = emptyList(),
                     isPlayableCharacter = true,
@@ -190,7 +190,7 @@ class AgentViewModelTest {
                     isFullPortraitRightFacing = false,
                     isAvailableForTest = true,
                     isBaseContent = true,
-                    voiceLine = null
+                    voiceLine = null,
                 ),
                 Agent(
                     uuid = "2",
@@ -204,7 +204,7 @@ class AgentViewModelTest {
                         displayName = "Duelist",
                         description = "Duelist description",
                         displayIcon = "duelist_icon.png",
-                        assetPath = "ShooterGame/Content/Characters/AggroBot/AggroBot_PrimaryAsset"
+                        assetPath = "ShooterGame/Content/Characters/AggroBot/AggroBot_PrimaryAsset",
                     ),
                     abilities = emptyList(),
                     isPlayableCharacter = true,
@@ -219,7 +219,7 @@ class AgentViewModelTest {
                     isFullPortraitRightFacing = false,
                     isAvailableForTest = true,
                     isBaseContent = true,
-                    voiceLine = null
+                    voiceLine = null,
                 ),
                 Agent(
                     uuid = "3",
@@ -242,9 +242,9 @@ class AgentViewModelTest {
                     isFullPortraitRightFacing = false,
                     isAvailableForTest = false,
                     isBaseContent = true,
-                    voiceLine = null
-                )
-            )
+                    voiceLine = null,
+                ),
+            ),
         )
     }
-} 
+}

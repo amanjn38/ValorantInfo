@@ -11,4 +11,4 @@ interface ContentTierApiService {
 
     @GET("v1/contenttiers/{contentTierUuid}")
     suspend fun getContentTier(@Path("contentTierUuid") contentTierUuid: String): ContentTier
-} 
+}

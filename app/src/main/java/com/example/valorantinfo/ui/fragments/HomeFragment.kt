@@ -15,13 +15,13 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    
+
     private lateinit var categoryAdapter: CategoryAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
@@ -29,11 +29,11 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         setupRecyclerView()
         loadCategories()
     }
-    
+
     private fun setupRecyclerView() {
         categoryAdapter = CategoryAdapter { category ->
             when (category.title) {
@@ -50,13 +50,13 @@ class HomeFragment : Fragment() {
                 }
             }
         }
-        
+
         binding.rvCategories.apply {
             adapter = categoryAdapter
             // Layout manager is defined in XML
         }
     }
-    
+
     private fun loadCategories() {
         val categories = listOf(
             Category("AGENTS", getString(R.string.explore_agents)),
@@ -78,9 +78,9 @@ class HomeFragment : Fragment() {
             Category("SPRAYS", "Decorative sprays to tag the environment"),
             Category("THEMES", "Visual themes and aesthetics for content"),
             Category("WEAPONS", getString(R.string.browse_weapons)),
-            Category("VERSIONS", "Game version history and updates")
+            Category("VERSIONS", "Game version history and updates"),
         )
-        
+
         categoryAdapter.submitList(categories)
     }
 

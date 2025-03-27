@@ -19,11 +19,11 @@ class HomeFragmentTest {
         // Initialize MockK
         MockKInitializer.initialize()
     }
-    
+
     private fun launchFragment() {
         // Launch the fragment with a simple theme
         scenario = launchFragmentInContainer(
-            themeResId = R.style.Theme_ValorantInfo_NoActionBar // Use app's NoActionBar theme
+            themeResId = R.style.Theme_ValorantInfo_NoActionBar, // Use app's NoActionBar theme
         ) {
             TestHomeFragment()
         }
@@ -33,8 +33,8 @@ class HomeFragmentTest {
     fun testHomeFragmentDisplaysCategories() {
         // Launch the fragment
         launchFragment()
-        
+
         // This test just verifies that the fragment loads and displays without crashing
         // Add more assertions as needed
     }
-} 
+}

@@ -5,7 +5,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
-//class BuddyDetailResponseTest {
+// class BuddyDetailResponseTest {
 //
 //    @Test
 //    fun `BuddyDetailResponse has correct properties`() {
@@ -44,9 +44,9 @@ import org.junit.runners.JUnit4
 //        assertEquals(1, response.data?.levels?.size ?: "NA")
 //        assertEquals("level-uuid", response.data?.levels?.get(0)?.uuid ?: "NA")
 //    }
-//}
+// }
 
-@RunWith(JUnit4::class)  // ✅ Add this if missing
+@RunWith(JUnit4::class) // ✅ Add this if missing
 class BuddyDetailResponseTest {
 
     @Test
@@ -59,7 +59,7 @@ class BuddyDetailResponseTest {
             hideIfNotOwned = false,
             displayName = "Level 1",
             displayIcon = "https://example.com/level.png",
-            assetPath = "path/to/level"
+            assetPath = "path/to/level",
         )
 
         val buddy = Buddy(
@@ -69,13 +69,13 @@ class BuddyDetailResponseTest {
             themeUuid = null,
             displayIcon = "https://example.com/buddy.png",
             assetPath = "path/to/buddy",
-            levels = listOf(buddyLevel)
+            levels = listOf(buddyLevel),
         )
 
         // When
         val response = BuddyDetailResponse(
             status = status,
-            data = buddy
+            data = buddy,
         )
 
         // Then

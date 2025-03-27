@@ -6,5 +6,5 @@ data class BuddyLevel(
     val hideIfNotOwned: Boolean,
     val displayName: String,
     val displayIcon: String,
-    val assetPath: String
-) 
+    val assetPath: String,
+)

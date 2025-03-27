@@ -9,7 +9,6 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.valorantinfo.R
 import com.example.valorantinfo.databinding.FragmentCompetitiveTiersBinding
 import com.example.valorantinfo.ui.adapters.CompetitiveTiersAdapter
 import com.example.valorantinfo.ui.viewmodels.CompetitiveTierViewModel
@@ -30,7 +29,7 @@ class CompetitiveTiersFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentCompetitiveTiersBinding.inflate(inflater, container, false)
         return binding.root
@@ -47,7 +46,7 @@ class CompetitiveTiersFragment : Fragment() {
             val action = CompetitiveTiersFragmentDirections
                 .actionCompetitiveTiersFragmentToCompetitiveTierDetailsFragment(
                     competitiveTier.uuid,
-                    competitiveTier.assetObjectName
+                    competitiveTier.assetObjectName,
                 )
             findNavController().navigate(action)
         }
@@ -87,4 +86,4 @@ class CompetitiveTiersFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

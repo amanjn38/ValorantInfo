@@ -23,7 +23,7 @@ class BundlesAdapter(private val onBundleClick: (Bundle) -> Unit) :
         val binding = ItemBundleBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
-            false
+            false,
         )
         return BundleViewHolder(binding)
     }
@@ -37,12 +37,12 @@ class BundlesAdapter(private val onBundleClick: (Bundle) -> Unit) :
 
         fun bind(bundle: Bundle, onBundleClick: (Bundle) -> Unit) {
             binding.tvBundleName.text = bundle.displayName
-            
+
             // Show progress indicator before loading starts
             binding.progressBarItem.visibility = View.VISIBLE
             binding.ivBundleIcon.visibility = View.INVISIBLE
             binding.viewOverlay.visibility = View.INVISIBLE
-            
+
             // Load the bundle icon using Glide with a listener to handle loading states
             Glide.with(binding.root.context)
                 .load(bundle.displayIcon) // Use displayIcon for the card
@@ -52,7 +52,7 @@ class BundlesAdapter(private val onBundleClick: (Bundle) -> Unit) :
                         e: GlideException?,
                         model: Any?,
                         target: Target<Drawable>,
-                        isFirstResource: Boolean
+                        isFirstResource: Boolean,
                     ): Boolean {
                         binding.progressBarItem.visibility = View.GONE
                         return false
@@ -63,7 +63,7 @@ class BundlesAdapter(private val onBundleClick: (Bundle) -> Unit) :
                         model: Any,
                         target: Target<Drawable>?,
                         dataSource: DataSource,
-                        isFirstResource: Boolean
+                        isFirstResource: Boolean,
                     ): Boolean {
                         binding.progressBarItem.visibility = View.GONE
                         binding.ivBundleIcon.visibility = View.VISIBLE
@@ -89,4 +89,4 @@ class BundlesAdapter(private val onBundleClick: (Bundle) -> Unit) :
             return oldItem == newItem
         }
     }
-} 
+}

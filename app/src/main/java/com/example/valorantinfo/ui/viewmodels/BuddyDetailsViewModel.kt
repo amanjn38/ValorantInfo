@@ -16,12 +16,12 @@ import javax.inject.Inject
 
 @HiltViewModel
 class BuddyDetailsViewModel @Inject constructor(
-    private val repository: BuddyRepository
+    private val repository: BuddyRepository,
 ) : ViewModel() {
 
     private val _buddyDetails = MutableStateFlow<Resource<Buddy>>(Resource.Loading())
     val buddyDetails: StateFlow<Resource<Buddy>> = _buddyDetails
-    
+
     private val _selectedLevel = MutableStateFlow<Resource<BuddyLevel?>>(Resource.Loading())
     val selectedLevel: StateFlow<Resource<BuddyLevel?>> = _selectedLevel
 
@@ -47,7 +47,7 @@ class BuddyDetailsViewModel @Inject constructor(
             }.launchIn(viewModelScope)
         }
     }
-    
+
     fun fetchBuddyLevel(levelUuid: String) {
         _selectedLevel.value = Resource.Loading()
         viewModelScope.launch {
@@ -67,8 +67,8 @@ class BuddyDetailsViewModel @Inject constructor(
             }.launchIn(viewModelScope)
         }
     }
-    
+
     fun clearSelectedLevel() {
         _selectedLevel.value = Resource.Success(null)
     }
-} 
+}

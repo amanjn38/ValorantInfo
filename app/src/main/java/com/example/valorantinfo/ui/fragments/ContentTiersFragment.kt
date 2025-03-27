@@ -22,14 +22,14 @@ class ContentTiersFragment : Fragment() {
 
     private var _binding: FragmentContentTiersBinding? = null
     private val binding get() = _binding!!
-    
+
     private val viewModel: ContentTierViewModel by viewModels()
     private lateinit var adapter: ContentTiersAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentContentTiersBinding.inflate(inflater, container, false)
         return binding.root
@@ -37,23 +37,23 @@ class ContentTiersFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         setupRecyclerView()
         observeViewModel()
     }
-    
+
     private fun setupRecyclerView() {
         adapter = ContentTiersAdapter { contentTier ->
             // Handle item click if needed
             Toast.makeText(context, "Selected: ${contentTier.displayName}", Toast.LENGTH_SHORT).show()
         }
-        
+
         binding.rvContentTiers.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = this@ContentTiersFragment.adapter
         }
     }
-    
+
     private fun observeViewModel() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.state.collectLatest { result ->
@@ -83,4 +83,4 @@ class ContentTiersFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

@@ -28,7 +28,7 @@ class CompetitiveTierDetailsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentCompetitiveTierDetailsBinding.inflate(inflater, container, false)
         return binding.root
@@ -84,4 +84,4 @@ class CompetitiveTierDetailsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

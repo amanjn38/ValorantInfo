@@ -27,11 +27,11 @@ class BuddyRepositoryImplSimpleTest {
         hideIfNotOwned = false,
         displayName = "Test Level",
         displayIcon = "https://example.com/icon.png",
-        assetPath = "path/to/asset"
+        assetPath = "path/to/asset",
     )
     private val sampleLevelResponse = BuddyLevelResponse(
         status = 200,
-        data = sampleLevel
+        data = sampleLevel,
     )
 
     @Before
@@ -48,12 +48,12 @@ class BuddyRepositoryImplSimpleTest {
         // When
         val flow = repository.fetchBuddyLevel(sampleLevelUuid)
         val emissions = flow.toList()
-        
+
         // Then
         assertEquals(2, emissions.size)
         assertTrue(emissions[0] is Resource.Loading)
         assertTrue(emissions[1] is Resource.Success)
-        
+
         val successEmission = emissions[1] as Resource.Success
         assertEquals(sampleLevelResponse, successEmission.data)
     }
@@ -67,10 +67,10 @@ class BuddyRepositoryImplSimpleTest {
         // When
         val flow = repository.fetchBuddyLevel(sampleLevelUuid)
         val emissions = flow.toList()
-        
+
         // Then
         assertEquals(2, emissions.size)
         assertTrue(emissions[0] is Resource.Loading)
         assertTrue(emissions[1] is Resource.Error)
     }
-} 
+}

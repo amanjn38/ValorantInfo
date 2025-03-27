@@ -13,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AgentDetailsViewModel @Inject constructor(
-    private val repository: AgentDetailsRepository
+    private val repository: AgentDetailsRepository,
 ) : ViewModel() {
     private val _agentDetailsState = MutableStateFlow<Resource<AgentDetailsResponse>>(Resource.Loading())
     val agentDetailsState: StateFlow<Resource<AgentDetailsResponse>> get() = _agentDetailsState
@@ -25,4 +25,4 @@ class AgentDetailsViewModel @Inject constructor(
             }
         }
     }
-} 
+}

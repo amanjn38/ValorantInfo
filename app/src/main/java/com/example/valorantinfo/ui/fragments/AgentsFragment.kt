@@ -27,18 +27,18 @@ class AgentsFragment : Fragment() {
 
     private var _binding: FragmentAgentsBinding? = null
     private val binding get() = _binding!!
-    
+
     // Property for testing - allows injecting a mock ViewModel
     internal var viewModelOverride: AgentViewModel? = null
-    
+
     private val viewModel: AgentViewModel by viewModels()
-    
+
     private lateinit var agentsAdapter: AgentsAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentAgentsBinding.inflate(inflater, container, false)
         return binding.root
@@ -46,20 +46,20 @@ class AgentsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         setupRecyclerView()
         setupSearchBar()
-        
+
         // Use the override viewModel if provided (for testing), otherwise use the injected one
         val activeViewModel = viewModelOverride ?: viewModel
-        
+
         observeAgents(activeViewModel)
         observeFilteredAgents(activeViewModel)
-        
+
         // Fetch agents
         activeViewModel.getAgents()
     }
-    
+
     private fun setupRecyclerView() {
         agentsAdapter = AgentsAdapter { agent ->
             // Navigate to agent details fragment
@@ -73,14 +73,14 @@ class AgentsFragment : Fragment() {
             itemAnimator = null
         }
     }
-    
+
     private fun setupSearchBar() {
         binding.etSearch.doAfterTextChanged { text ->
             val activeViewModel = viewModelOverride ?: viewModel
             activeViewModel.setSearchQuery(text.toString())
         }
     }
-    
+
     private fun observeAgents(activeViewModel: AgentViewModel) {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -91,19 +91,19 @@ class AgentsFragment : Fragment() {
                             binding.rvAgents.visibility = View.GONE
                             binding.tvError.visibility = View.GONE
                         }
-                        
+
                         is Resource.Success -> {
                             binding.progressBar.visibility = View.GONE
                             binding.rvAgents.visibility = View.VISIBLE
                             binding.tvError.visibility = View.GONE
                         }
-                        
+
                         is Resource.Error -> {
                             binding.progressBar.visibility = View.GONE
                             binding.rvAgents.visibility = View.GONE
                             binding.tvError.visibility = View.VISIBLE
                             binding.tvError.text = resource.message ?: getString(R.string.error_unknown)
-                            
+
                             Toast.makeText(requireContext(), resource.message, Toast.LENGTH_LONG).show()
                         }
                     }
@@ -111,7 +111,7 @@ class AgentsFragment : Fragment() {
             }
         }
     }
-    
+
     private fun observeFilteredAgents(activeViewModel: AgentViewModel) {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -126,4 +126,4 @@ class AgentsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

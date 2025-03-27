@@ -53,23 +53,23 @@ class AgentRepositoryImplTest {
                     isFullPortraitRightFacing = false,
                     isAvailableForTest = true,
                     isBaseContent = true,
-                    voiceLine = null
-                )
-            )
+                    voiceLine = null,
+                ),
+            ),
         )
-        
+
         coEvery { apiService.getAgents() } returns Response.success(mockResponse)
 
         // When & Then
         repository.fetchAgents().test {
             // First emission should be Loading
             assertThat(awaitItem()).isInstanceOf(Resource.Loading::class.java)
-            
+
             // Second emission should be Success with the mock data
             val successResource = awaitItem()
             assertThat(successResource).isInstanceOf(Resource.Success::class.java)
             assertThat((successResource as Resource.Success).data).isEqualTo(mockResponse)
-            
+
             // No more emissions
             awaitComplete()
         }
@@ -79,20 +79,20 @@ class AgentRepositoryImplTest {
     fun `fetchAgents emits Loading and then Error when API call returns an error response`() = runTest {
         // Given
         coEvery { apiService.getAgents() } returns Response.error(
-            404, 
-            "Not found".toResponseBody(null)
+            404,
+            "Not found".toResponseBody(null),
         )
 
         // When & Then
         repository.fetchAgents().test {
             // First emission should be Loading
             assertThat(awaitItem()).isInstanceOf(Resource.Loading::class.java)
-            
+
             // Second emission should be Error
             val errorResource = awaitItem()
             assertThat(errorResource).isInstanceOf(Resource.Error::class.java)
             assertThat((errorResource as Resource.Error).message).contains("Error code: 404")
-            
+
             // No more emissions
             awaitComplete()
         }
@@ -107,12 +107,12 @@ class AgentRepositoryImplTest {
         repository.fetchAgents().test {
             // First emission should be Loading
             assertThat(awaitItem()).isInstanceOf(Resource.Loading::class.java)
-            
+
             // Second emission should be Error
             val errorResource = awaitItem()
             assertThat(errorResource).isInstanceOf(Resource.Error::class.java)
             assertThat((errorResource as Resource.Error).message).isEqualTo("Empty response")
-            
+
             // No more emissions
             awaitComplete()
         }
@@ -127,14 +127,14 @@ class AgentRepositoryImplTest {
         repository.fetchAgents().test {
             // First emission should be Loading
             assertThat(awaitItem()).isInstanceOf(Resource.Loading::class.java)
-            
+
             // Second emission should be Error
             val errorResource = awaitItem()
             assertThat(errorResource).isInstanceOf(Resource.Error::class.java)
             assertThat((errorResource as Resource.Error).message).contains("Network error")
-            
+
             // No more emissions
             awaitComplete()
         }
     }
-} 
+}

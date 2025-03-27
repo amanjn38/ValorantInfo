@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class ContentTierRepositoryImpl @Inject constructor(
-    private val api: ContentTierApiService
+    private val api: ContentTierApiService,
 ) : ContentTierRepository {
 
     override fun getContentTiers(): Flow<Resource<List<ContentTier>>> = flow {
@@ -30,4 +30,4 @@ class ContentTierRepositoryImpl @Inject constructor(
             emit(Resource.Error(e.message ?: "An unexpected error occurred"))
         }
     }
-} 
+}

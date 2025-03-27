@@ -29,7 +29,7 @@ class AgentDetailsFragment : Fragment() {
 
     private var _binding: FragmentAgentDetailsBinding? = null
     private val binding get() = _binding!!
-    
+
     private val viewModel: AgentDetailsViewModel by viewModels()
     private val args: AgentDetailsFragmentArgs by navArgs()
     private lateinit var abilitiesAdapter: AbilitiesAdapter
@@ -37,7 +37,7 @@ class AgentDetailsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentAgentDetailsBinding.inflate(inflater, container, false)
         return binding.root
@@ -45,14 +45,14 @@ class AgentDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         setupRecyclerView()
         observeAgentDetails()
-        
+
         // Fetch agent details
         viewModel.getAgentDetails(args.agentUuid)
     }
-    
+
     private fun setupRecyclerView() {
         abilitiesAdapter = AbilitiesAdapter()
         binding.rvAbilities.apply {
@@ -60,7 +60,7 @@ class AgentDetailsFragment : Fragment() {
             layoutManager = LinearLayoutManager(requireContext())
         }
     }
-    
+
     private fun observeAgentDetails() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -71,23 +71,23 @@ class AgentDetailsFragment : Fragment() {
                             binding.contentGroup.visibility = View.GONE
                             binding.tvError.visibility = View.GONE
                         }
-                        
+
                         is Resource.Success -> {
                             binding.progressBar.visibility = View.GONE
                             binding.contentGroup.visibility = View.VISIBLE
                             binding.tvError.visibility = View.GONE
-                            
+
                             resource.data?.data?.let { agentDetails ->
                                 setupAgent(agentDetails)
                             }
                         }
-                        
+
                         is Resource.Error -> {
                             binding.progressBar.visibility = View.GONE
                             binding.contentGroup.visibility = View.GONE
                             binding.tvError.visibility = View.VISIBLE
                             binding.tvError.text = resource.message ?: getString(R.string.error_unknown)
-                            
+
                             Toast.makeText(requireContext(), resource.message, Toast.LENGTH_LONG).show()
                         }
                     }
@@ -135,4 +135,4 @@ class AgentDetailsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-} 
+}

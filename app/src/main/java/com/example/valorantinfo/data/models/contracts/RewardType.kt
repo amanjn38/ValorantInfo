@@ -6,7 +6,8 @@ enum class RewardType {
     SKIN,
     SPRAY,
     TITLE,
-    BUDDY;
+    BUDDY,
+    ;
 
     companion object {
         fun fromString(value: String): RewardType {
@@ -20,4 +21,4 @@ enum class RewardType {
             }
         }
     }
-} 
+}

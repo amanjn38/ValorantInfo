@@ -21,7 +21,7 @@ import javax.inject.Inject
 @OptIn(FlowPreview::class, ExperimentalCoroutinesApi::class)
 @HiltViewModel
 class BuddiesViewModel @Inject constructor(
-    private val repository: BuddyRepository
+    private val repository: BuddyRepository,
 ) : ViewModel() {
 
     private val _buddies = MutableStateFlow<Resource<List<Buddy>>>(Resource.Loading())
@@ -29,7 +29,7 @@ class BuddiesViewModel @Inject constructor(
 
     private val _filteredBuddies = MutableStateFlow<List<Buddy>>(emptyList())
     val filteredBuddies: StateFlow<List<Buddy>> = _filteredBuddies
-    
+
     private val _searchQuery = MutableStateFlow("")
     val searchQuery: StateFlow<String> = _searchQuery
 
@@ -45,7 +45,7 @@ class BuddiesViewModel @Inject constructor(
         _searchQuery
             .debounce(300) // Debounce to avoid searching on every keystroke
             .distinctUntilChanged() // Only emit when the query actually changes
-            .map { query -> 
+            .map { query ->
                 if (query.isEmpty()) {
                     originalBuddiesList
                 } else {
@@ -86,4 +86,4 @@ class BuddiesViewModel @Inject constructor(
     fun searchBuddies(query: String) {
         _searchQuery.value = query
     }
-} 
+}

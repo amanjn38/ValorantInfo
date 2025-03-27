@@ -12,4 +12,4 @@ interface CeremonyApiService {
 
     @GET("v1/ceremonies/{ceremonyUuid}")
     suspend fun getCeremonyDetail(@Path("ceremonyUuid") ceremonyUuid: String): Response<CeremonyDetailResponse>
-} 
+}

@@ -10,14 +10,20 @@ import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flowOf
-import kotlinx.coroutines.test.*
-import org.junit.*
+import kotlinx.coroutines.test.StandardTestDispatcher
+import kotlinx.coroutines.test.resetMain
+import kotlinx.coroutines.test.runTest
+import kotlinx.coroutines.test.setMain
+import org.junit.After
+import org.junit.Assert.assertEquals
+import org.junit.Before
+import org.junit.Rule
+import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
-import org.junit.Assert.*
 
 @ExperimentalCoroutinesApi
-@RunWith(JUnit4::class)  // Remove this if using JUnit5
+@RunWith(JUnit4::class) // Remove this if using JUnit5
 class BuddyDetailsViewModelSimpleTest {
 
     @get:Rule
@@ -34,11 +40,11 @@ class BuddyDetailsViewModelSimpleTest {
         hideIfNotOwned = false,
         displayName = "Test Level",
         displayIcon = "https://example.com/icon.png",
-        assetPath = "path/to/asset"
+        assetPath = "path/to/asset",
     )
     private val sampleLevelResponse = BuddyLevelResponse(
         status = 200,
-        data = sampleLevel
+        data = sampleLevel,
     )
 
     @Before
@@ -58,7 +64,7 @@ class BuddyDetailsViewModelSimpleTest {
         // Given
         coEvery { repository.fetchBuddyLevel(sampleLevelUuid) } returns flowOf(
             Resource.Loading(),
-            Resource.Success(sampleLevelResponse)
+            Resource.Success(sampleLevelResponse),
         )
 
         // When
@@ -76,7 +82,7 @@ class BuddyDetailsViewModelSimpleTest {
         val errorMessage = "Error fetching buddy level"
         coEvery { repository.fetchBuddyLevel(sampleLevelUuid) } returns flowOf(
             Resource.Loading(),
-            Resource.Error(errorMessage)
+            Resource.Error(errorMessage),
         )
 
         // When

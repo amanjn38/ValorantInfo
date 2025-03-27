@@ -12,7 +12,7 @@ import java.io.IOException
 import javax.inject.Inject
 
 class CeremonyRepositoryImpl @Inject constructor(
-    private val ceremonyApiService: CeremonyApiService
+    private val ceremonyApiService: CeremonyApiService,
 ) : CeremonyRepository {
 
     override suspend fun fetchCeremonies(): Flow<Resource<CeremoniesListResponse>> = flow {
@@ -54,4 +54,4 @@ class CeremonyRepositoryImpl @Inject constructor(
             emit(Resource.Error(e.localizedMessage ?: Constants.ERROR_UNKNOWN))
         }
     }
-} 
+}

@@ -1,42 +1,41 @@
 package com.example.valorantinfo.di
 
+import androidx.lifecycle.ViewModelProvider
 import com.example.valorantinfo.api.AgentApiService
 import com.example.valorantinfo.api.AgentDetailsApiService
+import com.example.valorantinfo.api.BuddyApiService
+import com.example.valorantinfo.api.BundleApiService
+import com.example.valorantinfo.api.CeremonyApiService
+import com.example.valorantinfo.api.CompetitiveTierApiService
+import com.example.valorantinfo.api.ContentTierApiService
+import com.example.valorantinfo.api.ContractApiService
 import com.example.valorantinfo.repository.AgentDetailsRepository
 import com.example.valorantinfo.repository.AgentDetailsRepositoryImpl
 import com.example.valorantinfo.repository.AgentRepository
 import com.example.valorantinfo.repository.AgentRepositoryImpl
-import com.example.valorantinfo.api.BuddyApiService
 import com.example.valorantinfo.repository.BuddyRepository
 import com.example.valorantinfo.repository.BuddyRepositoryImpl
-import com.example.valorantinfo.api.BundleApiService
 import com.example.valorantinfo.repository.BundleRepository
 import com.example.valorantinfo.repository.BundleRepositoryImpl
-import com.example.valorantinfo.api.CeremonyApiService
 import com.example.valorantinfo.repository.CeremonyRepository
 import com.example.valorantinfo.repository.CeremonyRepositoryImpl
-import com.example.valorantinfo.api.CompetitiveTierApiService
 import com.example.valorantinfo.repository.CompetitiveTierRepository
 import com.example.valorantinfo.repository.CompetitiveTierRepositoryImpl
-import com.example.valorantinfo.api.ContentTierApiService
 import com.example.valorantinfo.repository.ContentTierRepository
 import com.example.valorantinfo.repository.ContentTierRepositoryImpl
+import com.example.valorantinfo.repository.ContractRepository
+import com.example.valorantinfo.repository.ContractRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import javax.inject.Singleton
-import androidx.lifecycle.ViewModelProvider
-import com.example.valorantinfo.api.ContractApiService
-import com.example.valorantinfo.data.models.contracts.Contracts
-import com.example.valorantinfo.repository.ContractRepository
-import com.example.valorantinfo.repository.ContractRepositoryImpl
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
+import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -56,7 +55,7 @@ object AppModule {
     @Singleton
     fun provideOkHttpClient(
         loggingInterceptor: HttpLoggingInterceptor,
-        networkInterceptor: Interceptor
+        networkInterceptor: Interceptor,
     ): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)

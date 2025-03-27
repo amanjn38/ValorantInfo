@@ -11,14 +11,14 @@ import com.example.valorantinfo.data.models.buddy.BuddyLevel
 import com.example.valorantinfo.databinding.ItemBuddyLevelBinding
 
 class BuddyLevelsAdapter(
-    val onLevelClick: ((BuddyLevel) -> Unit)? = null
+    val onLevelClick: ((BuddyLevel) -> Unit)? = null,
 ) : ListAdapter<BuddyLevel, BuddyLevelsAdapter.LevelViewHolder>(LevelDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LevelViewHolder {
         val binding = ItemBuddyLevelBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
-            false
+            false,
         )
         return LevelViewHolder(binding)
     }
@@ -33,16 +33,16 @@ class BuddyLevelsAdapter(
         fun bind(level: BuddyLevel) {
             // Set level name
             binding.tvLevelName.text = level.displayName.uppercase()
-            
+
             // Set charm level text
             binding.tvCharmLevel.text = "CHARM LEVEL: ${level.charmLevel}"
-            
+
             // Load level icon
             Glide.with(binding.ivLevelIcon)
                 .load(level.displayIcon)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(binding.ivLevelIcon)
-                
+
             // Set click listener if provided
             if (onLevelClick != null) {
                 binding.root.setOnClickListener {
@@ -63,4 +63,4 @@ class BuddyLevelsAdapter(
             return oldItem == newItem
         }
     }
-} 
+}

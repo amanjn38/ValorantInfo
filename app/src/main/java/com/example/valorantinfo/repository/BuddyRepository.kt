@@ -10,4 +10,4 @@ interface BuddyRepository {
     fun fetchBuddies(): Flow<Resource<BuddyResponse>>
     fun fetchBuddyDetails(buddyUuid: String): Flow<Resource<BuddyDetailResponse>>
     fun fetchBuddyLevel(levelUuid: String): Flow<Resource<BuddyLevelResponse>>
-} 
+}

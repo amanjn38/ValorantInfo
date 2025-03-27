@@ -47,25 +47,25 @@ class AgentDetailsViewModelTest {
         val mockResponse = mockAgentDetailsResponse()
         coEvery { repository.fetchAgentDetails(agentUuid) } returns flowOf(
             Resource.Loading(),
-            Resource.Success(mockResponse)
+            Resource.Success(mockResponse),
         )
 
         // When
         viewModel.agentDetailsState.test {
             // Assert initial state is Loading
             assertThat(awaitItem()).isInstanceOf(Resource.Loading::class.java)
-            
+
             // Trigger the agent details fetch
             viewModel.getAgentDetails(agentUuid)
-            
+
             // Skip the initial Loading state (it's also emitted from the repository flow)
             skipItems(1)
-            
+
             // Assert Success state with data
             val successState = awaitItem()
             assertThat(successState).isInstanceOf(Resource.Success::class.java)
             assertThat((successState as Resource.Success).data).isEqualTo(mockResponse)
-            
+
             // Cancel the collection
             cancelAndConsumeRemainingEvents()
         }
@@ -77,22 +77,22 @@ class AgentDetailsViewModelTest {
         val agentUuid = "1"
         val errorMessage = "Network error"
         coEvery { repository.fetchAgentDetails(agentUuid) } returns flowOf(
-            Resource.Error(errorMessage)
+            Resource.Error(errorMessage),
         )
 
         // When
         viewModel.agentDetailsState.test {
             // Skip the initial loading state
             skipItems(1)
-            
+
             // Trigger the agent details fetch
             viewModel.getAgentDetails(agentUuid)
-            
+
             // Assert error state
             val errorState = awaitItem()
             assertThat(errorState).isInstanceOf(Resource.Error::class.java)
             assertThat((errorState as Resource.Error).message).isEqualTo(errorMessage)
-            
+
             // Cancel the collection
             cancelAndConsumeRemainingEvents()
         }
@@ -114,21 +114,21 @@ class AgentDetailsViewModelTest {
                     displayName = "Duelist",
                     description = "Duelist description",
                     displayIcon = "duelist_icon.png",
-                    assetPath = "ShooterGame/Content/Characters/AggroBot/AggroBot_PrimaryAsset"
+                    assetPath = "ShooterGame/Content/Characters/AggroBot/AggroBot_PrimaryAsset",
                 ),
                 abilities = listOf(
                     Ability(
                         slot = "Q",
                         displayName = "Updraft",
                         description = "Updraft description",
-                        displayIcon = "updraft_icon.png"
+                        displayIcon = "updraft_icon.png",
                     ),
                     Ability(
                         slot = "E",
                         displayName = "Tailwind",
                         description = "Tailwind description",
-                        displayIcon = "tailwind_icon.png"
-                    )
+                        displayIcon = "tailwind_icon.png",
+                    ),
                 ),
                 developerName = "Jett",
                 characterTags = listOf("Fast", "Mobility"),
@@ -142,9 +142,9 @@ class AgentDetailsViewModelTest {
                 isPlayableCharacter = true,
                 isAvailableForTest = true,
                 isBaseContent = true,
-                voiceLine = null
+                voiceLine = null,
             ),
-            error = null
+            error = null,
         )
     }
-} 
+}

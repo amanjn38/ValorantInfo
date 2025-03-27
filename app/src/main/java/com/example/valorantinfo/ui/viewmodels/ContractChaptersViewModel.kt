@@ -13,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ContractChaptersViewModel @Inject constructor(
-    private val contractRepository: ContractRepository
+    private val contractRepository: ContractRepository,
 ) : ViewModel() {
 
     private val TAG = "ContractChaptersVM"
@@ -35,7 +35,7 @@ class ContractChaptersViewModel @Inject constructor(
 
                 // First, find the epilogue if it exists
                 val epilogue = contract.content.chapters.find { it.isEpilogue }
-                
+
                 // Then, get all non-epilogue chapters and sort them by position
                 val regularChapters = contract.content.chapters
                     .filter { !it.isEpilogue }
@@ -46,17 +46,19 @@ class ContractChaptersViewModel @Inject constructor(
                     Log.d(TAG, "testing Creating chapter ${index + 1} with position $index")
                     chapter.copy(
                         id = "chapter_$index",
-                        position = index
+                        position = index,
                     )
                 }.toMutableList()
 
                 // Add epilogue at the end if it exists
                 epilogue?.let {
                     Log.d(TAG, "testing Adding epilogue at position ${chapters.size}")
-                    chapters.add(it.copy(
-                        id = "epilogue",
-                        position = chapters.size
-                    ))
+                    chapters.add(
+                        it.copy(
+                            id = "epilogue",
+                            position = chapters.size,
+                        ),
+                    )
                 }
 
                 Log.d(TAG, "testing Found ${chapters.size} chapters")
@@ -76,4 +78,4 @@ sealed class ContractChaptersUiState {
     object Loading : ContractChaptersUiState()
     data class Success(val chapters: List<Chapter>) : ContractChaptersUiState()
     data class Error(val message: String) : ContractChaptersUiState()
-} 
+}

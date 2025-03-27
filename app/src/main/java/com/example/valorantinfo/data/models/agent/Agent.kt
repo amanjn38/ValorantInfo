@@ -21,5 +21,5 @@ data class Agent(
     val isBaseContent: Boolean,
     val role: Role?,
     val abilities: List<Ability>?,
-    val voiceLine: VoiceLine?
+    val voiceLine: VoiceLine?,
 )

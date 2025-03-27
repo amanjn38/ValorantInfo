@@ -7,5 +7,5 @@ data class Buddy(
     val themeUuid: String?,
     val displayIcon: String,
     val assetPath: String,
-    val levels: List<BuddyLevel>
-) 
+    val levels: List<BuddyLevel>,
+)

@@ -14,7 +14,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AgentViewModel @Inject constructor(
-    private val repository: AgentRepository
+    private val repository: AgentRepository,
 ) : ViewModel() {
     private val _agentsState = MutableStateFlow<Resource<AgentResponse>>(Resource.Loading())
     val agentsState: StateFlow<Resource<AgentResponse>> get() = _agentsState
@@ -31,7 +31,7 @@ class AgentViewModel @Inject constructor(
         viewModelScope.launch {
             repository.fetchAgents().collect { resource ->
                 _agentsState.value = resource
-                
+
                 if (resource is Resource.Success) {
                     allAgents = resource.data?.data?.filter { it.isPlayableCharacter } ?: emptyList()
                     filterAgents()
@@ -52,7 +52,7 @@ class AgentViewModel @Inject constructor(
         } else {
             _filteredAgents.value = allAgents.filter {
                 it.displayName.contains(query, ignoreCase = true) ||
-                it.role?.displayName?.contains(query, ignoreCase = true) == true
+                    it.role?.displayName?.contains(query, ignoreCase = true) == true
             }
         }
     }

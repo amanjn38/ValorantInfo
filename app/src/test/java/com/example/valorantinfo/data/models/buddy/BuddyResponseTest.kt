@@ -4,7 +4,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class BuddyResponseTest {
-    
+
     @Test
     fun `BuddyResponse has correct properties`() {
         // Given
@@ -17,7 +17,7 @@ class BuddyResponseTest {
                 themeUuid = null,
                 displayIcon = "https://example.com/buddy1.png",
                 assetPath = "path/to/buddy1",
-                levels = emptyList()
+                levels = emptyList(),
             ),
             Buddy(
                 uuid = "buddy-uuid-2",
@@ -33,18 +33,18 @@ class BuddyResponseTest {
                         hideIfNotOwned = false,
                         displayName = "Level 1",
                         displayIcon = "https://example.com/level.png",
-                        assetPath = "path/to/level"
-                    )
-                )
-            )
+                        assetPath = "path/to/level",
+                    ),
+                ),
+            ),
         )
-        
+
         // When
         val response = BuddyResponse(
             status = status,
-            data = buddies
+            data = buddies,
         )
-        
+
         // Then
         assertEquals(status, response.status)
         assertEquals(buddies, response.data)
@@ -54,22 +54,22 @@ class BuddyResponseTest {
         assertEquals(0, response.data[0].levels.size)
         assertEquals(1, response.data[1].levels.size)
     }
-    
+
     @Test
     fun `BuddyResponse can have empty data`() {
         // Given
         val status = 200
         val buddies = emptyList<Buddy>()
-        
+
         // When
         val response = BuddyResponse(
             status = status,
-            data = buddies
+            data = buddies,
         )
-        
+
         // Then
         assertEquals(status, response.status)
         assertEquals(buddies, response.data)
         assertEquals(0, response.data.size)
     }
-} 
+}

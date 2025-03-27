@@ -16,28 +16,28 @@ import javax.inject.Inject
 
 @HiltViewModel
 class BuddyViewModel @Inject constructor(
-    private val repository: BuddyRepository
+    private val repository: BuddyRepository,
 ) : ViewModel() {
-    
+
     private val _buddiesState = MutableStateFlow<Resource<BuddyResponse>>(Resource.Loading())
     val buddiesState: StateFlow<Resource<BuddyResponse>> = _buddiesState
-    
+
     private val _buddyDetailState = MutableStateFlow<Resource<BuddyDetailResponse>>(Resource.Loading())
     val buddyDetailState: StateFlow<Resource<BuddyDetailResponse>> = _buddyDetailState
-    
+
     private val _searchQuery = MutableStateFlow("")
     val searchQuery: StateFlow<String> = _searchQuery
-    
+
     private val _filteredBuddies = MutableStateFlow<List<Buddy>>(emptyList())
     val filteredBuddies: StateFlow<List<Buddy>> = _filteredBuddies
-    
+
     private var allBuddies = listOf<Buddy>()
-    
+
     fun getBuddies() {
         viewModelScope.launch {
             repository.fetchBuddies().collectLatest { resource ->
                 _buddiesState.value = resource
-                
+
                 if (resource is Resource.Success) {
                     allBuddies = resource.data?.data ?: emptyList()
                     filterBuddies()
@@ -45,7 +45,7 @@ class BuddyViewModel @Inject constructor(
             }
         }
     }
-    
+
     fun getBuddyDetails(buddyUuid: String) {
         viewModelScope.launch {
             repository.fetchBuddyDetails(buddyUuid).collectLatest { resource ->
@@ -53,12 +53,12 @@ class BuddyViewModel @Inject constructor(
             }
         }
     }
-    
+
     fun setSearchQuery(query: String) {
         _searchQuery.value = query
         filterBuddies()
     }
-    
+
     private fun filterBuddies() {
         val query = _searchQuery.value
         if (query.isEmpty()) {
@@ -69,4 +69,4 @@ class BuddyViewModel @Inject constructor(
             }
         }
     }
-} 
+}
