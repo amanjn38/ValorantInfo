@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_homeFragment_to_contentTiersFragment"
             app:destination="@id/contentTiersFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_contractsFragment"
+            app:destination="@id/contractsFragment" />
     </fragment>
 
     <fragment
@@ -144,5 +147,64 @@
         android:name="com.example.valorantinfo.ui.fragments.ContentTiersFragment"
         android:label="Content Tiers"
         tools:layout="@layout/fragment_content_tiers" />
+
+    <fragment
+        android:id="@+id/contractsFragment"
+        android:name="com.example.valorantinfo.ui.fragments.ContractsFragment"
+        android:label="Contracts"
+        tools:layout="@layout/fragment_contracts">
+        <action
+            android:id="@+id/action_contractsFragment_to_contractDetailsFragment"
+            app:destination="@id/contractDetailsFragment" />
+        <action
+            android:id="@+id/action_contractsFragment_to_contractChaptersFragment"
+            app:destination="@id/contractChaptersFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/contractDetailsFragment"
+        android:name="com.example.valorantinfo.ui.fragments.ContractDetailsFragment"
+        android:label="Contract Details"
+        tools:layout="@layout/fragment_contract_details">
+        <argument
+            android:name="contractId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_contractDetailsFragment_to_contractChaptersFragment"
+            app:destination="@id/contractChaptersFragment"
+            app:popUpTo="@id/contractDetailsFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/contractChaptersFragment"
+        android:name="com.example.valorantinfo.ui.fragments.ContractChaptersFragment"
+        android:label="Contract Chapters"
+        tools:layout="@layout/fragment_contract_chapters">
+        <argument
+            android:name="contractId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_contractChaptersFragment_to_contractChapterFragment"
+            app:destination="@id/contractChapterFragment"
+            app:popUpTo="@id/contractChaptersFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/contractChapterFragment"
+        android:name="com.example.valorantinfo.ui.fragments.ContractChapterFragment"
+        android:label="Chapter Details"
+        tools:layout="@layout/fragment_contract_chapter">
+        <argument
+            android:name="contractId"
+            app:argType="string" />
+        <argument
+            android:name="chapterId"
+            app:argType="string" />
+        <argument
+            android:name="isEpilogue"
+            app:argType="boolean" />
+    </fragment>
 
 </navigation>

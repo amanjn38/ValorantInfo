@@ -29,6 +29,10 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 import androidx.lifecycle.ViewModelProvider
+import com.example.valorantinfo.api.ContractApiService
+import com.example.valorantinfo.data.models.contracts.Contracts
+import com.example.valorantinfo.repository.ContractRepository
+import com.example.valorantinfo.repository.ContractRepositoryImpl
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -165,6 +169,18 @@ object AppModule {
     @Singleton
     fun provideContentTierRepository(api: ContentTierApiService): ContentTierRepository {
         return ContentTierRepositoryImpl(api)
+    }
+
+    @Provides
+    @Singleton
+    fun provideValorantApi(retrofit: Retrofit): ContractApiService {
+        return retrofit.create(ContractApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideContractRepository(api: ContractApiService): ContractRepository {
+        return ContractRepositoryImpl(api)
     }
 
     @Provides

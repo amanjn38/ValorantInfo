@@ -2,7 +2,7 @@
 <resources>
     <color name="primary">#FF4655</color>
     <color name="primary_dark">#CC3742</color>
-    <color name="accent">#FF4655</color>
+    <color name="accent">#0F1923</color>
     <color name="background">#1F1F1F</color>
     <color name="surface">#2D2D2D</color>
     <color name="text_primary">#FFFFFF</color>
@@ -10,12 +10,28 @@
     <color name="chip_background">#3D3D3D</color>
     
     <!-- Dark Theme Colors -->
-    <color name="background_dark">#1A1A1A</color>
-    <color name="card_background">#2D2D2D</color>
+    <color name="background_dark">#0F1923</color>
+    <color name="card_background">#1F2937</color>
     <color name="card_stroke">#3D3D3D</color>
     <color name="error_color">#FF5252</color>
     
     <!-- Existing colors -->
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    
+    <!-- New colors from the code block -->
+    <color name="reward_type_background">#2D3748</color>
+    <color name="error">#FF5252</color>
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FFC107</color>
+    <color name="info">#2196F3</color>
+
+    <!-- Reward Type Colors -->
+    <color name="reward_currency">#FFD700</color>
+    <color name="reward_spray">#4CAF50</color>
+    <color name="reward_player_card">#2196F3</color>
+    <color name="reward_title">#9C27B0</color>
+    <color name="reward_gun_buddy">#FF9800</color>
+    <color name="reward_character">#E91E63</color>
+    <color name="reward_default">#607D8B</color>
 </resources>
