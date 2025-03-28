@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">Valorant Info</string>
+    <string name="app_name">ValorantInfo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="abilities">ABILITIES</string>
-    <string name="valorant_info">Valorant Info</string>
-    <string name="agents">Agents</string>
+    <string name="valorant_info">VALORANT INFO</string>
+    <string name="agents">AGENTS</string>
     <string name="explore_categories">EXPLORE CATEGORIES</string>
     <string name="app_subtitle">A clean, beautiful app for all your VALORANT agent needs</string>
     <string name="search_agents">Search agents…</string>
@@ -15,24 +15,20 @@
     <string name="search_icon">Search Icon</string>
     <string name="valorant_logo">VALORANT Logo</string>
     <string name="error_unknown">Unknown error occurred</string>
-    <string name="explore_agents">Explore Agents</string>
-    <string name="discover_maps">Discover Maps</string>
-    <string name="browse_weapons">Browse Weapons</string>
-    <string name="learn_gamemodes">Learn Gamemodes</string>
-    <string name="understand_ranks">Understand Ranks</string>
+    <string name="explore_agents">Explore all VALORANT agents and their unique abilities</string>
+    <string name="discover_maps">Discover the battlegrounds of VALORANT</string>
+    <string name="browse_weapons">Browse all weapons available in the VALORANT arsenal</string>
+    <string name="learn_gamemodes">Learn about the different ways to play VALORANT</string>
+    <string name="understand_ranks">Understand the ranking system in VALORANT</string>
     <string name="currencies">Currencies</string>
-    <string name="currency_icon">Currency Icon</string>
-    <string name="currency_name">Currency Name</string>
-    <string name="currency_description">Currency Description</string>
-    <string name="currency_details">Currency Details</string>
+    <string name="currency_icon">Currency icon</string>
     <string name="view_details">View Details</string>
     <string name="asset_path">Asset Path</string>
     <string name="events">Events</string>
-    <string name="event_details">Event Details</string>
-    <string name="event_name">Event Name</string>
-    <string name="event_short_name">Short Name</string>
-    <string name="event_time">Event Time</string>
-    <string name="event_asset_path">Asset Path</string>
+    <string name="flex">Flex</string>
+    <string name="flex_icon">Flex Icon</string>
+    
+    <!-- Navigation Labels -->
     <string name="agent_details">Agent Details</string>
     <string name="buddies">Buddies</string>
     <string name="buddy_details">Buddy Details</string>
@@ -47,19 +43,6 @@
     <string name="contract_details">Contract Details</string>
     <string name="contract_chapters">Contract Chapters</string>
     <string name="chapter_details">Chapter Details</string>
-    <string name="gear">Gear</string>
-    <string name="level_borders">Level Borders</string>
-    <string name="player_cards">Player Cards</string>
-    <string name="player_titles">Player Titles</string>
-    <string name="seasons">Seasons</string>
-    <string name="sprays">Sprays</string>
-    <string name="themes">Themes</string>
-    <string name="versions">Versions</string>
-    <string name="maps">Maps</string>
-    <string name="weapons">Weapons</string>
-    <string name="gamemodes">Gamemodes</string>
-    <string name="ranks">Ranks</string>
-    <string name="tier_number">Tier: %s</string>
     
     <!-- Not used in UI, just documentation for testing -->
     <string name="testing_documentation">
@@ -88,4 +71,5 @@
         - UI tests: ./gradlew connectedAndroidTest
         - Specific tests: ./gradlew test —tests "com.example.valorantinfo.ui.viewmodels.*"
     </string>
+    <string name="tier_number">Tier: %s</string>
 </resources>

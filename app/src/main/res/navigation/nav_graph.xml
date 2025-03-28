@@ -37,6 +37,9 @@
         <action
             android:id="@+id/action_homeFragment_to_eventsFragment"
             app:destination="@id/eventsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_flexFragment"
+            app:destination="@id/flexFragment" />
     </fragment>
 
     <fragment
@@ -252,5 +255,11 @@
             android:name="currencyUuid"
             app:argType="string" />
     </fragment>
+
+    <fragment
+        android:id="@+id/flexFragment"
+        android:name="com.example.valorantinfo.ui.fragments.FlexFragment"
+        android:label="@string/flex"
+        tools:layout="@layout/fragment_flex" />
 
 </navigation>

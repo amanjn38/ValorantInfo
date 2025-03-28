@@ -53,6 +53,7 @@ class HomeFragment : Fragment() {
                 "CONTRACTS" -> findNavController().navigate(R.id.action_homeFragment_to_contractsFragment)
                 "CURRENCIES" -> findNavController().navigate(R.id.action_homeFragment_to_currenciesFragment)
                 "EVENTS" -> findNavController().navigate(R.id.action_homeFragment_to_eventsFragment)
+                "FLEX" -> findNavController().navigate(R.id.action_homeFragment_to_flexFragment)
                 // Add other navigation actions here when you create more fragments
                 else -> {
                     // For categories that don't have implementations yet
@@ -77,6 +78,7 @@ class HomeFragment : Fragment() {
             Category("CONTRACTS", "Agent contracts and battle pass progression"),
             Category("CURRENCIES", "In-game currencies for purchasing items"),
             Category("EVENTS", "Limited-time events and special occasions"),
+            Category("FLEX", "In-game flex"),
             Category("GAMEMODES", getString(R.string.learn_gamemodes)),
             Category("GEAR", "Equipment and utilities available during matches"),
             Category("LEVEL BORDERS", "Player level borders and progression visuals"),

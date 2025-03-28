@@ -11,6 +11,7 @@ import com.example.valorantinfo.api.ContentTierApiService
 import com.example.valorantinfo.api.ContractApiService
 import com.example.valorantinfo.api.CurrencyApiService
 import com.example.valorantinfo.api.EventsApiService
+import com.example.valorantinfo.api.FlexApiService
 import com.example.valorantinfo.repository.CurrencyRepository
 import com.example.valorantinfo.repository.CurrencyRepositoryImpl
 import com.example.valorantinfo.repository.EventRepository
@@ -31,6 +32,8 @@ import com.example.valorantinfo.repository.ContentTierRepository
 import com.example.valorantinfo.repository.ContentTierRepositoryImpl
 import com.example.valorantinfo.repository.ContractRepository
 import com.example.valorantinfo.repository.ContractRepositoryImpl
+import com.example.valorantinfo.repository.FlexRepository
+import com.example.valorantinfo.repository.FlexRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -216,5 +219,17 @@ object AppModule {
     @Singleton
     fun provideEventRepository(api: EventsApiService): EventRepository {
         return EventRepositoryImpl(api)
+    }
+
+    @Provides
+    @Singleton
+    fun provideFlexApiService(retrofit: Retrofit): FlexApiService {
+        return retrofit.create(FlexApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideFlexRepository(api: FlexApiService): FlexRepository {
+        return FlexRepositoryImpl(api)
     }
 }
