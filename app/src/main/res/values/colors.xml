@@ -34,4 +34,6 @@
     <color name="reward_gun_buddy">#FF9800</color>
     <color name="reward_character">#E91E63</color>
     <color name="reward_default">#607D8B</color>
+
+    <color name="valorant_red">#FF4655</color>
 </resources>

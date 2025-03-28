@@ -1,0 +1,2567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.4.2" type="baseline" client="gradle" dependencies="false" name="AGP (8.4.2)" variant="all" version="8.4.2">
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingContentDescription&quot;. Did you mean &apos;ContentDescription&apos; (Image without `contentDescription`) ?"
+        errorLine1="        enable += setOf(&quot;NullSafeMutableStateFlow&quot;, &quot;MissingContentDescription&quot;)"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="80"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingContentDescription&quot;. Did you mean &apos;ContentDescription&apos; (Image without `contentDescription`) ?"
+        errorLine1="        enable += setOf(&quot;NullSafeMutableStateFlow&quot;, &quot;MissingContentDescription&quot;)"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="80"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingContentDescription&quot;. Did you mean &apos;ContentDescription&apos; (Image without `contentDescription`) ?"
+        errorLine1="        enable += setOf(&quot;NullSafeMutableStateFlow&quot;, &quot;MissingContentDescription&quot;)"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="80"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingContentDescription&quot;. Did you mean &apos;ContentDescription&apos; (Image without `contentDescription`) ?"
+        errorLine1="        enable += setOf(&quot;NullSafeMutableStateFlow&quot;, &quot;MissingContentDescription&quot;)"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="80"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingContentDescription&quot;. Did you mean &apos;ContentDescription&apos; (Image without `contentDescription`) ?"
+        errorLine1="        enable += setOf(&quot;NullSafeMutableStateFlow&quot;, &quot;MissingContentDescription&quot;)"
+        errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="80"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;NullSafeMutableStateFlow&quot;"
+        errorLine1="        enable += setOf(&quot;NullSafeMutableStateFlow&quot;, &quot;MissingContentDescription&quot;)"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="80"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;NullSafeMutableStateFlow&quot;"
+        errorLine1="        enable += setOf(&quot;NullSafeMutableStateFlow&quot;, &quot;MissingContentDescription&quot;)"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="80"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;NullSafeMutableStateFlow&quot;"
+        errorLine1="        enable += setOf(&quot;NullSafeMutableStateFlow&quot;, &quot;MissingContentDescription&quot;)"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="80"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;NullSafeMutableStateFlow&quot;"
+        errorLine1="        enable += setOf(&quot;NullSafeMutableStateFlow&quot;, &quot;MissingContentDescription&quot;)"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="80"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;NullSafeMutableStateFlow&quot;"
+        errorLine1="        enable += setOf(&quot;NullSafeMutableStateFlow&quot;, &quot;MissingContentDescription&quot;)"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="80"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;UnusedImports&quot;"
+        errorLine1="    &lt;issue id=&quot;UnusedImports&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="16"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;UnusedImports&quot;"
+        errorLine1="    &lt;issue id=&quot;UnusedImports&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="16"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;UnusedImports&quot;"
+        errorLine1="    &lt;issue id=&quot;UnusedImports&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="16"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;InvalidResource&quot;. Did you mean &apos;InvalidResourceFolder&apos; (Invalid Resource Folder) ?"
+        errorLine1="    &lt;issue id=&quot;InvalidResource&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="17"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;InvalidResource&quot;. Did you mean &apos;InvalidResourceFolder&apos; (Invalid Resource Folder) ?"
+        errorLine1="    &lt;issue id=&quot;InvalidResource&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="17"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;InvalidResource&quot;. Did you mean &apos;InvalidResourceFolder&apos; (Invalid Resource Folder) ?"
+        errorLine1="    &lt;issue id=&quot;InvalidResource&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="17"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingDimension&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingDimension&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="18"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingDimension&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingDimension&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="18"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingDimension&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingDimension&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="18"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;InvalidXml&quot;"
+        errorLine1="    &lt;issue id=&quot;InvalidXml&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="24"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;InvalidXml&quot;"
+        errorLine1="    &lt;issue id=&quot;InvalidXml&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="24"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;InvalidXml&quot;"
+        errorLine1="    &lt;issue id=&quot;InvalidXml&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="24"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingLayout&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingLayout&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="25"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingLayout&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingLayout&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="25"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingLayout&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingLayout&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="25"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingManifest&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingManifest&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="26"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingManifest&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingManifest&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="26"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingManifest&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingManifest&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="26"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingResource&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingResource&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="28"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingResource&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingResource&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="28"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingResource&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingResource&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="28"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingString&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingString&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="29"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingString&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingString&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="29"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingString&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingString&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="29"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingStyles&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingStyles&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="30"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingStyles&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingStyles&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="30"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingStyles&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingStyles&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="30"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingTheme&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingTheme&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="31"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingTheme&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingTheme&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="31"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingTheme&quot;"
+        errorLine1="    &lt;issue id=&quot;MissingTheme&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="31"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingVersionCode&quot;. Did you mean &apos;MissingVersion&apos; (Missing application name/version) ?"
+        errorLine1="    &lt;issue id=&quot;MissingVersionCode&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="33"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingVersionCode&quot;. Did you mean &apos;MissingVersion&apos; (Missing application name/version) ?"
+        errorLine1="    &lt;issue id=&quot;MissingVersionCode&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="33"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingVersionCode&quot;. Did you mean &apos;MissingVersion&apos; (Missing application name/version) ?"
+        errorLine1="    &lt;issue id=&quot;MissingVersionCode&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="33"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingVersionName&quot;. Did you mean &apos;MissingVersion&apos; (Missing application name/version) ?"
+        errorLine1="    &lt;issue id=&quot;MissingVersionName&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="34"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingVersionName&quot;. Did you mean &apos;MissingVersion&apos; (Missing application name/version) ?"
+        errorLine1="    &lt;issue id=&quot;MissingVersionName&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="34"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnknownIssueId"
+        message="Unknown issue id &quot;MissingVersionName&quot;. Did you mean &apos;MissingVersion&apos; (Missing application name/version) ?"
+        errorLine1="    &lt;issue id=&quot;MissingVersionName&quot; severity=&quot;error&quot; />"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="lint.xml"
+            line="34"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of com.android.application than 8.4.2 is available: 8.9.1"
+        errorLine1="agp = &quot;8.4.2&quot;"
+        errorLine2="      ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of com.android.application than 8.4.2 is available: 8.9.1"
+        errorLine1="agp = &quot;8.4.2&quot;"
+        errorLine2="      ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of com.android.application than 8.4.2 is available: 8.9.1"
+        errorLine1="agp = &quot;8.4.2&quot;"
+        errorLine2="      ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.fragment:fragment-testing than 1.6.2 is available: 1.8.6"
+        errorLine1="    debugImplementation(&quot;androidx.fragment:fragment-testing:$fragmentVersion&quot;)"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="180"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.fragment:fragment-testing than 1.6.2 is available: 1.8.6"
+        errorLine1="    debugImplementation(&quot;androidx.fragment:fragment-testing:$fragmentVersion&quot;)"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="181"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of io.mockk:mockk-agent-api than 1.13.8 is available: 1.13.10"
+        errorLine1="    androidTestImplementation(&quot;io.mockk:mockk-agent-api:$mockkVersion&quot;)"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="188"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of io.mockk:mockk-agent than 1.13.8 is available: 1.13.10"
+        errorLine1="    androidTestImplementation(&quot;io.mockk:mockk-agent:$mockkVersion&quot;)"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="189"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-contrib than 3.5.1 is available: 3.6.1"
+        errorLine1="    testImplementation(&quot;androidx.test.espresso:espresso-contrib:3.5.1&quot;)"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="197"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:core than 1.5.0 is available: 1.6.1"
+        errorLine1="    testImplementation(&quot;androidx.test:core:1.5.0&quot;)"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="198"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:core-ktx than 1.5.0 is available: 1.6.1"
+        errorLine1="    testImplementation(&quot;androidx.test:core-ktx:1.5.0&quot;)"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="199"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-contrib than 3.5.1 is available: 3.6.1"
+        errorLine1="espressoContrib = &quot;3.5.1&quot;"
+        errorLine2="                  ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="5"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-contrib than 3.5.1 is available: 3.6.1"
+        errorLine1="espressoContrib = &quot;3.5.1&quot;"
+        errorLine2="                  ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="5"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-contrib than 3.5.1 is available: 3.6.1"
+        errorLine1="espressoContrib = &quot;3.5.1&quot;"
+        errorLine2="                  ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="5"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-intents than 3.5.1 is available: 3.6.1"
+        errorLine1="espressoIntents = &quot;3.5.1&quot;"
+        errorLine2="                  ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="6"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-intents than 3.5.1 is available: 3.6.1"
+        errorLine1="espressoIntents = &quot;3.5.1&quot;"
+        errorLine2="                  ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="6"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-intents than 3.5.1 is available: 3.6.1"
+        errorLine1="espressoIntents = &quot;3.5.1&quot;"
+        errorLine2="                  ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="6"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.6.1"
+        errorLine1="espressoVersion = &quot;3.5.1&quot;"
+        errorLine2="                  ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="7"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.6.1"
+        errorLine1="espressoVersion = &quot;3.5.1&quot;"
+        errorLine2="                  ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="7"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.6.1"
+        errorLine1="espressoVersion = &quot;3.5.1&quot;"
+        errorLine2="                  ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="7"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlin.android than 1.9.23 is available: 2.0.0"
+        errorLine1="kotlin = &quot;1.9.23&quot;"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="11"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlin.android than 1.9.23 is available: 2.0.0"
+        errorLine1="kotlin = &quot;1.9.23&quot;"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="11"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlin.android than 1.9.23 is available: 2.0.0"
+        errorLine1="kotlin = &quot;1.9.23&quot;"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="11"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:rules than 1.5.0 is available: 1.6.1"
+        errorLine1="rules = &quot;1.5.0&quot;"
+        errorLine2="        ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="26"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:rules than 1.5.0 is available: 1.6.1"
+        errorLine1="rules = &quot;1.5.0&quot;"
+        errorLine2="        ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="26"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:rules than 1.5.0 is available: 1.6.1"
+        errorLine1="rules = &quot;1.5.0&quot;"
+        errorLine2="        ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="26"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:runner than 1.5.2 is available: 1.6.2"
+        errorLine1="runner = &quot;1.5.2&quot;"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="27"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:runner than 1.5.2 is available: 1.6.2"
+        errorLine1="runner = &quot;1.5.2&quot;"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="27"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:runner than 1.5.2 is available: 1.6.2"
+        errorLine1="runner = &quot;1.5.2&quot;"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="27"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of io.mockk:mockk than 1.13.9 is available: 1.13.10"
+        errorLine1="mockk = &quot;1.13.9&quot;"
+        errorLine2="        ~~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="30"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of io.mockk:mockk than 1.13.9 is available: 1.13.10"
+        errorLine1="mockk = &quot;1.13.9&quot;"
+        errorLine2="        ~~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="30"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of io.mockk:mockk than 1.13.9 is available: 1.13.10"
+        errorLine1="mockk = &quot;1.13.9&quot;"
+        errorLine2="        ~~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="30"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:core than 1.5.0 is available: 1.6.1"
+        errorLine1="testCoreVersion = &quot;1.5.0&quot;"
+        errorLine2="                  ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="32"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:core than 1.5.0 is available: 1.6.1"
+        errorLine1="testCoreVersion = &quot;1.5.0&quot;"
+        errorLine2="                  ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="32"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:core than 1.5.0 is available: 1.6.1"
+        errorLine1="testCoreVersion = &quot;1.5.0&quot;"
+        errorLine2="                  ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="32"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.2.1"
+        errorLine1="testExtVersion = &quot;1.1.5&quot;"
+        errorLine2="                 ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="33"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.2.1"
+        errorLine1="testExtVersion = &quot;1.1.5&quot;"
+        errorLine2="                 ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="33"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.2.1"
+        errorLine1="testExtVersion = &quot;1.1.5&quot;"
+        errorLine2="                 ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="33"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:core than 1.6.0 is available: 1.6.1"
+        errorLine1="androidx-test-core = &quot;1.6.0&quot;"
+        errorLine2="                     ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="37"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:core than 1.6.0 is available: 1.6.1"
+        errorLine1="androidx-test-core = &quot;1.6.0&quot;"
+        errorLine2="                     ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="37"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:core than 1.6.0 is available: 1.6.1"
+        errorLine1="androidx-test-core = &quot;1.6.0&quot;"
+        errorLine2="                     ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="37"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:runner than 1.6.0 is available: 1.6.2"
+        errorLine1="androidx-test-runner = &quot;1.6.0&quot;"
+        errorLine2="                       ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="38"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:runner than 1.6.0 is available: 1.6.2"
+        errorLine1="androidx-test-runner = &quot;1.6.0&quot;"
+        errorLine2="                       ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="38"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:runner than 1.6.0 is available: 1.6.2"
+        errorLine1="androidx-test-runner = &quot;1.6.0&quot;"
+        errorLine2="                       ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="38"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:rules than 1.6.0 is available: 1.6.1"
+        errorLine1="androidx-test-rules = &quot;1.6.0&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="39"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:rules than 1.6.0 is available: 1.6.1"
+        errorLine1="androidx-test-rules = &quot;1.6.0&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="39"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test:rules than 1.6.0 is available: 1.6.1"
+        errorLine1="androidx-test-rules = &quot;1.6.0&quot;"
+        errorLine2="                      ~~~~~~~">
+        <location
+            file="$HOME/StudioProjects/ValorantInfo/gradle/libs.versions.toml"
+            line="39"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="KaptUsageInsteadOfKsp"
+        message="This library supports using KSP instead of kapt, which greatly improves performance. Learn more: https://developer.android.com/studio/build/migrate-to-ksp"
+        errorLine1="    kapt(libs.compiler)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="148"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `#0F1923` with a theme that also paints a background (inferred theme is `@style/Theme.ValorantInfo.NoActionBar`)"
+        errorLine1="    android:background=&quot;#0F1923&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_agent_details.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `#0F1923` with a theme that also paints a background (inferred theme is `@style/Theme.ValorantInfo.NoActionBar`)"
+        errorLine1="    android:background=&quot;#0F1923&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_agents.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.ValorantInfo.NoActionBar`)"
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_buddies.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.ValorantInfo.NoActionBar`)"
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_buddy_details.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.ValorantInfo.NoActionBar`)"
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_bundle_details.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.ValorantInfo.NoActionBar`)"
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_bundles.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.ValorantInfo.NoActionBar`)"
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_ceremonies.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.ValorantInfo.NoActionBar`)"
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_ceremony_details.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/background_dark` with a theme that also paints a background (inferred theme is `@style/Theme.ValorantInfo.NoActionBar`)"
+        errorLine1="    android:background=&quot;@color/background_dark&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_competitive_tier_details.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/background_dark` with a theme that also paints a background (inferred theme is `@style/Theme.ValorantInfo.NoActionBar`)"
+        errorLine1="    android:background=&quot;@color/background_dark&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_competitive_tiers.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/background_dark` with a theme that also paints a background (inferred theme is `@style/Theme.ValorantInfo.NoActionBar`)"
+        errorLine1="    android:background=&quot;@color/background_dark&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_content_tiers.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/background` with a theme that also paints a background (inferred theme is `@style/Theme.ValorantInfo.NoActionBar`)"
+        errorLine1="    android:background=&quot;@color/background&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_contract_chapter.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/background` with a theme that also paints a background (inferred theme is `@style/Theme.ValorantInfo.NoActionBar`)"
+        errorLine1="    android:background=&quot;@color/background&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_contract_chapters.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/background` with a theme that also paints a background (inferred theme is `@style/Theme.ValorantInfo.NoActionBar`)"
+        errorLine1="    android:background=&quot;@color/background&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_contract_details.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/background` with a theme that also paints a background (inferred theme is `@style/Theme.ValorantInfo.NoActionBar`)"
+        errorLine1="    android:background=&quot;@color/background&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_contracts.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `#0F1923` with a theme that also paints a background (inferred theme is `@style/Theme.ValorantInfo.NoActionBar`)"
+        errorLine1="    android:background=&quot;#0F1923&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.baseline_currency_exchange_24` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:height=&quot;24dp&quot; android:tint=&quot;#000000&quot; android:viewportHeight=&quot;24&quot; android:viewportWidth=&quot;24&quot; android:width=&quot;24dp&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/baseline_currency_exchange_24.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.chip_background_state` appears to be unused"
+        errorLine1="&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/color/chip_background_state.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.surface` appears to be unused"
+        errorLine1="    &lt;color name=&quot;surface&quot;>#2D2D2D&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="7"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.chip_background` appears to be unused"
+        errorLine1="    &lt;color name=&quot;chip_background&quot;>#3D3D3D&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="10"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.reward_type_background` appears to be unused"
+        errorLine1="    &lt;color name=&quot;reward_type_background&quot;>#2D3748&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="23"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.error` appears to be unused"
+        errorLine1="    &lt;color name=&quot;error&quot;>#FF5252&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="24"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.success` appears to be unused"
+        errorLine1="    &lt;color name=&quot;success&quot;>#4CAF50&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="25"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.warning` appears to be unused"
+        errorLine1="    &lt;color name=&quot;warning&quot;>#FFC107&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="26"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.info` appears to be unused"
+        errorLine1="    &lt;color name=&quot;info&quot;>#2196F3&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="27"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.reward_currency` appears to be unused"
+        errorLine1="    &lt;color name=&quot;reward_currency&quot;>#FFD700&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="30"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.reward_spray` appears to be unused"
+        errorLine1="    &lt;color name=&quot;reward_spray&quot;>#4CAF50&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="31"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.reward_player_card` appears to be unused"
+        errorLine1="    &lt;color name=&quot;reward_player_card&quot;>#2196F3&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="32"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.reward_title` appears to be unused"
+        errorLine1="    &lt;color name=&quot;reward_title&quot;>#9C27B0&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="33"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.reward_gun_buddy` appears to be unused"
+        errorLine1="    &lt;color name=&quot;reward_gun_buddy&quot;>#FF9800&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="34"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.reward_character` appears to be unused"
+        errorLine1="    &lt;color name=&quot;reward_character&quot;>#E91E63&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="35"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.reward_default` appears to be unused"
+        errorLine1="    &lt;color name=&quot;reward_default&quot;>#607D8B&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="36"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.reward_type_background` appears to be unused"
+        errorLine1="&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/reward_type_background.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.hello_blank_fragment` appears to be unused"
+        errorLine1="    &lt;string name=&quot;hello_blank_fragment&quot;>Hello blank fragment&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="4"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.valorant_logo` appears to be unused"
+        errorLine1="    &lt;string name=&quot;valorant_logo&quot;>VALORANT Logo&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="16"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.testing_documentation` appears to be unused"
+        errorLine1="    &lt;string name=&quot;testing_documentation&quot;>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="25"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.SearchViewStyle` appears to be unused"
+        errorLine1="    &lt;style name=&quot;SearchViewStyle&quot; parent=&quot;Widget.AppCompat.SearchView&quot;>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/styles.xml"
+            line="3"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.Base_Theme_ValorantInfo` appears to be unused"
+        errorLine1="    &lt;style name=&quot;Base.Theme.ValorantInfo&quot; parent=&quot;Theme.Material3.DayNight.NoActionBar&quot;>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="3"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_agents.xml"
+            line="56"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="    &lt;EditText"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_buddies.xml"
+            line="25"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    debugImplementation(&quot;androidx.fragment:fragment-testing:1.8.6&quot;)"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="160"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    debugImplementation(&quot;androidx.fragment:fragment-testing:$fragmentVersion&quot;)"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="180"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    debugImplementation(&quot;androidx.fragment:fragment-testing:$fragmentVersion&quot;)"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="181"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    androidTestImplementation(&quot;io.mockk:mockk-agent-api:$mockkVersion&quot;)"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="188"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    androidTestImplementation(&quot;io.mockk:mockk-agent:$mockkVersion&quot;)"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="189"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use the existing version catalog reference (`libs.arch.core.testing`) instead"
+        errorLine1="    testImplementation(&quot;androidx.arch.core:core-testing:2.2.0&quot;)"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="194"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    testImplementation(&quot;org.robolectric:robolectric:4.10.3&quot;)"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="196"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use the existing version catalog reference (`libs.androidx.espresso.contrib.v351`) instead"
+        errorLine1="    testImplementation(&quot;androidx.test.espresso:espresso-contrib:3.5.1&quot;)"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="197"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use the existing version catalog reference (`libs.androidx.core.v150`) instead"
+        errorLine1="    testImplementation(&quot;androidx.test:core:1.5.0&quot;)"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="198"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    testImplementation(&quot;androidx.test:core-ktx:1.5.0&quot;)"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="199"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;androidx.swiperefreshlayout:swiperefreshlayout:1.1.0&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="204"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_contract_details.xml"
+            line="36"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_contract.xml"
+            line="18"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                        &lt;ImageView"
+        errorLine2="                         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_contract_level.xml"
+            line="80"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                        &lt;ImageView"
+        errorLine2="                         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_contract_level.xml"
+            line="115"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                        &lt;ImageView"
+        errorLine2="                         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_contract_level.xml"
+            line="150"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                        &lt;ImageView"
+        errorLine2="                         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_contract_level.xml"
+            line="185"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                        &lt;ImageView"
+        errorLine2="                         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_contract_level.xml"
+            line="220"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                        &lt;ImageView"
+        errorLine2="                         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_contract_level.xml"
+            line="255"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    binding.tvError.text = &quot;No buddies match your search&quot;"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/BuddiesFragment.kt"
+            line="136"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        binding.tvLevelDetailCharmLevel.text = &quot;CHARM LEVEL: ${level.charmLevel}&quot;"
+        errorLine2="                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/BuddyDetailsFragment.kt"
+            line="113"
+            column="48"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        binding.tvLevelDetailCharmLevel.text = &quot;CHARM LEVEL: ${level.charmLevel}&quot;"
+        errorLine2="                                                ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/BuddyDetailsFragment.kt"
+            line="113"
+            column="49"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        binding.tvLevelUuid.text = &quot;UUID: ${level.uuid}&quot;"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/BuddyDetailsFragment.kt"
+            line="114"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        binding.tvLevelUuid.text = &quot;UUID: ${level.uuid}&quot;"
+        errorLine2="                                    ~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/BuddyDetailsFragment.kt"
+            line="114"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                                binding.tvBuddyDescription.text = &quot;No description available&quot;"
+        errorLine2="                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/BuddyDetailsFragment.kt"
+            line="159"
+            column="68"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                            binding.tvLevelDetailCharmLevel.text = &quot;CHARM LEVEL: ${level.charmLevel}&quot;"
+        errorLine2="                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/BuddyDetailsFragment.kt"
+            line="219"
+            column="68"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            binding.tvLevelDetailCharmLevel.text = &quot;CHARM LEVEL: ${level.charmLevel}&quot;"
+        errorLine2="                                                                    ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/BuddyDetailsFragment.kt"
+            line="219"
+            column="69"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                            binding.tvLevelUuid.text = &quot;UUID: ${level.uuid}&quot;"
+        errorLine2="                                                       ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/BuddyDetailsFragment.kt"
+            line="220"
+            column="56"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            binding.tvLevelUuid.text = &quot;UUID: ${level.uuid}&quot;"
+        errorLine2="                                                        ~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/BuddyDetailsFragment.kt"
+            line="220"
+            column="57"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            binding.tvCharmLevel.text = &quot;CHARM LEVEL: ${level.charmLevel}&quot;"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/BuddyLevelsAdapter.kt"
+            line="38"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            binding.tvCharmLevel.text = &quot;CHARM LEVEL: ${level.charmLevel}&quot;"
+        errorLine2="                                         ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/BuddyLevelsAdapter.kt"
+            line="38"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                            binding.tvBundleUuid.text = &quot;UUID: ${bundle.uuid}&quot;"
+        errorLine2="                                                        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/BundleDetailsFragment.kt"
+            line="88"
+            column="57"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            binding.tvBundleUuid.text = &quot;UUID: ${bundle.uuid}&quot;"
+        errorLine2="                                                         ~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/BundleDetailsFragment.kt"
+            line="88"
+            column="58"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                            binding.tvCeremonyUuid.text = &quot;UUID: ${ceremony.uuid}&quot;"
+        errorLine2="                                                          ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/CeremonyDetailsFragment.kt"
+            line="86"
+            column="59"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                            binding.tvCeremonyUuid.text = &quot;UUID: ${ceremony.uuid}&quot;"
+        errorLine2="                                                           ~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/CeremonyDetailsFragment.kt"
+            line="86"
+            column="60"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                tvTiersCount.text = &quot;Contains ${competitiveTier.tiers.size} tiers&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/CompetitiveTiersAdapter.kt"
+            line="21"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                tvTiersCount.text = &quot;Contains ${competitiveTier.tiers.size} tiers&quot;"
+        errorLine2="                                     ~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/CompetitiveTiersAdapter.kt"
+            line="21"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                tvTiersCount.text = &quot;Contains ${competitiveTier.tiers.size} tiers&quot;"
+        errorLine2="                                                                           ~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/CompetitiveTiersAdapter.kt"
+            line="21"
+            column="76"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                tvRank.text = &quot;Rank: ${contentTier.rank}&quot;"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContentTiersAdapter.kt"
+            line="45"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                tvRank.text = &quot;Rank: ${contentTier.rank}&quot;"
+        errorLine2="                               ~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContentTiersAdapter.kt"
+            line="45"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                tvJuiceValue.text = &quot;Juice Value: ${contentTier.juiceValue}&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContentTiersAdapter.kt"
+            line="46"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                tvJuiceValue.text = &quot;Juice Value: ${contentTier.juiceValue}&quot;"
+        errorLine2="                                     ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContentTiersAdapter.kt"
+            line="46"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                tvJuiceCost.text = &quot;Juice Cost: ${contentTier.juiceCost}&quot;"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContentTiersAdapter.kt"
+            line="47"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                tvJuiceCost.text = &quot;Juice Cost: ${contentTier.juiceCost}&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContentTiersAdapter.kt"
+            line="47"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            chapterTitle.text = &quot;Chapter ${chapter.position + 1}&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/ContractChapterFragment.kt"
+            line="117"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            chapterTitle.text = &quot;Chapter ${chapter.position + 1}&quot;"
+        errorLine2="                                           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/ContractChapterFragment.kt"
+            line="117"
+            column="44"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            chapterTitle.text = &quot;Chapter ${chapter.position + 1}&quot;"
+        errorLine2="                                 ~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/fragments/ContractChapterFragment.kt"
+            line="117"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                chapterNumber.text = &quot;Chapter ${chapter.position + 1}&quot;"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractChaptersAdapter.kt"
+            line="41"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                chapterNumber.text = &quot;Chapter ${chapter.position + 1}&quot;"
+        errorLine2="                                                ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractChaptersAdapter.kt"
+            line="41"
+            column="49"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                chapterNumber.text = &quot;Chapter ${chapter.position + 1}&quot;"
+        errorLine2="                                      ~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractChaptersAdapter.kt"
+            line="41"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                levelCount.text = &quot;${chapter.levels.size} Levels&quot;"
+        errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractChaptersAdapter.kt"
+            line="42"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                levelCount.text = &quot;${chapter.levels.size} Levels&quot;"
+        errorLine2="                                                         ~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractChaptersAdapter.kt"
+            line="42"
+            column="58"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            levelNumber.text = &quot;Level ${adapterPosition + 1}&quot;"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractLevelAdapter.kt"
+            line="44"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            levelNumber.text = &quot;Level ${adapterPosition + 1}&quot;"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractLevelAdapter.kt"
+            line="44"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            levelNumber.text = &quot;Level ${adapterPosition + 1}&quot;"
+        errorLine2="                                ~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractLevelAdapter.kt"
+            line="44"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            levelProgress.text = &quot;${level.xp} XP / ${level.xp} XP&quot;"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractLevelAdapter.kt"
+            line="45"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            levelProgress.text = &quot;${level.xp} XP / ${level.xp} XP&quot;"
+        errorLine2="                                             ~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractLevelAdapter.kt"
+            line="45"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            levelProgress.text = &quot;${level.xp} XP / ${level.xp} XP&quot;"
+        errorLine2="                                                              ~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractLevelAdapter.kt"
+            line="45"
+            column="63"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                    xpReward.text = &quot;${level.reward.amount} XP&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractLevelAdapter.kt"
+            line="60"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    xpReward.text = &quot;${level.reward.amount} XP&quot;"
+        errorLine2="                                                           ~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractLevelAdapter.kt"
+            line="60"
+            column="60"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                    vpReward.text = &quot;${level.reward.amount} VP&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractLevelAdapter.kt"
+            line="64"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    vpReward.text = &quot;${level.reward.amount} VP&quot;"
+        errorLine2="                                                           ~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractLevelAdapter.kt"
+            line="64"
+            column="60"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    skinReward.text = &quot;Skin&quot;"
+        errorLine2="                                       ~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractLevelAdapter.kt"
+            line="68"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    sprayReward.text = &quot;Spray&quot;"
+        errorLine2="                                        ~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractLevelAdapter.kt"
+            line="72"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    titleReward.text = &quot;Title&quot;"
+        errorLine2="                                        ~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractLevelAdapter.kt"
+            line="76"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    buddyReward.text = &quot;Buddy&quot;"
+        errorLine2="                                        ~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/ContractLevelAdapter.kt"
+            line="80"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                tvTierNumber.text = &quot;Tier: ${tier.tier}&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/TiersAdapter.kt"
+            line="21"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                tvTierNumber.text = &quot;Tier: ${tier.tier}&quot;"
+        errorLine2="                                     ~~~~~~">
+        <location
+            file="src/main/java/com/example/valorantinfo/ui/adapters/TiersAdapter.kt"
+            line="21"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;BUDDIES&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;BUDDIES&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_buddies.xml"
+            line="17"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Search Buddies...&quot;, should use `@string` resource"
+        errorLine1="        android:hint=&quot;Search Buddies...&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_buddies.xml"
+            line="35"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Buddy Image&quot;, should use `@string` resource"
+        errorLine1="                android:contentDescription=&quot;Buddy Image&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_buddy_details.xml"
+            line="39"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;DESCRIPTION&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;DESCRIPTION&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_buddy_details.xml"
+            line="51"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;LEVELS&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;LEVELS&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_buddy_details.xml"
+            line="76"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;(Tap on a level to see details)&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;(Tap on a level to see details)&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_buddy_details.xml"
+            line="89"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Close Details&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;Close Details&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_buddy_details.xml"
+            line="156"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;LEVEL DETAILS&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;LEVEL DETAILS&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_buddy_details.xml"
+            line="167"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Level Icon&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;Level Icon&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_buddy_details.xml"
+            line="190"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Bundle Image&quot;, should use `@string` resource"
+        errorLine1="                    android:contentDescription=&quot;Bundle Image&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_bundle_details.xml"
+            line="49"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;DESCRIPTION&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;DESCRIPTION&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_bundle_details.xml"
+            line="69"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;DETAILS&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;DETAILS&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_bundle_details.xml"
+            line="94"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Promotional Image&quot;, should use `@string` resource"
+        errorLine1="                    android:contentDescription=&quot;Promotional Image&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_bundle_details.xml"
+            line="137"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;BUNDLES&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;BUNDLES&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_bundles.xml"
+            line="18"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Featured content packs available in the store&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Featured content packs available in the store&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_bundles.xml"
+            line="33"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;CEREMONIES&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;CEREMONIES&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_ceremonies.xml"
+            line="18"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Special animations for key match moments&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Special animations for key match moments&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_ceremonies.xml"
+            line="33"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TYPE&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;TYPE&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_ceremony_details.xml"
+            line="46"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;CEREMONY&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;CEREMONY&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_ceremony_details.xml"
+            line="63"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;ASSET PATH&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;ASSET PATH&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_ceremony_details.xml"
+            line="73"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Ceremony animations play during key moments in a VALORANT match, adding flair to impressive achievements.&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Ceremony animations play during key moments in a VALORANT match, adding flair to impressive achievements.&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_ceremony_details.xml"
+            line="106"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Competitive Tiers&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Competitive Tiers&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_competitive_tiers.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Content Tiers&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Content Tiers&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_content_tiers.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;View Chapters&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;View Chapters&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_contract_details.xml"
+            line="71"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Buddy Icon&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;Buddy Icon&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_buddy.xml"
+            line="22"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Level Icon&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;Level Icon&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_buddy_level.xml"
+            line="21"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Bundle Image&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;Bundle Image&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_bundle.xml"
+            line="22"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;CEREMONY&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;CEREMONY&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_ceremony.xml"
+            line="42"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Competitive Tier Icon&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;Competitive Tier Icon&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_competitive_tier.xml"
+            line="27"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Content Tier Icon&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;Content Tier Icon&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_content_tier.xml"
+            line="27"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Tier Icon&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;Tier Icon&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_tier.xml"
+            line="27"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlSymmetry"
+        message="When you define `paddingEnd` you should probably also define `paddingStart` for right-to-left symmetry"
+        errorLine1="            android:paddingEnd=&quot;@dimen/_4sdp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_contract_level.xml"
+            line="53"
+            column="13"/>
+    </issue>
+
+</issues>

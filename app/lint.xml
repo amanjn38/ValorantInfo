@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- Disable some rules that are too strict for development -->
+    <issue id="MissingTranslation" severity="warning" />
+    <issue id="GradleDependency" severity="warning" />
+    <issue id="UnusedResources" severity="warning" />
+    <issue id="InvalidPackage" severity="ignore" />
+    <issue id="MissingPermission" severity="ignore" />
+    <issue id="HandlerLeak" severity="ignore" />
+    <issue id="NullSafeMutableLiveData" severity="ignore" />
+    
+    <!-- Enable important rules -->
+    <issue id="NullSafeMutableStateFlow" severity="error" />
+    <issue id="MissingContentDescription" severity="error" />
+    <issue id="HardcodedText" severity="warning" />
+    <issue id="UnusedImports" severity="error" />
+    <issue id="InvalidResource" severity="error" />
+    <issue id="MissingDimension" severity="error" />
+    <issue id="MissingId" severity="error" />
+    <issue id="DuplicateDefinition" severity="error" />
+    <issue id="DuplicateIds" severity="error" />
+    <issue id="InvalidId" severity="error" />
+    <issue id="InvalidPackage" severity="error" />
+    <issue id="InvalidXml" severity="error" />
+    <issue id="MissingLayout" severity="error" />
+    <issue id="MissingManifest" severity="error" />
+    <issue id="MissingPermission" severity="error" />
+    <issue id="MissingResource" severity="error" />
+    <issue id="MissingString" severity="error" />
+    <issue id="MissingStyles" severity="error" />
+    <issue id="MissingTheme" severity="error" />
+    <issue id="MissingVersion" severity="error" />
+    <issue id="MissingVersionCode" severity="error" />
+    <issue id="MissingVersionName" severity="error" />
+    <issue id="MissingVersionName" severity="error" />
+    <issue id="MissingVersionCode" severity="error" />
+    <issue id="MissingVersion" severity="error" />
+    <issue id="MissingTheme" severity="error" />
+    <issue id="MissingStyles" severity="error" />
+    <issue id="MissingString" severity="error" />
+    <issue id="MissingResource" severity="error" />
+    <issue id="MissingPermission" severity="error" />
+    <issue id="MissingManifest" severity="error" />
+    <issue id="MissingLayout" severity="error" />
+    <issue id="InvalidXml" severity="error" />
+    <issue id="InvalidPackage" severity="error" />
+    <issue id="InvalidId" severity="error" />
+    <issue id="DuplicateIds" severity="error" />
+    <issue id="DuplicateDefinition" severity="error" />
+    <issue id="MissingId" severity="error" />
+    <issue id="MissingDimension" severity="error" />
+    <issue id="InvalidResource" severity="error" />
+    <issue id="UnusedImports" severity="error" />
+    <issue id="HardcodedText" severity="warning" />
+    <issue id="MissingContentDescription" severity="error" />
+    <issue id="NullSafeMutableStateFlow" severity="error" />
+</lint> 

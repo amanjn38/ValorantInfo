@@ -44,6 +44,19 @@ class HomeFragment : Fragment() {
                 "COMPETITIVE TIERS" -> findNavController().navigate(R.id.action_homeFragment_to_competitiveTiersFragment)
                 "CONTENT TIERS" -> findNavController().navigate(R.id.action_homeFragment_to_contentTiersFragment)
                 "CONTRACTS" -> findNavController().navigate(R.id.action_homeFragment_to_contractsFragment)
+                "CURRENCIES" -> findNavController().navigate(R.id.action_homeFragment_to_currenciesFragment)
+//                "EVENTS" -> findNavController().navigate(R.id.action_homeFragment_to_eventsFragment)
+//                "GAMEMODES" -> findNavController().navigate(R.id.action_homeFragment_to_gamemodesFragment)
+//                "GEAR" -> findNavController().navigate(R.id.action_homeFragment_to_gearFragment)
+//                "LEVEL BORDERS" -> findNavController().navigate(R.id.action_homeFragment_to_levelBordersFragment)
+//                "MAPS" -> findNavController().navigate(R.id.action_homeFragment_to_mapsFragment)
+//                "PLAYER CARDS" -> findNavController().navigate(R.id.action_homeFragment_to_playerCardsFragment)
+//                "PLAYER TITLES" -> findNavController().navigate(R.id.action_homeFragment_to_playerTitlesFragment)
+//                "SEASONS" -> findNavController().navigate(R.id.action_homeFragment_to_seasonsFragment)
+//                "SPRAYS" -> findNavController().navigate(R.id.action_homeFragment_to_spraysFragment)
+//                "THEMES" -> findNavController().navigate(R.id.action_homeFragment_to_themesFragment)
+//                "WEAPONS" -> findNavController().navigate(R.id.action_homeFragment_to_weaponsFragment)
+//                "VERSIONS" -> findNavController().navigate(R.id.action_homeFragment_to_versionsFragment)
                 // Add other navigation actions here when you create more fragments
                 else -> {
                     // For categories that don't have implementations yet

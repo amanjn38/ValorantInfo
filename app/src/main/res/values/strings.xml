@@ -48,4 +48,9 @@
         - UI tests: ./gradlew connectedAndroidTest
         - Specific tests: ./gradlew test —tests "com.example.valorantinfo.ui.viewmodels.*"
     </string>
+    <string name="tier_number">Tier: %s</string>
+    <string name="currency_icon">Currency icon</string>
+    <string name="currencies">Currencies</string>
+    <string name="view_details">View Details</string>
+    <string name="asset_path">Asset Path</string>
 </resources>

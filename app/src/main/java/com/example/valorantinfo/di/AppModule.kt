@@ -9,6 +9,7 @@ import com.example.valorantinfo.api.CeremonyApiService
 import com.example.valorantinfo.api.CompetitiveTierApiService
 import com.example.valorantinfo.api.ContentTierApiService
 import com.example.valorantinfo.api.ContractApiService
+import com.example.valorantinfo.data.api.ValorantApi
 import com.example.valorantinfo.repository.AgentDetailsRepository
 import com.example.valorantinfo.repository.AgentDetailsRepositoryImpl
 import com.example.valorantinfo.repository.AgentRepository
@@ -172,7 +173,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideValorantApi(retrofit: Retrofit): ContractApiService {
+    fun provideContractServiceApi(retrofit: Retrofit): ContractApiService {
         return retrofit.create(ContractApiService::class.java)
     }
 
@@ -186,5 +187,11 @@ object AppModule {
     @Singleton
     fun provideViewModelFactory(): ViewModelProvider.Factory {
         return ViewModelProvider.NewInstanceFactory()
+    }
+
+    @Provides
+    @Singleton
+    fun provideValorantApi(retrofit: Retrofit): ValorantApi {
+        return retrofit.create(ValorantApi::class.java)
     }
 }
