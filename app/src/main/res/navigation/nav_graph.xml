@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.valorantinfo.ui.fragments.HomeFragment"
-        android:label="Home"
+        android:label="@string/valorant_info"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_agentsFragment"
@@ -34,12 +34,15 @@
         <action
             android:id="@+id/action_homeFragment_to_currenciesFragment"
             app:destination="@id/currenciesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_eventsFragment"
+            app:destination="@id/eventsFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/agentsFragment"
         android:name="com.example.valorantinfo.ui.fragments.AgentsFragment"
-        android:label="Agents"
+        android:label="@string/agents"
         tools:layout="@layout/fragment_agents">
         <action
             android:id="@+id/action_agentsFragment_to_agentDetailsFragment"
@@ -49,7 +52,7 @@
     <fragment
         android:id="@+id/agentDetailsFragment"
         android:name="com.example.valorantinfo.ui.fragments.AgentDetailsFragment"
-        android:label="Agent Details"
+        android:label="@string/agent_details"
         tools:layout="@layout/fragment_agent_details">
         <argument
             android:name="agentUuid"
@@ -59,7 +62,7 @@
     <fragment
         android:id="@+id/buddiesFragment"
         android:name="com.example.valorantinfo.ui.fragments.BuddiesFragment"
-        android:label="Buddies"
+        android:label="@string/buddies"
         tools:layout="@layout/fragment_buddies">
         <action
             android:id="@+id/action_buddiesFragment_to_buddyDetailsFragment"
@@ -69,7 +72,7 @@
     <fragment
         android:id="@+id/buddyDetailsFragment"
         android:name="com.example.valorantinfo.ui.fragments.BuddyDetailsFragment"
-        android:label="Buddy Details"
+        android:label="@string/buddy_details"
         tools:layout="@layout/fragment_buddy_details">
         <argument
             android:name="buddyUuid"
@@ -79,7 +82,7 @@
     <fragment
         android:id="@+id/bundlesFragment"
         android:name="com.example.valorantinfo.ui.fragments.BundlesFragment"
-        android:label="Bundles"
+        android:label="@string/bundles"
         tools:layout="@layout/fragment_bundles">
         <action
             android:id="@+id/action_bundlesFragment_to_bundleDetailsFragment"
@@ -89,7 +92,7 @@
     <fragment
         android:id="@+id/bundleDetailsFragment"
         android:name="com.example.valorantinfo.ui.fragments.BundleDetailsFragment"
-        android:label="Bundle Details"
+        android:label="@string/bundle_details"
         tools:layout="@layout/fragment_bundle_details">
         <argument
             android:name="bundleUuid"
@@ -102,7 +105,7 @@
     <fragment
         android:id="@+id/ceremoniesFragment"
         android:name="com.example.valorantinfo.ui.fragments.CeremoniesFragment"
-        android:label="Ceremonies"
+        android:label="@string/ceremonies"
         tools:layout="@layout/fragment_ceremonies">
         <action
             android:id="@+id/action_ceremoniesFragment_to_ceremonyDetailsFragment"
@@ -112,7 +115,7 @@
     <fragment
         android:id="@+id/ceremonyDetailsFragment"
         android:name="com.example.valorantinfo.ui.fragments.CeremonyDetailsFragment"
-        android:label="Ceremony Details"
+        android:label="@string/ceremony_details"
         tools:layout="@layout/fragment_ceremony_details">
         <argument
             android:name="ceremonyUuid"
@@ -125,7 +128,7 @@
     <fragment
         android:id="@+id/competitiveTiersFragment"
         android:name="com.example.valorantinfo.ui.fragments.CompetitiveTiersFragment"
-        android:label="Competitive Tiers"
+        android:label="@string/competitive_tiers"
         tools:layout="@layout/fragment_competitive_tiers">
         <action
             android:id="@+id/action_competitiveTiersFragment_to_competitiveTierDetailsFragment"
@@ -135,7 +138,7 @@
     <fragment
         android:id="@+id/competitiveTierDetailsFragment"
         android:name="com.example.valorantinfo.ui.fragments.CompetitiveTierDetailsFragment"
-        android:label="Competitive Tier Details"
+        android:label="@string/competitive_tier_details"
         tools:layout="@layout/fragment_competitive_tier_details">
         <argument
             android:name="competitiveTierUuid"
@@ -148,13 +151,13 @@
     <fragment
         android:id="@+id/contentTiersFragment"
         android:name="com.example.valorantinfo.ui.fragments.ContentTiersFragment"
-        android:label="Content Tiers"
+        android:label="@string/content_tiers"
         tools:layout="@layout/fragment_content_tiers" />
 
     <fragment
         android:id="@+id/contractsFragment"
         android:name="com.example.valorantinfo.ui.fragments.ContractsFragment"
-        android:label="Contracts"
+        android:label="@string/contracts"
         tools:layout="@layout/fragment_contracts">
         <action
             android:id="@+id/action_contractsFragment_to_contractDetailsFragment"
@@ -167,7 +170,7 @@
     <fragment
         android:id="@+id/contractDetailsFragment"
         android:name="com.example.valorantinfo.ui.fragments.ContractDetailsFragment"
-        android:label="Contract Details"
+        android:label="@string/contract_details"
         tools:layout="@layout/fragment_contract_details">
         <argument
             android:name="contractId"
@@ -182,7 +185,7 @@
     <fragment
         android:id="@+id/contractChaptersFragment"
         android:name="com.example.valorantinfo.ui.fragments.ContractChaptersFragment"
-        android:label="Contract Chapters"
+        android:label="@string/contract_chapters"
         tools:layout="@layout/fragment_contract_chapters">
         <argument
             android:name="contractId"
@@ -197,7 +200,7 @@
     <fragment
         android:id="@+id/contractChapterFragment"
         android:name="com.example.valorantinfo.ui.fragments.ContractChapterFragment"
-        android:label="Chapter Details"
+        android:label="@string/chapter_details"
         tools:layout="@layout/fragment_contract_chapter">
         <argument
             android:name="contractId"
@@ -208,6 +211,26 @@
         <argument
             android:name="isEpilogue"
             app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.example.valorantinfo.ui.fragments.EventsFragment"
+        android:label="@string/events"
+        tools:layout="@layout/fragment_events">
+        <action
+            android:id="@+id/action_eventsFragment_to_eventDetailsFragment"
+            app:destination="@id/eventDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventDetailsFragment"
+        android:name="com.example.valorantinfo.ui.fragments.EventDetailsFragment"
+        android:label="@string/events"
+        tools:layout="@layout/fragment_event_details">
+        <argument
+            android:name="eventUuid"
+            app:argType="string" />
     </fragment>
 
     <fragment

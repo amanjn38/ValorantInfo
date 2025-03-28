@@ -10,7 +10,9 @@ import com.example.valorantinfo.R
 import com.example.valorantinfo.data.models.Category
 import com.example.valorantinfo.databinding.FragmentHomeBinding
 import com.example.valorantinfo.ui.adapters.CategoryAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
@@ -29,9 +31,14 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        setupClickListeners()
         setupRecyclerView()
         loadCategories()
+    }
+
+    private fun setupClickListeners() {
+        binding.apply {
+        }
     }
 
     private fun setupRecyclerView() {
@@ -45,18 +52,7 @@ class HomeFragment : Fragment() {
                 "CONTENT TIERS" -> findNavController().navigate(R.id.action_homeFragment_to_contentTiersFragment)
                 "CONTRACTS" -> findNavController().navigate(R.id.action_homeFragment_to_contractsFragment)
                 "CURRENCIES" -> findNavController().navigate(R.id.action_homeFragment_to_currenciesFragment)
-//                "EVENTS" -> findNavController().navigate(R.id.action_homeFragment_to_eventsFragment)
-//                "GAMEMODES" -> findNavController().navigate(R.id.action_homeFragment_to_gamemodesFragment)
-//                "GEAR" -> findNavController().navigate(R.id.action_homeFragment_to_gearFragment)
-//                "LEVEL BORDERS" -> findNavController().navigate(R.id.action_homeFragment_to_levelBordersFragment)
-//                "MAPS" -> findNavController().navigate(R.id.action_homeFragment_to_mapsFragment)
-//                "PLAYER CARDS" -> findNavController().navigate(R.id.action_homeFragment_to_playerCardsFragment)
-//                "PLAYER TITLES" -> findNavController().navigate(R.id.action_homeFragment_to_playerTitlesFragment)
-//                "SEASONS" -> findNavController().navigate(R.id.action_homeFragment_to_seasonsFragment)
-//                "SPRAYS" -> findNavController().navigate(R.id.action_homeFragment_to_spraysFragment)
-//                "THEMES" -> findNavController().navigate(R.id.action_homeFragment_to_themesFragment)
-//                "WEAPONS" -> findNavController().navigate(R.id.action_homeFragment_to_weaponsFragment)
-//                "VERSIONS" -> findNavController().navigate(R.id.action_homeFragment_to_versionsFragment)
+                "EVENTS" -> findNavController().navigate(R.id.action_homeFragment_to_eventsFragment)
                 // Add other navigation actions here when you create more fragments
                 else -> {
                     // For categories that don't have implementations yet

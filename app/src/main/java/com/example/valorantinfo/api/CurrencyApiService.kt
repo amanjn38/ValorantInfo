@@ -1,11 +1,11 @@
-package com.example.valorantinfo.data.api
+package com.example.valorantinfo.api
 
 import com.example.valorantinfo.data.models.currencies.CurrencyResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 
-interface ValorantApi {
+interface CurrencyApiService {
     @GET("v1/currencies")
     suspend fun getCurrencies(
         @Query("v1/language") language: String = "en-US"

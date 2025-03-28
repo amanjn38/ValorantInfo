@@ -9,7 +9,12 @@ import com.example.valorantinfo.api.CeremonyApiService
 import com.example.valorantinfo.api.CompetitiveTierApiService
 import com.example.valorantinfo.api.ContentTierApiService
 import com.example.valorantinfo.api.ContractApiService
-import com.example.valorantinfo.data.api.ValorantApi
+import com.example.valorantinfo.api.CurrencyApiService
+import com.example.valorantinfo.api.EventsApiService
+import com.example.valorantinfo.repository.CurrencyRepository
+import com.example.valorantinfo.repository.CurrencyRepositoryImpl
+import com.example.valorantinfo.repository.EventRepository
+import com.example.valorantinfo.repository.EventRepositoryImpl
 import com.example.valorantinfo.repository.AgentDetailsRepository
 import com.example.valorantinfo.repository.AgentDetailsRepositoryImpl
 import com.example.valorantinfo.repository.AgentRepository
@@ -191,7 +196,25 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideValorantApi(retrofit: Retrofit): ValorantApi {
-        return retrofit.create(ValorantApi::class.java)
+    fun provideCurrencyApiService(retrofit: Retrofit): CurrencyApiService {
+        return retrofit.create(CurrencyApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideCurrencyRepository(api: CurrencyApiService): CurrencyRepository {
+        return CurrencyRepositoryImpl(api)
+    }
+
+    @Provides
+    @Singleton
+    fun provideEventsApiService(retrofit: Retrofit): EventsApiService {
+        return retrofit.create(EventsApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideEventRepository(api: EventsApiService): EventRepository {
+        return EventRepositoryImpl(api)
     }
 }

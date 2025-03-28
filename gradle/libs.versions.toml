@@ -35,6 +35,7 @@ coroutines-test = "1.8.0"
 swiperefreshlayout = "1.1.0"
 testCoreVersion = "1.5.0"
 testExtVersion = "1.1.5"
+threetenabp = "1.4.6"
 turbine = "1.1.0"
 arch-core-testing = "2.2.0"
 truth = "1.4.1"
@@ -89,6 +90,7 @@ ssp-android = { module = "com.intuit.ssp:ssp-android", version.ref = "sspAndroid
 # Testing libraries
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines-test" }
+threetenabp = { module = "com.jakewharton.threetenabp:threetenabp", version.ref = "threetenabp" }
 turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
 arch-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "arch-core-testing" }
 truth = { module = "com.google.truth:truth", version.ref = "truth" }

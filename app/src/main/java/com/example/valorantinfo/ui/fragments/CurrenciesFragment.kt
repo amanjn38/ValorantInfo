@@ -24,7 +24,6 @@ class CurrenciesFragment : Fragment() {
 
     private var _binding: FragmentCurrenciesBinding? = null
     private val binding get() = _binding!!
-
     private val viewModel: CurrenciesViewModel by viewModels()
     private lateinit var currencyAdapter: CurrencyAdapter
 
@@ -59,7 +58,6 @@ class CurrenciesFragment : Fragment() {
                 viewModel.uiState.collect { state ->
                     when (state) {
                         is CurrenciesUiState.Loading -> {
-                            System.out.println("testing 12 ")
                             binding.progressBar.visibility = View.VISIBLE
                             binding.tvError.visibility = View.GONE
                             binding.rvCurrencies.visibility = View.GONE

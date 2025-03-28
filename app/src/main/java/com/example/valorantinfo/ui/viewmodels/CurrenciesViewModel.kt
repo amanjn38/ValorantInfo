@@ -3,7 +3,7 @@ package com.example.valorantinfo.ui.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.valorantinfo.data.models.currencies.Currency
-import com.example.valorantinfo.data.repository.CurrencyRepository
+import com.example.valorantinfo.repository.CurrencyRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
