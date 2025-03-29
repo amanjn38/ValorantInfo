@@ -32,6 +32,7 @@ class EquippableAdapter : ListAdapter<GameModeEquippable, EquippableAdapter.Equi
         fun bind(equippable: GameModeEquippable) {
             binding.apply {
                 tvEquippableName.text = equippable.displayName
+                tvEquippableDescription.text = equippable.description
 
                 Glide.with(ivEquippableIcon)
                     .load(equippable.displayIcon)

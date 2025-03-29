@@ -10,7 +10,7 @@ data class GameMode(
     @SerializedName("description")
     val description: String,
     @SerializedName("displayIcon")
-    val displayIcon: String,
+    val displayIcon: String?,
     @SerializedName("duration")
     val duration: String,
     @SerializedName("isMatchmakingEnabled")
@@ -22,7 +22,7 @@ data class GameMode(
     @SerializedName("orbCount")
     val orbCount: Int,
     @SerializedName("teamRoles")
-    val teamRoles: List<String>
+    val teamRoles: List<String>?
 )
 
 data class GameFeatureOverride(

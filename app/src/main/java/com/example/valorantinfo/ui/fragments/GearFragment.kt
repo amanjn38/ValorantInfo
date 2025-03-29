@@ -9,23 +9,23 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.valorantinfo.databinding.FragmentGameModesBinding
-import com.example.valorantinfo.ui.adapters.GameModeAdapter
-import com.example.valorantinfo.ui.viewmodels.GameModeViewModel
+import com.example.valorantinfo.databinding.FragmentGearBinding
+import com.example.valorantinfo.ui.adapters.GearAdapter
+import com.example.valorantinfo.ui.viewmodels.GearUiState
+import com.example.valorantinfo.ui.viewmodels.GearViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class GameModesFragment : Fragment() {
+class GearFragment : Fragment() {
 
-    private var _binding: FragmentGameModesBinding? = null
+    private var _binding: FragmentGearBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: GameModeViewModel by viewModels()
-    private val gameModeAdapter = GameModeAdapter { gameMode ->
-        val action = GameModesFragmentDirections.actionGameModesFragmentToGameModeDetailsFragment(gameMode.uuid)
-        findNavController().navigate(action)
+    private val viewModel: GearViewModel by viewModels()
+    private val gearAdapter = GearAdapter { gear ->
+        navigateToGearDetails(gear.uuid)
     }
 
     override fun onCreateView(
@@ -33,7 +33,7 @@ class GameModesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentGameModesBinding.inflate(inflater, container, false)
+        _binding = FragmentGearBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -44,9 +44,9 @@ class GameModesFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        binding.rvGameModes.apply {
+        binding.rvGear.apply {
             layoutManager = LinearLayoutManager(context)
-            adapter = gameModeAdapter
+            adapter = gearAdapter
         }
     }
 
@@ -54,23 +54,29 @@ class GameModesFragment : Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.uiState.collectLatest { state ->
                 when (state) {
-                    is GameModeViewModel.GameModeUiState.Loading -> {
+                    is GearUiState.Loading -> {
                         binding.progressBar.visibility = View.VISIBLE
-                        binding.rvGameModes.visibility = View.GONE
+                        binding.nestedScrollView.visibility = View.GONE
                     }
-                    is GameModeViewModel.GameModeUiState.Success -> {
+                    is GearUiState.Success -> {
                         binding.progressBar.visibility = View.GONE
-                        binding.rvGameModes.visibility = View.VISIBLE
-                        gameModeAdapter.submitList(state.gameModes)
+                        binding.nestedScrollView.visibility = View.VISIBLE
+                        gearAdapter.submitList(state.gear)
                     }
-                    is GameModeViewModel.GameModeUiState.Error -> {
+                    is GearUiState.Error -> {
                         binding.progressBar.visibility = View.GONE
-                        binding.rvGameModes.visibility = View.GONE
-                        // Handle error state
+                        binding.nestedScrollView.visibility = View.GONE
+                        binding.tvError.visibility = View.VISIBLE
+                        binding.tvError.text = state.message
                     }
                 }
             }
         }
+    }
+
+    private fun navigateToGearDetails(gearUuid: String) {
+        val action = GearFragmentDirections.actionGearFragmentToGearDetailsFragment(gearUuid)
+        findNavController().navigate(action)
     }
 
     override fun onDestroyView() {

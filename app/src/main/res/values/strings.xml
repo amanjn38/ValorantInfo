@@ -90,5 +90,5 @@
     </string>
     <string name="tier_number">Tier: %s</string>
     <string name="not_specified">Not specified</string>
-    <string name="game_modes_capital">GAME MODES</string>
+    <string name="gear">GEAR</string>
 </resources>

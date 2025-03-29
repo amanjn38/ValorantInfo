@@ -43,6 +43,11 @@
         <action
             android:id="@+id/action_homeFragment_to_gameModesFragment"
             app:destination="@id/gameModesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gearFragment"
+            app:destination="@id/gearFragment" />
+
+
     </fragment>
 
     <fragment
@@ -283,5 +288,32 @@
         android:name="com.example.valorantinfo.ui.fragments.FlexFragment"
         android:label="@string/flex"
         tools:layout="@layout/fragment_flex" />
+
+    <fragment
+        android:id="@+id/gearFragment"
+        android:name="com.example.valorantinfo.ui.fragments.GearFragment"
+        android:label="@string/gear"
+        tools:layout="@layout/fragment_gear">
+        <action
+            android:id="@+id/action_gearFragment_to_gearDetailsFragment"
+            app:destination="@id/gearDetailsFragment">
+            <argument
+                android:name="gearUuid"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_gearFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gearDetailsFragment"
+        android:name="com.example.valorantinfo.ui.fragments.GearDetailsFragment"
+        android:label="@string/gear"
+        tools:layout="@layout/fragment_gear_details">
+        <argument
+            android:name="gearUuid"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

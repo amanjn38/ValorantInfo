@@ -10,5 +10,7 @@ data class GameModeEquippable(
     @SerializedName("description")
     val description: String,
     @SerializedName("displayIcon")
-    val displayIcon: String
+    val displayIcon: String?,
+    @SerializedName("assetPath")
+    val assetPath: String
 ) 

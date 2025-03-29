@@ -7,14 +7,9 @@ import com.example.valorantinfo.repository.GameModeRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-
-sealed class GameModeUiState {
-    object Loading : GameModeUiState()
-    data class Success(val gameModes: List<GameMode>) : GameModeUiState()
-    data class Error(val message: String) : GameModeUiState()
-}
 
 @HiltViewModel
 class GameModeViewModel @Inject constructor(
@@ -22,25 +17,31 @@ class GameModeViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<GameModeUiState>(GameModeUiState.Loading)
-    val uiState: StateFlow<GameModeUiState> = _uiState
+    val uiState: StateFlow<GameModeUiState> = _uiState.asStateFlow()
 
     init {
         loadGameModes()
     }
 
-    private fun loadGameModes() {
+    fun loadGameModes() {
         viewModelScope.launch {
-            _uiState.value = GameModeUiState.Loading
             try {
+                _uiState.value = GameModeUiState.Loading
                 val gameModes = repository.getGameModes()
                 _uiState.value = GameModeUiState.Success(gameModes)
             } catch (e: Exception) {
-                _uiState.value = GameModeUiState.Error(e.message ?: "Failed to load game modes")
+                _uiState.value = GameModeUiState.Error(e.message ?: "Unknown error occurred")
             }
         }
     }
 
     fun retry() {
         loadGameModes()
+    }
+
+    sealed class GameModeUiState {
+        object Loading : GameModeUiState()
+        data class Success(val gameModes: List<GameMode>) : GameModeUiState()
+        data class Error(val message: String) : GameModeUiState()
     }
 } 

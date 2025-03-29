@@ -50,6 +50,7 @@ class HomeFragment : Fragment() {
                 "EVENTS" -> findNavController().navigate(R.id.action_homeFragment_to_eventsFragment)
                 "FLEX" -> findNavController().navigate(R.id.action_homeFragment_to_flexFragment)
                 "GAMEMODES" -> findNavController().navigate(R.id.action_homeFragment_to_gameModesFragment)
+                "GEAR" -> findNavController().navigate(R.id.action_homeFragment_to_gearFragment)
                 // Add other navigation actions here when you create more fragments
                 else -> {
                     // For categories that don't have implementations yet

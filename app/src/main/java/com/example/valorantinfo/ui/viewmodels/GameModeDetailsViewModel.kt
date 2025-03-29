@@ -20,10 +20,15 @@ class GameModeDetailsViewModel @Inject constructor(
     private val _uiState = MutableStateFlow<GameModeDetailsUiState>(GameModeDetailsUiState.Loading)
     val uiState: StateFlow<GameModeDetailsUiState> = _uiState.asStateFlow()
 
-    fun loadGameModeDetails(gameModeId: String) {
+    fun loadGameModeDetails(gameModeUuid: String) {
         viewModelScope.launch {
             try {
-                val gameMode = repository.getGameMode(gameModeId)
+                _uiState.value = GameModeDetailsUiState.Loading
+                val gameMode = repository.getGameMode(gameModeUuid)
+                if (gameMode == null) {
+                    _uiState.value = GameModeDetailsUiState.Error("Game mode not found")
+                    return@launch
+                }
                 val equippables = repository.getGameModeEquippables()
                 _uiState.value = GameModeDetailsUiState.Success(gameMode, equippables)
             } catch (e: Exception) {

@@ -13,10 +13,9 @@ import com.example.valorantinfo.api.CurrencyApiService
 import com.example.valorantinfo.api.EventsApiService
 import com.example.valorantinfo.api.FlexApiService
 import com.example.valorantinfo.api.GameModeApiService
-import com.example.valorantinfo.repository.CurrencyRepository
-import com.example.valorantinfo.repository.CurrencyRepositoryImpl
-import com.example.valorantinfo.repository.EventRepository
-import com.example.valorantinfo.repository.EventRepositoryImpl
+import com.example.valorantinfo.api.GearApiService
+import com.example.valorantinfo.repository.GearRepository
+import com.example.valorantinfo.repository.GearRepositoryImpl
 import com.example.valorantinfo.repository.AgentDetailsRepository
 import com.example.valorantinfo.repository.AgentDetailsRepositoryImpl
 import com.example.valorantinfo.repository.AgentRepository
@@ -33,6 +32,10 @@ import com.example.valorantinfo.repository.ContentTierRepository
 import com.example.valorantinfo.repository.ContentTierRepositoryImpl
 import com.example.valorantinfo.repository.ContractRepository
 import com.example.valorantinfo.repository.ContractRepositoryImpl
+import com.example.valorantinfo.repository.CurrencyRepository
+import com.example.valorantinfo.repository.CurrencyRepositoryImpl
+import com.example.valorantinfo.repository.EventRepository
+import com.example.valorantinfo.repository.EventRepositoryImpl
 import com.example.valorantinfo.repository.FlexRepository
 import com.example.valorantinfo.repository.FlexRepositoryImpl
 import com.example.valorantinfo.repository.GameModeRepository
@@ -249,4 +252,17 @@ object AppModule {
     }
 
 
+    @Provides
+    @Singleton
+    fun provideGearApiService(retrofit: Retrofit): GearApiService {
+        return retrofit.create(GearApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideGearRepository(
+        gearModeApiService: GearApiService
+    ): GearRepository {
+        return GearRepositoryImpl(gearModeApiService)
+    }
 }
