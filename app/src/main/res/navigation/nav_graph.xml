@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.valorantinfo.ui.fragments.HomeFragment"
-        android:label="@string/valorant_info"
+        android:label="@string/home"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_agentsFragment"
@@ -40,6 +40,29 @@
         <action
             android:id="@+id/action_homeFragment_to_flexFragment"
             app:destination="@id/flexFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gameModesFragment"
+            app:destination="@id/gameModesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameModesFragment"
+        android:name="com.example.valorantinfo.ui.fragments.GameModesFragment"
+        android:label="@string/game_modes"
+        tools:layout="@layout/fragment_game_modes">
+        <action
+            android:id="@+id/action_gameModesFragment_to_gameModeDetailsFragment"
+            app:destination="@id/gameModeDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameModeDetailsFragment"
+        android:name="com.example.valorantinfo.ui.fragments.GameModeDetailsFragment"
+        android:label="@string/game_mode_details"
+        tools:layout="@layout/fragment_game_mode_details">
+        <argument
+            android:name="gameModeUuid"
+            app:argType="string" />
     </fragment>
 
     <fragment
@@ -215,7 +238,6 @@
             android:name="isEpilogue"
             app:argType="boolean" />
     </fragment>
-
     <fragment
         android:id="@+id/eventsFragment"
         android:name="com.example.valorantinfo.ui.fragments.EventsFragment"

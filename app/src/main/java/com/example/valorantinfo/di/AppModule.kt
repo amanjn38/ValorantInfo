@@ -12,6 +12,7 @@ import com.example.valorantinfo.api.ContractApiService
 import com.example.valorantinfo.api.CurrencyApiService
 import com.example.valorantinfo.api.EventsApiService
 import com.example.valorantinfo.api.FlexApiService
+import com.example.valorantinfo.api.GameModeApiService
 import com.example.valorantinfo.repository.CurrencyRepository
 import com.example.valorantinfo.repository.CurrencyRepositoryImpl
 import com.example.valorantinfo.repository.EventRepository
@@ -34,6 +35,8 @@ import com.example.valorantinfo.repository.ContractRepository
 import com.example.valorantinfo.repository.ContractRepositoryImpl
 import com.example.valorantinfo.repository.FlexRepository
 import com.example.valorantinfo.repository.FlexRepositoryImpl
+import com.example.valorantinfo.repository.GameModeRepository
+import com.example.valorantinfo.repository.GameModeRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -232,4 +235,18 @@ object AppModule {
     fun provideFlexRepository(api: FlexApiService): FlexRepository {
         return FlexRepositoryImpl(api)
     }
+
+    @Provides
+    @Singleton
+    fun provideGameModeApiService(retrofit: Retrofit): GameModeApiService {
+        return retrofit.create(GameModeApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideGameModeRepository(apiService: GameModeApiService): GameModeRepository {
+        return GameModeRepositoryImpl(apiService)
+    }
+
+
 }

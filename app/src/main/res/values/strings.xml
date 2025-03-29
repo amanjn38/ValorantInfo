@@ -27,6 +27,21 @@
     <string name="events">Events</string>
     <string name="flex">Flex</string>
     <string name="flex_icon">Flex Icon</string>
+    <string name="game_modes">Game Modes</string>
+    <string name="game_mode_icon">Game Mode Icon</string>
+    <string name="game_mode_details">Game Mode Details</string>
+    <string name="equippables">Equippables</string>
+    <string name="equippable_icon">Equippable Icon</string>
+    <string name="duration_format">Duration: %s</string>
+    <string name="matchmaking_format">Matchmaking: %s</string>
+    <string name="team_voice_format">Team Voice: %s</string>
+    <string name="minimap_format">Minimap: %s</string>
+    <string name="orb_count_format">Orb Count: %d</string>
+    <string name="team_roles_format">Team Roles: %s</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="visible">Visible</string>
+    <string name="hidden">Hidden</string>
     
     <!-- Navigation Labels -->
     <string name="agent_details">Agent Details</string>
@@ -43,6 +58,8 @@
     <string name="contract_details">Contract Details</string>
     <string name="contract_chapters">Contract Chapters</string>
     <string name="chapter_details">Chapter Details</string>
+    <string name="home">Home</string>
+    <string name="event_details">Event Details</string>
     
     <!-- Not used in UI, just documentation for testing -->
     <string name="testing_documentation">
@@ -72,4 +89,6 @@
         - Specific tests: ./gradlew test —tests "com.example.valorantinfo.ui.viewmodels.*"
     </string>
     <string name="tier_number">Tier: %s</string>
+    <string name="not_specified">Not specified</string>
+    <string name="game_modes_capital">GAME MODES</string>
 </resources>

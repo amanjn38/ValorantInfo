@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.navigateUp
 import com.example.valorantinfo.R
 import com.example.valorantinfo.data.models.Category
 import com.example.valorantinfo.databinding.FragmentHomeBinding
@@ -31,14 +32,8 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupClickListeners()
         setupRecyclerView()
         loadCategories()
-    }
-
-    private fun setupClickListeners() {
-        binding.apply {
-        }
     }
 
     private fun setupRecyclerView() {
@@ -54,6 +49,7 @@ class HomeFragment : Fragment() {
                 "CURRENCIES" -> findNavController().navigate(R.id.action_homeFragment_to_currenciesFragment)
                 "EVENTS" -> findNavController().navigate(R.id.action_homeFragment_to_eventsFragment)
                 "FLEX" -> findNavController().navigate(R.id.action_homeFragment_to_flexFragment)
+                "GAMEMODES" -> findNavController().navigate(R.id.action_homeFragment_to_gameModesFragment)
                 // Add other navigation actions here when you create more fragments
                 else -> {
                     // For categories that don't have implementations yet
