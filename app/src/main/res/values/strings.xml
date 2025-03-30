@@ -93,4 +93,6 @@
     <string name="gear">GEAR</string>
     <string name="todo">TODO</string>
     <string name="level_borders">Level Borders</string>
+    <string name="callouts">Callouts</string>
+    <string name="maps">Maps</string>
 </resources>

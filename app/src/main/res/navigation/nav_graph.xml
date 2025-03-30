@@ -49,6 +49,9 @@
         <action
             android:id="@+id/action_homeFragment_to_levelBordersFragment"
             app:destination="@id/levelBordersFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
 
 
     </fragment>
@@ -339,6 +342,29 @@
         tools:layout="@layout/fragment_level_border_details">
         <argument
             android:name="levelBorderUuid"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.valorantinfo.ui.fragments.MapsFragment"
+        android:label="@string/maps"
+        tools:layout="@layout/fragment_maps">
+        <action
+            android:id="@+id/action_mapsFragment_to_mapDetailsFragment"
+            app:destination="@id/mapDetailsFragment" />
+        <action
+            android:id="@+id/action_mapsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mapDetailsFragment"
+        android:name="com.example.valorantinfo.ui.fragments.MapDetailsFragment"
+        android:label="@string/maps"
+        tools:layout="@layout/fragment_map_details">
+        <argument
+            android:name="mapUuid"
             app:argType="string" />
     </fragment>
 

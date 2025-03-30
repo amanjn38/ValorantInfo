@@ -15,6 +15,7 @@ import com.example.valorantinfo.api.FlexApiService
 import com.example.valorantinfo.api.GameModeApiService
 import com.example.valorantinfo.api.GearApiService
 import com.example.valorantinfo.api.LevelBordersApiService
+import com.example.valorantinfo.api.MapsApiService
 import com.example.valorantinfo.repository.AgentDetailsRepository
 import com.example.valorantinfo.repository.AgentDetailsRepositoryImpl
 import com.example.valorantinfo.repository.AgentRepository
@@ -43,6 +44,8 @@ import com.example.valorantinfo.repository.GearRepository
 import com.example.valorantinfo.repository.GearRepositoryImpl
 import com.example.valorantinfo.repository.LevelBorderRepository
 import com.example.valorantinfo.repository.LevelBorderRepositoryImpl
+import com.example.valorantinfo.repository.MapRepository
+import com.example.valorantinfo.repository.MapRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -281,5 +284,19 @@ object AppModule {
         levelBordersApiService: LevelBordersApiService
     ): LevelBorderRepository {
         return LevelBorderRepositoryImpl(levelBordersApiService)
+    }
+
+    @Provides
+    @Singleton
+    fun provideMapApiService(retrofit: Retrofit): MapsApiService {
+        return retrofit.create(MapsApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideMapsRepository(
+        mapsApiService: MapsApiService
+    ): MapRepository {
+        return MapRepositoryImpl(mapsApiService)
     }
 }
