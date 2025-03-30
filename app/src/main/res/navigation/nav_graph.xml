@@ -46,6 +46,9 @@
         <action
             android:id="@+id/action_homeFragment_to_gearFragment"
             app:destination="@id/gearFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_levelBordersFragment"
+            app:destination="@id/levelBordersFragment" />
 
 
     </fragment>
@@ -313,6 +316,29 @@
         tools:layout="@layout/fragment_gear_details">
         <argument
             android:name="gearUuid"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/levelBordersFragment"
+        android:name="com.example.valorantinfo.ui.fragments.LevelBordersFragment"
+        android:label="@string/level_borders"
+        tools:layout="@layout/fragment_level_borders">
+        <action
+            android:id="@+id/action_levelBordersFragment_to_levelBorderDetailsFragment"
+            app:destination="@id/levelBorderDetailsFragment" />
+        <action
+            android:id="@+id/action_levelBordersFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/levelBorderDetailsFragment"
+        android:name="com.example.valorantinfo.ui.fragments.LevelBorderDetailsFragment"
+        android:label="@string/level_borders"
+        tools:layout="@layout/fragment_level_border_details">
+        <argument
+            android:name="levelBorderUuid"
             app:argType="string" />
     </fragment>
 

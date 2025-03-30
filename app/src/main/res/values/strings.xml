@@ -91,4 +91,6 @@
     <string name="tier_number">Tier: %s</string>
     <string name="not_specified">Not specified</string>
     <string name="gear">GEAR</string>
+    <string name="todo">TODO</string>
+    <string name="level_borders">Level Borders</string>
 </resources>
