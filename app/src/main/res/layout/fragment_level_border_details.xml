@@ -43,6 +43,7 @@
                 app:cardElevation="4dp">
 
                 <ImageView
+                    android:contentDescription="@string/level_borders"
                     android:id="@+id/borderImageView"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"

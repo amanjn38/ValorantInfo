@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.navigateUp
 import com.example.valorantinfo.R
 import com.example.valorantinfo.data.models.Category
 import com.example.valorantinfo.databinding.FragmentHomeBinding
