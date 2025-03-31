@@ -1,5 +1,6 @@
 package com.example.valorantinfo.di
 
+import android.content.Context
 import androidx.lifecycle.ViewModelProvider
 import com.example.valorantinfo.api.AgentApiService
 import com.example.valorantinfo.api.AgentDetailsApiService
@@ -16,6 +17,7 @@ import com.example.valorantinfo.api.GameModeApiService
 import com.example.valorantinfo.api.GearApiService
 import com.example.valorantinfo.api.LevelBordersApiService
 import com.example.valorantinfo.api.MapsApiService
+import com.example.valorantinfo.api.PlayerCardApiService
 import com.example.valorantinfo.repository.AgentDetailsRepository
 import com.example.valorantinfo.repository.AgentDetailsRepositoryImpl
 import com.example.valorantinfo.repository.AgentRepository
@@ -46,9 +48,12 @@ import com.example.valorantinfo.repository.LevelBorderRepository
 import com.example.valorantinfo.repository.LevelBorderRepositoryImpl
 import com.example.valorantinfo.repository.MapRepository
 import com.example.valorantinfo.repository.MapRepositoryImpl
+import com.example.valorantinfo.repository.PlayerCardRepository
+import com.example.valorantinfo.repository.PlayerCardRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -61,6 +66,12 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+
+    @Provides
+    @Singleton
+    fun provideContext(@ApplicationContext appContext: Context): Context {
+        return appContext
+    }
 
     @Provides
     @Singleton
@@ -298,5 +309,19 @@ object AppModule {
         mapsApiService: MapsApiService
     ): MapRepository {
         return MapRepositoryImpl(mapsApiService)
+    }
+
+    @Provides
+    @Singleton
+    fun providePlayerCardApiService(retrofit: Retrofit): PlayerCardApiService {
+        return retrofit.create(PlayerCardApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun providePlayerCardRepository(
+        playerCardApiService: PlayerCardApiService
+    ): PlayerCardRepository {
+        return PlayerCardRepositoryImpl(playerCardApiService)
     }
 }

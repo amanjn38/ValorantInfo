@@ -52,6 +52,7 @@ class HomeFragment : Fragment() {
                 "GEAR" -> findNavController().navigate(R.id.action_homeFragment_to_gearFragment)
                 "LEVEL BORDERS" -> findNavController().navigate(R.id.action_homeFragment_to_levelBordersFragment)
                 "MAPS" -> findNavController().navigate(R.id.action_homeFragment_to_mapsFragment)
+                "PLAYER CARDS" -> findNavController().navigate(R.id.action_homeFragment_to_playerCardFragment)
                 // Add other navigation actions here when you create more fragments
                 else -> {
                     // For categories that don't have implementations yet
