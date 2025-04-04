@@ -55,6 +55,9 @@
         <action
             android:id="@+id/action_homeFragment_to_playerCardFragment"
             app:destination="@id/playerCardFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_playerTitleFragment"
+            app:destination="@id/playerTitleFragment" />
 
 
     </fragment>
@@ -389,6 +392,27 @@
         android:label="Player Card Details">
         <argument
             android:name="playerCardUuid"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/playerTitleFragment"
+        android:name="com.example.valorantinfo.ui.fragments.PlayerTitleFragment"
+        android:label="Player Titles">
+        <action
+            android:id="@+id/action_playerTitleFragment_to_playerTitleDetailsFragment"
+            app:destination="@id/playerTitleDetailsFragment" />
+        <action
+            android:id="@+id/action_playerTitleFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/playerTitleDetailsFragment"
+        android:name="com.example.valorantinfo.ui.fragments.PlayerTitleDetailsFragment"
+        android:label="Player Title Details">
+        <argument
+            android:name="playerTitleUuid"
             app:argType="string" />
     </fragment>
 

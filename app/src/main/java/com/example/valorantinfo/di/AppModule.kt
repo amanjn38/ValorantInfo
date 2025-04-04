@@ -18,6 +18,7 @@ import com.example.valorantinfo.api.GearApiService
 import com.example.valorantinfo.api.LevelBordersApiService
 import com.example.valorantinfo.api.MapsApiService
 import com.example.valorantinfo.api.PlayerCardApiService
+import com.example.valorantinfo.api.PlayerTitleApiService
 import com.example.valorantinfo.repository.AgentDetailsRepository
 import com.example.valorantinfo.repository.AgentDetailsRepositoryImpl
 import com.example.valorantinfo.repository.AgentRepository
@@ -50,6 +51,8 @@ import com.example.valorantinfo.repository.MapRepository
 import com.example.valorantinfo.repository.MapRepositoryImpl
 import com.example.valorantinfo.repository.PlayerCardRepository
 import com.example.valorantinfo.repository.PlayerCardRepositoryImpl
+import com.example.valorantinfo.repository.PlayerTitleRepository
+import com.example.valorantinfo.repository.PlayerTitleRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -323,5 +326,19 @@ object AppModule {
         playerCardApiService: PlayerCardApiService
     ): PlayerCardRepository {
         return PlayerCardRepositoryImpl(playerCardApiService)
+    }
+
+    @Provides
+    @Singleton
+    fun providePlayerTitleApiService(retrofit: Retrofit): PlayerTitleApiService {
+        return retrofit.create(PlayerTitleApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun providePlayerTitleRepository(
+        playerTitleApiService: PlayerTitleApiService
+    ): PlayerTitleRepository {
+        return PlayerTitleRepositoryImpl(playerTitleApiService)
     }
 }

@@ -96,4 +96,6 @@
     <string name="callouts">Callouts</string>
     <string name="maps">Maps</string>
     <string name="player_card">Player Card</string>
+    <string name="player_titles">Player Titles</string>
+    <string name="player_title_details">Player Title Details</string>
 </resources>
